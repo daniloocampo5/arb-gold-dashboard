@@ -1,0 +1,27 @@
+{
+  "start_date": "2026-06-13",
+  "start_balance": 254,
+  "current_balance": 254,
+  "pnl_total": 0,
+  "pnl_pct": 0,
+  "pc_online": false,
+  "last_updated": "2026-06-13T06:00:00Z",
+  "open_position": null,
+  "trades": [],
+  "summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "profit_factor": 0,
+    "win_rate": 0,
+    "target_wr": 45
+  },
+  "params": {
+    "sl_mult": 1.5,
+    "tp_mult": 3.0,
+    "atr_period": 14,
+    "max_hold_h": 8,
+    "cooldown_h": 2,
+    "lot": 0.01
+  }
+}
