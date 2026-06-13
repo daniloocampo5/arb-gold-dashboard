@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARB-Gold Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#080d1a;color:#e2e8f0;min-height:100vh;padding:16px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.title{font-size:22px;font-weight:700;color:#f8fafc}
+.title span{color:#fbbf24;font-size:14px;display:block;font-weight:400}
+.badge{padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}
+.badge.on{background:#052e16;color:#4ade80;border:1px solid #166534}
+.badge.off{background:#1c1917;color:#f87171;border:1px solid #7f1d1d}
+.badge.warn{background:#1c1400;color:#fbbf24;border:1px solid #78350f}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:16px}
+.card .label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.card .value{font-size:26px;font-weight:700;color:#f8fafc}
+.card .sub{font-size:12px;color:#94a3b8;margin-top:4px}
+.card.green{border-color:#166534}.card.green .value{color:#4ade80}
+.card.red{border-color:#7f1d1d}.card.red .value{color:#f87171}
+.card.yellow{border-color:#78350f}.card.yellow .value{color:#fbbf24}
+.section{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:16px;margin-bottom:16px}
+.section h3{font-size:13px;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
+.pos-card{background:#080d1a;border-radius:8px;padding:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.pos-detail{font-size:13px;color:#94a3b8}.pos-detail strong{color:#e2e8f0;display:block}
+.no-pos{color:#475569;font-size:14px;text-align:center;padding:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:8px 10px;color:#475569;font-weight:500;border-bottom:1px solid #1e293b}
+td{padding:9px 10px;border-bottom:1px solid #0f172a;color:#cbd5e1}
+tr:last-child td{border:none}
+.win{color:#4ade80;font-weight:600}.loss{color:#f87171;font-weight:600}
+.wr-bar{background:#1e293b;border-radius:4px;height:6px;margin-top:8px;overflow:hidden}
+.wr-fill{height:100%;border-radius:4px;transition:width .6s ease}
+.footer{text-align:center;color:#334155;font-size:12px;margin-top:20px}
+.refresh-btn{background:#1e293b;border:none;color:#94a3b8;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:13px;margin-top:8px}
+.refresh-btn:hover{background:#334155;color:#e2e8f0}
+.params{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.param{background:#080d1a;border-radius:6px;padding:8px 12px;font-size:12px;color:#94a3b8}
+.param strong{color:#e2e8f0;display:block;font-size:14px}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="title">🤖 ARB-Gold Dashboard<span id="subtitle">XAUUSDm M15 · Cargando...</span></div>
+  <div id="status-badge" class="badge off">Cargando...</div>
+</div>
+
+<div class="cards" id="cards">
+  <div class="card"><div class="label">Balance</div><div class="value">—</div></div>
+  <div class="card"><div class="label">P&amp;L Total</div><div class="value">—</div></div>
+  <div class="card"><div class="label">Win Rate</div><div class="value">—</div></div>
+  <div class="card"><div class="label">Trades</div><div class="value">—</div></div>
+</div>
+
+<div class="section">
+  <h3>📊 Posición Abierta</h3>
+  <div id="pos-section"><div class="no-pos">Cargando...</div></div>
+</div>
+
+<div class="section">
+  <h3>📋 Historial de Trades</h3>
+  <div id="trades-section"><div class="no-pos">Cargando...</div></div>
+</div>
+
+<div class="section">
+  <h3>⚙️ Parámetros</h3>
+  <div class="params" id="params-section"></div>
+</div>
+
+<div class="footer">
+  <div id="last-updated">Actualizando...</div>
+  <button class="refresh-btn" onclick="loadData()">↻ Actualizar</button>
+</div>
+
+<script>
+async function loadData(){
+  try{
+    const r=await fetch('data/status.json?t='+Date.now());
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    render(d);
+  }catch(e){
+    document.getElementById('last-updated').textContent='Error cargando datos: '+e.message;
+  }
+}
+
+function fmt(n,dec=2){return(n>=0?'+':'')+n.toFixed(dec)}
+function fmtDate(s){if(!s)return'—';const d=new Date(s);return d.toLocaleDateString('es-CO',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'America/Bogota'})+' (Bogotá)'}
+function ago(s){if(!s)return'desconocido';const diff=(Date.now()-new Date(s))/3600000;if(diff<1)return'hace menos de 1h';if(diff<24)return'hace '+Math.floor(diff)+'h';return'hace '+Math.floor(diff/24)+'d'}
+
+function render(d){
+  // Badge
+  const badge=document.getElementById('status-badge');
+  const pcOnline=d.pc_online;
+  badge.textContent=pcOnline?'🟢 PC Conectado':'🔴 PC Desconectado';
+  badge.className='badge '+(pcOnline?'on':'off');
+  document.getElementById('subtitle').textContent='XAUUSDm M15 · Desde '+d.start_date;
+
+  // Cards
+  const pnl=d.pnl_total||0;
+  const wr=d.summary?.win_rate||0;
+  const tgt=d.summary?.target_wr||45;
+  const wrClass=wr>=tgt?'green':wr>=tgt*0.7?'yellow':'red';
+  const pnlClass=pnl>=0?'green':'red';
+  document.getElementById('cards').innerHTML=`
+    <div class="card"><div class="label">Balance</div><div class="value">$${(d.current_balance||254).toFixed(2)}</div><div class="sub">Base $${d.start_balance||254}</div></div>
+    <div class="card ${pnlClass}"><div class="label">P&L Total</div><div class="value">${fmt(pnl)}</div><div class="sub">${fmt(d.pnl_pct||0,1)}%</div></div>
+    <div class="card ${wrClass}"><div class="label">Win Rate</div><div class="value">${wr.toFixed(1)}%</div><div class="sub">Meta: ${tgt}%<div class="wr-bar"><div class="wr-fill" style="width:${Math.min(wr/tgt*100,100)}%;background:${wr>=tgt?'#4ade80':wr>=tgt*0.7?'#fbbf24':'#f87171'}"></div></div></div></div>
+    <div class="card"><div class="label">Trades</div><div class="value">${d.summary?.total||0}</div><div class="sub"><span class="win">${d.summary?.wins||0}W</span> · <span class="loss">${d.summary?.losses||0}L</span> · PF ${(d.summary?.profit_factor||0).toFixed(2)}</div></div>
+  `;
+
+  // Posición abierta
+  const pos=d.open_position;
+  const posEl=document.getElementById('pos-section');
+  if(pos){
+    const dir=pos.type==='BUY'?'🟢 LONG':'🔴 SHORT';
+    const profit=pos.profit||0;
+    posEl.innerHTML=`<div class="pos-card">
+      <div class="pos-detail"><strong>${dir} ${pos.volume} lot</strong>Entrada: $${pos.entry}</div>
+      <div class="pos-detail"><strong>SL $${pos.sl} · TP $${pos.tp}</strong>Actual: $${pos.current||'—'}</div>
+      <div class="pos-detail" style="color:${profit>=0?'#4ade80':'#f87171'}"><strong>${fmt(profit)} USD</strong>P&L flotante</div>
+    </div>`;
+  } else {
+    posEl.innerHTML='<div class="no-pos">⚪ Sin posición abierta</div>';
+  }
+
+  // Trades
+  const trades=d.trades||[];
+  const trEl=document.getElementById('trades-section');
+  if(!trades.length){
+    trEl.innerHTML='<div class="no-pos">Sin trades registrados aún</div>';
+  } else {
+    trEl.innerHTML='<table><thead><tr><th>#</th><th>Dir</th><th>Entrada</th><th>Salida</th><th>Duración</th><th>Cierre</th><th>P&L</th></tr></thead><tbody>'+
+    trades.slice().reverse().map(t=>{
+      const h=Math.floor((t.duration_min||0)/60),m=(t.duration_min||0)%60;
+      return`<tr>
+        <td>${t.ticket}</td>
+        <td>${t.direction==='BUY'?'🟢 L':'🔴 S'}</td>
+        <td>$${t.entry_price}</td>
+        <td>$${t.exit_price||'—'}</td>
+        <td>${h}h ${m}m</td>
+        <td>${t.exit_type||'—'}</td>
+        <td class="${t.profit_usd>=0?'win':'loss'}">${fmt(t.profit_usd||0)}</td>
+      </tr>`;
+    }).join('')+'</tbody></table>';
+  }
+
+  // Params
+  const p=d.params||{};
+  document.getElementById('params-section').innerHTML=`
+    <div class="param"><strong>SL</strong>${p.sl_mult||1.5}× ATR</div>
+    <div class="param"><strong>TP</strong>${p.tp_mult||3.0}× ATR</div>
+    <div class="param"><strong>ATR</strong>Período ${p.atr_period||14}</div>
+    <div class="param"><strong>Timeout</strong>${p.max_hold_h||8}h</div>
+    <div class="param"><strong>Cooldown</strong>${p.cooldown_h||2}h</div>
+    <div class="param"><strong>Lot</strong>${p.lot||0.01}</div>
+  `;
+
+  document.getElementById('last-updated').textContent='Última actualización: '+fmtDate(d.last_updated)+' ('+ago(d.last_updated)+')';
+}
+
+setInterval(loadData,600000);
+loadData();
+</script>
+</body>
+</html>
