@@ -1,12 +1,13 @@
 {
-  "pc_online": false,
-  "updated_at": "2026-06-15T20:43:15Z",
-  "last_updated": "2026-06-15T21:02:42Z",
+  "pc_online": true,
+  "updated_at": "2026-06-15T21:07:39Z",
+  "last_updated": "2026-06-15T21:07:39Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 190.54,
-  "pnl_total": 0,
-  "pnl_pct": 0,
+  "pnl_total": 0.0,
+  "pnl_pct": 0.0,
+  "tunnel_url": "https://notifications-shall-springer-beijing.trycloudflare.com",
   "trades": [],
   "open_position": null,
   "open_positions": [],
@@ -14,18 +15,18 @@
     "total": 0,
     "wins": 0,
     "losses": 0,
-    "pnl": 0,
+    "pnl": 0.0,
     "win_rate": 0,
     "profit_factor": 0,
     "target_wr": 45
   },
   "params": {
     "sl_mult": 1.5,
-    "tp_mult": 3,
+    "tp_mult": 3.0,
     "atr_period": 14,
     "max_hold_h": 8,
     "cooldown_h": 2,
     "lot": 0.01
   },
-  "message": "ARB-Gold activo. 0 trades desde 2026-06-13. PnL: $0"
+  "message": "ARB-Gold activo. 0 trades. PnL: $0.0"
 }
