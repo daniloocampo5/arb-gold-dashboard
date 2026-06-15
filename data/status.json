@@ -1,27 +1,21 @@
 {
-  "start_date": "2026-06-13",
-  "start_balance": 254,
-  "current_balance": 254,
-  "pnl_total": 0,
-  "pnl_pct": 0,
-  "pc_online": false,
-  "last_updated": "2026-06-15T00:02:55Z",
-  "open_position": null,
-  "trades": [],
-  "summary": {
-    "total": 0,
-    "wins": 0,
-    "losses": 0,
-    "profit_factor": 0,
-    "win_rate": 0,
-    "target_wr": 45
-  },
-  "params": {
-    "sl_mult": 1.5,
-    "tp_mult": 3.0,
-    "atr_period": 14,
-    "max_hold_h": 8,
-    "cooldown_h": 2,
-    "lot": 0.01
-  }
+    "updated_at":  "2026-06-15T02:04:39Z",
+    "open_positions":  [
+
+                       ],
+    "pc_online":  true,
+    "summary":  {
+                    "profit_factor":  0,
+                    "losses":  0,
+                    "total":  0,
+                    "wins":  0,
+                    "win_rate":  0,
+                    "pnl":  0
+                },
+    "tunnel_url":  "https://notifications-shall-springer-beijing.trycloudflare.com",
+    "trades":  [
+
+               ],
+    "message":  "Sistema ARB-Gold activo. 0 trades en las primeras 24h (normal en fase inicial).",
+    "period_hours":  72
 }
