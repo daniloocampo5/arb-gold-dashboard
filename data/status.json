@@ -1,23 +1,16 @@
 {
-    "message":  "ARB-Gold activo. 0 trades propios (magic 20260613). Balance actual Deskbook2: .54",
-    "summary":  {
-                    "profit_factor":  0,
-                    "losses":  0,
-                    "total":  0,
-                    "wins":  0,
-                    "win_rate":  0,
-                    "pnl":  0
-                },
-    "balance":  190.54,
-    "updated_at":  "2026-06-15T02:20:37Z",
-    "open_positions":  [
-
-                       ],
-    "tunnel_url":  "https://notifications-shall-springer-beijing.trycloudflare.com",
-    "period_hours":  72,
-    "trades":  [
-
-               ],
-    "pc_online":  true,
-    "balance_inicial_arb":  254
+  "pc_online": true,
+  "updated_at": "2026-06-15T02:25:43Z",
+  "tunnel_url": "https://notifications-shall-springer-beijing.trycloudflare.com",
+  "trades": [],
+  "open_positions": [],
+  "summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "win_rate": 0,
+    "profit_factor": 0
+  },
+  "message": "ARB-Gold activo. 0 trades cerrados. PnL: $0.0"
 }
