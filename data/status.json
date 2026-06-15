@@ -1,9 +1,5 @@
 {
-    "updated_at":  "2026-06-15T02:04:39Z",
-    "open_positions":  [
-
-                       ],
-    "pc_online":  true,
+    "message":  "ARB-Gold activo. 0 trades propios (magic 20260613). Balance actual Deskbook2: .54",
     "summary":  {
                     "profit_factor":  0,
                     "losses":  0,
@@ -12,10 +8,16 @@
                     "win_rate":  0,
                     "pnl":  0
                 },
+    "balance":  190.54,
+    "updated_at":  "2026-06-15T02:20:37Z",
+    "open_positions":  [
+
+                       ],
     "tunnel_url":  "https://notifications-shall-springer-beijing.trycloudflare.com",
+    "period_hours":  72,
     "trades":  [
 
                ],
-    "message":  "Sistema ARB-Gold activo. 0 trades en las primeras 24h (normal en fase inicial).",
-    "period_hours":  72
+    "pc_online":  true,
+    "balance_inicial_arb":  254
 }
