@@ -1,35 +1,31 @@
 {
-    "pc_online":  true,
-    "updated_at":  "2026-06-16T08:43:43Z",
-    "last_updated":  "2026-06-16T08:43:43Z",
-    "start_date":  "2026-06-13",
-    "start_balance":  254,
-    "current_balance":  190.54,
-    "pnl_total":  0,
-    "pnl_pct":  0,
-    "trades":  [
-
-               ],
-    "open_position":  null,
-    "open_positions":  [
-
-                       ],
-    "summary":  {
-                    "total":  0,
-                    "wins":  0,
-                    "losses":  0,
-                    "pnl":  0,
-                    "win_rate":  0,
-                    "profit_factor":  0,
-                    "target_wr":  45
-                },
-    "params":  {
-                   "sl_mult":  1.5,
-                   "tp_mult":  3,
-                   "atr_period":  14,
-                   "max_hold_h":  8,
-                   "cooldown_h":  2,
-                   "lot":  0.01
-               },
-    "message":  "ARB-Gold activo. 0 trades desde 2026-06-13. PnL: $0"
+  "pc_online": false,
+  "updated_at": "2026-06-16T08:43:43Z",
+  "last_updated": "2026-06-16T09:02:21Z",
+  "start_date": "2026-06-13",
+  "start_balance": 254,
+  "current_balance": 190.54,
+  "pnl_total": 0,
+  "pnl_pct": 0,
+  "trades": [],
+  "open_position": null,
+  "open_positions": [],
+  "summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0,
+    "win_rate": 0,
+    "profit_factor": 0,
+    "target_wr": 45
+  },
+  "params": {
+    "sl_mult": 1.5,
+    "tp_mult": 3,
+    "atr_period": 14,
+    "max_hold_h": 8,
+    "cooldown_h": 2,
+    "lot": 0.01
+  },
+  "message": "ARB-Gold activo. 0 trades desde 2026-06-13. PnL: $0"
 }
