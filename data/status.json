@@ -1,7 +1,7 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-17T13:19:13Z",
-  "last_updated": "2026-06-17T13:19:13Z",
+  "updated_at": "2026-06-17T13:43:27Z",
+  "last_updated": "2026-06-17T13:43:27Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 190.54,
@@ -35,10 +35,10 @@
     }
   ],
   "open_position": {
-    "actual": 4332.686,
+    "actual": 4340.001,
     "entrada": 4324.492,
     "lotes": 0.01,
-    "profit": -8.2,
+    "profit": -15.51,
     "sl": 0.0,
     "ticket": 543743321,
     "tipo": "SELL",
@@ -46,52 +46,62 @@
   },
   "open_positions": [
     {
-      "actual": 4332.686,
+      "actual": 4340.001,
       "entrada": 4324.492,
       "lotes": 0.01,
-      "profit": -8.2,
+      "profit": -15.51,
       "sl": 0.0,
       "ticket": 543743321,
       "tipo": "SELL",
       "tp": 0.0
     },
     {
-      "actual": 4332.406,
+      "actual": 4339.721,
       "entrada": 4324.88,
       "lotes": 0.01,
-      "profit": 7.53,
+      "profit": 14.84,
       "sl": 0.0,
       "ticket": 544061299,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4332.406,
+      "actual": 4339.721,
       "entrada": 4332.014,
       "lotes": 0.01,
-      "profit": 0.4,
+      "profit": 7.71,
       "sl": 0.0,
       "ticket": 544076762,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4332.406,
+      "actual": 4339.721,
       "entrada": 4333.655,
       "lotes": 0.01,
-      "profit": -1.25,
+      "profit": 6.06,
       "sl": 0.0,
       "ticket": 544091687,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4332.406,
+      "actual": 4339.721,
       "entrada": 4331.942,
       "lotes": 0.01,
-      "profit": 0.47,
+      "profit": 7.78,
       "sl": 0.0,
       "ticket": 544113010,
+      "tipo": "BUY",
+      "tp": 0.0
+    },
+    {
+      "actual": 4339.721,
+      "entrada": 4335.861,
+      "lotes": 0.01,
+      "profit": 3.86,
+      "sl": 0.0,
+      "ticket": 544131932,
       "tipo": "BUY",
       "tp": 0.0
     }
