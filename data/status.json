@@ -1,7 +1,7 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-17T04:17:25Z",
-  "last_updated": "2026-06-17T04:17:25Z",
+  "updated_at": "2026-06-17T04:41:33Z",
+  "last_updated": "2026-06-17T04:41:33Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 190.54,
@@ -20,72 +20,84 @@
       "profit_usd": 19.48,
       "result": "WIN",
       "ticket": "542819225"
+    },
+    {
+      "direction": "BUY",
+      "duration_min": 754,
+      "entry_price": 4335.53,
+      "entry_time": "2026-06-16 16:00 UTC",
+      "exit_comment": "[sl 4320.321]",
+      "exit_price": 4320.32,
+      "exit_time": "2026-06-17 04:34 UTC",
+      "profit_usd": -15.22,
+      "result": "LOSS",
+      "ticket": "543295097"
     }
   ],
   "open_position": {
-    "actual": 4332.026,
-    "entrada": 4335.535,
+    "actual": 4322.556,
+    "entrada": 4332.335,
     "lotes": 0.01,
-    "profit": -3.51,
-    "sl": 4320.321,
-    "ticket": 543295097,
+    "profit": -9.78,
+    "sl": 0.0,
+    "ticket": 543726942,
     "tipo": "BUY",
-    "tp": 4363.805
+    "tp": 0.0
   },
   "open_positions": [
     {
-      "actual": 4332.026,
-      "entrada": 4335.535,
-      "lotes": 0.01,
-      "profit": -3.51,
-      "sl": 4320.321,
-      "ticket": 543295097,
-      "tipo": "BUY",
-      "tp": 4363.805
-    },
-    {
-      "actual": 4332.026,
+      "actual": 4322.556,
       "entrada": 4332.335,
       "lotes": 0.01,
-      "profit": -0.31,
+      "profit": -9.78,
       "sl": 0.0,
       "ticket": 543726942,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4332.026,
+      "actual": 4322.556,
       "entrada": 4332.335,
       "lotes": 0.01,
-      "profit": -0.31,
+      "profit": -9.78,
       "sl": 0.0,
       "ticket": 543726946,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4332.026,
+      "actual": 4322.556,
       "entrada": 4331.987,
       "lotes": 0.01,
-      "profit": 0.04,
+      "profit": -9.43,
       "sl": 0.0,
       "ticket": 543726948,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4332.306,
+      "actual": 4322.836,
       "entrada": 4330.842,
       "lotes": 0.01,
-      "profit": -1.47,
+      "profit": 8.0,
       "sl": 0.0,
       "ticket": 543734098,
+      "tipo": "SELL",
+      "tp": 0.0
+    },
+    {
+      "actual": 4322.836,
+      "entrada": 4324.492,
+      "lotes": 0.01,
+      "profit": 1.65,
+      "sl": 0.0,
+      "ticket": 543743321,
       "tipo": "SELL",
       "tp": 0.0
     }
   ],
   "summary": {
-    "total": 1,
+    "total": 2,
     "wins": 0,
     "losses": 0,
     "pnl": 0,
@@ -101,5 +113,5 @@
     "cooldown_h": 2,
     "lot": 0.01
   },
-  "message": "ARB-Gold activo. 1 trades. PnL: $0"
+  "message": "ARB-Gold activo. 2 trades. PnL: $0"
 }
