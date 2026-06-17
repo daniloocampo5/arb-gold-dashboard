@@ -1,12 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-17T03:48:43Z",
-  "last_updated": "2026-06-17T03:48:43Z",
+  "updated_at": "2026-06-17T04:11:26Z",
+  "last_updated": "2026-06-17T04:11:26Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
-  "current_balance": 273.48,
-  "pnl_total": 19.48,
-  "pnl_pct": 7.67,
+  "current_balance": 190.54,
+  "pnl_total": 0,
+  "pnl_pct": 0.0,
+  "tunnel_url": "https://notifications-shall-springer-beijing.trycloudflare.com",
   "trades": [
     {
       "direction": "BUY",
@@ -22,33 +23,63 @@
     }
   ],
   "open_position": {
-    "actual": 4333.034,
+    "actual": 4332.057,
     "entrada": 4335.535,
     "lotes": 0.01,
-    "profit": -2.51,
+    "profit": -3.48,
     "sl": 4320.321,
     "ticket": 543295097,
     "tipo": "BUY",
-    "tp": 4366.17
+    "tp": 4363.805
   },
   "open_positions": [
     {
-      "actual": 4333.034,
+      "actual": 4332.057,
       "entrada": 4335.535,
       "lotes": 0.01,
-      "profit": -2.51,
+      "profit": -3.48,
       "sl": 4320.321,
       "ticket": 543295097,
       "tipo": "BUY",
-      "tp": 4366.17
+      "tp": 4363.805
+    },
+    {
+      "actual": 4332.057,
+      "entrada": 4332.335,
+      "lotes": 0.01,
+      "profit": -0.28,
+      "sl": 0.0,
+      "ticket": 543726942,
+      "tipo": "BUY",
+      "tp": 0.0
+    },
+    {
+      "actual": 4332.057,
+      "entrada": 4332.335,
+      "lotes": 0.01,
+      "profit": -0.28,
+      "sl": 0.0,
+      "ticket": 543726946,
+      "tipo": "BUY",
+      "tp": 0.0
+    },
+    {
+      "actual": 4332.057,
+      "entrada": 4331.987,
+      "lotes": 0.01,
+      "profit": 0.07,
+      "sl": 0.0,
+      "ticket": 543726948,
+      "tipo": "BUY",
+      "tp": 0.0
     }
   ],
   "summary": {
     "total": 1,
-    "wins": 1,
+    "wins": 0,
     "losses": 0,
-    "pnl": 19.48,
-    "win_rate": 100.0,
+    "pnl": 0,
+    "win_rate": 0.0,
     "profit_factor": 0,
     "target_wr": 45
   },
@@ -60,5 +91,5 @@
     "cooldown_h": 2,
     "lot": 0.01
   },
-  "message": "ARB-Gold. 1 trades cerrados. PnL: +19.48"
+  "message": "ARB-Gold activo. 1 trades. PnL: $0"
 }
