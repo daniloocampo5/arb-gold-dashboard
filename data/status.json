@@ -1,7 +1,7 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-17T13:49:18Z",
-  "last_updated": "2026-06-17T13:49:18Z",
+  "updated_at": "2026-06-17T14:13:33Z",
+  "last_updated": "2026-06-17T14:13:33Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 190.54,
@@ -35,10 +35,10 @@
     }
   ],
   "open_position": {
-    "actual": 4343.197,
+    "actual": 4340.669,
     "entrada": 4324.492,
     "lotes": 0.01,
-    "profit": -18.71,
+    "profit": -16.18,
     "sl": 0.0,
     "ticket": 543743321,
     "tipo": "SELL",
@@ -46,72 +46,82 @@
   },
   "open_positions": [
     {
-      "actual": 4343.197,
+      "actual": 4340.669,
       "entrada": 4324.492,
       "lotes": 0.01,
-      "profit": -18.71,
+      "profit": -16.18,
       "sl": 0.0,
       "ticket": 543743321,
       "tipo": "SELL",
       "tp": 0.0
     },
     {
-      "actual": 4342.917,
+      "actual": 4340.389,
       "entrada": 4324.88,
       "lotes": 0.01,
-      "profit": 18.04,
+      "profit": 15.51,
       "sl": 0.0,
       "ticket": 544061299,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4342.917,
+      "actual": 4340.389,
       "entrada": 4332.014,
       "lotes": 0.01,
-      "profit": 10.91,
+      "profit": 8.38,
       "sl": 0.0,
       "ticket": 544076762,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4342.917,
+      "actual": 4340.389,
       "entrada": 4333.655,
       "lotes": 0.01,
-      "profit": 9.26,
+      "profit": 6.73,
       "sl": 0.0,
       "ticket": 544091687,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4342.917,
+      "actual": 4340.389,
       "entrada": 4331.942,
       "lotes": 0.01,
-      "profit": 10.98,
+      "profit": 8.45,
       "sl": 0.0,
       "ticket": 544113010,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4342.917,
+      "actual": 4340.389,
       "entrada": 4335.861,
       "lotes": 0.01,
-      "profit": 7.06,
+      "profit": 4.53,
       "sl": 0.0,
       "ticket": 544131932,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4342.917,
+      "actual": 4340.389,
       "entrada": 4341.721,
       "lotes": 0.01,
-      "profit": 1.2,
+      "profit": -1.33,
       "sl": 0.0,
       "ticket": 544160385,
+      "tipo": "BUY",
+      "tp": 0.0
+    },
+    {
+      "actual": 4340.389,
+      "entrada": 4340.159,
+      "lotes": 0.01,
+      "profit": 0.23,
+      "sl": 0.0,
+      "ticket": 544185160,
       "tipo": "BUY",
       "tp": 0.0
     }
