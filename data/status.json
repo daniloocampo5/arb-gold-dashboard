@@ -1,7 +1,7 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-17T13:13:21Z",
-  "last_updated": "2026-06-17T13:13:21Z",
+  "updated_at": "2026-06-17T13:17:08Z",
+  "last_updated": "2026-06-17T13:17:08Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 190.54,
@@ -35,10 +35,10 @@
     }
   ],
   "open_position": {
-    "actual": 4332.607,
+    "actual": 4332.363,
     "entrada": 4324.492,
     "lotes": 0.01,
-    "profit": -8.12,
+    "profit": -7.87,
     "sl": 0.0,
     "ticket": 543743321,
     "tipo": "SELL",
@@ -46,42 +46,52 @@
   },
   "open_positions": [
     {
-      "actual": 4332.607,
+      "actual": 4332.363,
       "entrada": 4324.492,
       "lotes": 0.01,
-      "profit": -8.12,
+      "profit": -7.87,
       "sl": 0.0,
       "ticket": 543743321,
       "tipo": "SELL",
       "tp": 0.0
     },
     {
-      "actual": 4332.327,
+      "actual": 4332.083,
       "entrada": 4324.88,
       "lotes": 0.01,
-      "profit": 7.45,
+      "profit": 7.2,
       "sl": 0.0,
       "ticket": 544061299,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4332.327,
+      "actual": 4332.083,
       "entrada": 4332.014,
       "lotes": 0.01,
-      "profit": 0.32,
+      "profit": 0.07,
       "sl": 0.0,
       "ticket": 544076762,
       "tipo": "BUY",
       "tp": 0.0
     },
     {
-      "actual": 4332.327,
+      "actual": 4332.083,
       "entrada": 4333.655,
       "lotes": 0.01,
-      "profit": -1.33,
+      "profit": -1.58,
       "sl": 0.0,
       "ticket": 544091687,
+      "tipo": "BUY",
+      "tp": 0.0
+    },
+    {
+      "actual": 4332.083,
+      "entrada": 4331.942,
+      "lotes": 0.01,
+      "profit": 0.14,
+      "sl": 0.0,
+      "ticket": 544113010,
       "tipo": "BUY",
       "tp": 0.0
     }
