@@ -1,22 +1,65 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-17T03:41:23Z",
-  "last_updated": "2026-06-17T03:41:23Z",
+  "updated_at": "2026-06-17T03:45:12Z",
+  "last_updated": "2026-06-17T03:45:12Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 190.54,
-  "pnl_total": 0.0,
+  "pnl_total": 0,
   "pnl_pct": 0.0,
   "tunnel_url": "https://notifications-shall-springer-beijing.trycloudflare.com",
-  "trades": [],
-  "open_position": null,
-  "open_positions": [],
+  "trades": [
+    {
+      "direction": "BUY",
+      "duration_min": 292,
+      "entry_price": 4335.13,
+      "entry_time": "2026-06-16 08:00 UTC",
+      "exit_comment": "[tp 4354.608]",
+      "exit_price": 4354.61,
+      "exit_time": "2026-06-16 12:52 UTC",
+      "profit_usd": 19.48,
+      "result": "WIN",
+      "ticket": "542819225"
+    }
+  ],
+  "open_position": {
+    "actual": 4332.798,
+    "entrada": 4335.535,
+    "lotes": 0.01,
+    "profit": -2.74,
+    "sl": 4320.321,
+    "ticket": 543295097,
+    "tipo": "BUY",
+    "tp": 4366.17
+  },
+  "open_positions": [
+    {
+      "actual": 4332.798,
+      "entrada": 4335.535,
+      "lotes": 0.01,
+      "profit": -2.74,
+      "sl": 4320.321,
+      "ticket": 543295097,
+      "tipo": "BUY",
+      "tp": 4366.17
+    },
+    {
+      "actual": 4333.078,
+      "entrada": 4331.733,
+      "lotes": 0.01,
+      "profit": -1.35,
+      "sl": 0.0,
+      "ticket": 543568088,
+      "tipo": "SELL",
+      "tp": 0.0
+    }
+  ],
   "summary": {
-    "total": 0,
+    "total": 1,
     "wins": 0,
     "losses": 0,
-    "pnl": 0.0,
-    "win_rate": 0,
+    "pnl": 0,
+    "win_rate": 0.0,
     "profit_factor": 0,
     "target_wr": 45
   },
@@ -28,5 +71,5 @@
     "cooldown_h": 2,
     "lot": 0.01
   },
-  "message": "ARB-Gold activo. 0 trades. PnL: $0.0"
+  "message": "ARB-Gold activo. 1 trades. PnL: $0"
 }
