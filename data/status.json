@@ -1,12 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-19T02:43:39Z",
-  "last_updated": "2026-06-19T02:43:39Z",
+  "updated_at": "2026-06-19T02:55:11Z",
+  "last_updated": "2026-06-19T02:55:11Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 243.94,
   "pnl_total": -10.06,
   "pnl_pct": -3.96,
+  "tunnel_url": "https://notifications-shall-springer-beijing.trycloudflare.com",
   "trades": [
     {
       "direction": "BUY",
@@ -64,5 +65,5 @@
     "cooldown_h": 2,
     "lot": 0.01
   },
-  "message": "ARB-Gold. 3 trades. WR 33.3%. PnL $-10.06"
+  "message": "ARB-Gold activo. 3 trades. PnL: $-10.06"
 }
