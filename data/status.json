@@ -1,26 +1,14 @@
 {
-  "pc_online": false,
-  "updated_at": "2026-06-19T02:55:11Z",
-  "last_updated": "2026-06-19T03:02:00Z",
+  "pc_online": true,
+  "updated_at": "2026-06-19T03:25:16Z",
+  "last_updated": "2026-06-19T03:25:16Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
-  "current_balance": 243.94,
-  "pnl_total": -10.06,
-  "pnl_pct": -3.96,
+  "current_balance": 224.46,
+  "pnl_total": -29.54,
+  "pnl_pct": -11.63,
   "tunnel_url": "https://notifications-shall-springer-beijing.trycloudflare.com",
   "trades": [
-    {
-      "direction": "BUY",
-      "duration_min": 292,
-      "entry_price": 4335.13,
-      "entry_time": "2026-06-16 08:00 UTC",
-      "exit_comment": "[tp 4354.608]",
-      "exit_price": 4354.61,
-      "exit_time": "2026-06-16 12:52 UTC",
-      "profit_usd": 19.48,
-      "result": "WIN",
-      "ticket": "542819225"
-    },
     {
       "direction": "BUY",
       "duration_min": 754,
@@ -49,12 +37,12 @@
   "open_position": null,
   "open_positions": [],
   "summary": {
-    "total": 3,
-    "wins": 1,
+    "total": 2,
+    "wins": 0,
     "losses": 2,
-    "pnl": -10.06,
-    "win_rate": 33.3,
-    "profit_factor": 0.66,
+    "pnl": -29.54,
+    "win_rate": 0.0,
+    "profit_factor": 0.0,
     "target_wr": 45
   },
   "params": {
@@ -65,5 +53,5 @@
     "cooldown_h": 2,
     "lot": 0.01
   },
-  "message": "ARB-Gold activo. 3 trades. PnL: $-10.06"
+  "message": "ARB-Gold activo. 2 trades. PnL: $-29.54"
 }
