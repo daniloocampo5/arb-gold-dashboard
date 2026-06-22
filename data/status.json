@@ -1,13 +1,13 @@
 {
-  "pc_online": false,
-  "updated_at": "2026-06-22T02:43:19Z",
-  "last_updated": "2026-06-22T06:02:12Z",
+  "pc_online": true,
+  "updated_at": "2026-06-22T07:09:31Z",
+  "last_updated": "2026-06-22T07:09:31Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 243.94,
   "pnl_total": -10.06,
   "pnl_pct": -3.96,
-  "tunnel_url": "https://notifications-shall-springer-beijing.trycloudflare.com",
+  "tunnel_url": "https://spots-bestsellers-bargains-consumer.trycloudflare.com",
   "trades": [
     {
       "direction": "BUY",
@@ -65,5 +65,5 @@
     "cooldown_h": 2,
     "lot": 0.01
   },
-  "message": "Flask no responde: HTTPSConnectionPool(host='notifications-shall-springer-beijing.trycloudflare.com', port=443): Max retries exceeded with url: /trades?key=mt5nani2026&horas=200 (Caused by NameResolutionError(\"HTTPSConnection(host='notifications-shall-springer-beijing.trycloudflare.com', port=443): Failed to resolve 'notifications-shall-springer-beijing.trycloudflare.com' ([Errno 11001] getaddrinfo failed)\"))"
+  "message": "ARB-Gold activo. 3 trades. PnL: $-10.06"
 }
