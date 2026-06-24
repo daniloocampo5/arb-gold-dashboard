@@ -1,26 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-24T10:11:43Z",
-  "last_updated": "2026-06-24T10:11:43Z",
+  "updated_at": "2026-06-24T11:11:46Z",
+  "last_updated": "2026-06-24T11:11:46Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
-  "current_balance": 204.93,
-  "pnl_total": -49.07,
-  "pnl_pct": -19.32,
+  "current_balance": 185.45,
+  "pnl_total": -68.55,
+  "pnl_pct": -26.99,
   "tunnel_url": "https://spots-bestsellers-bargains-consumer.trycloudflare.com",
   "trades": [
-    {
-      "direction": "BUY",
-      "duration_min": 292,
-      "entry_price": 4335.13,
-      "entry_time": "2026-06-16 08:00 UTC",
-      "exit_comment": "[tp 4354.608]",
-      "exit_price": 4354.61,
-      "exit_time": "2026-06-16 12:52 UTC",
-      "profit_usd": 19.48,
-      "result": "WIN",
-      "ticket": "542819225"
-    },
     {
       "direction": "BUY",
       "duration_min": 754,
@@ -61,12 +49,12 @@
   "open_position": null,
   "open_positions": [],
   "summary": {
-    "total": 4,
-    "wins": 1,
+    "total": 3,
+    "wins": 0,
     "losses": 3,
-    "pnl": -49.07,
-    "win_rate": 25.0,
-    "profit_factor": 0.28,
+    "pnl": -68.55,
+    "win_rate": 0.0,
+    "profit_factor": 0.0,
     "target_wr": 45
   },
   "params": {
@@ -77,5 +65,5 @@
     "cooldown_h": 2,
     "lot": 0.01
   },
-  "message": "ARB-Gold activo. 4 trades. PnL: $-49.07"
+  "message": "ARB-Gold activo. 3 trades. PnL: $-68.55"
 }
