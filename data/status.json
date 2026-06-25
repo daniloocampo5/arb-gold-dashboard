@@ -1,6 +1,6 @@
 {
-  "pc_online": true,
-  "updated_at": "2026-06-25T16:01:15Z",
+  "pc_online": false,
+  "updated_at": "2026-06-25T16:45:23Z",
   "last_updated": "2026-06-25T16:01:15Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
@@ -192,5 +192,5 @@
     "win_rate": 0,
     "profit_factor": 0
   },
-  "message": "ARB-Gold: 4 trades $-49.07 | StochC2: 0 trades $+0.00 | PnL total: $-49.07"
+  "message": "PC detectada pero Flask server no responde. Datos anteriores conservados."
 }
