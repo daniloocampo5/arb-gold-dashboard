@@ -1,13 +1,13 @@
 {
-  "pc_online": false,
-  "updated_at": "2026-06-25T17:45:27Z",
-  "last_updated": "2026-06-25T16:01:15Z",
+  "pc_online": true,
+  "updated_at": "2026-06-26T06:31:25Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
-  "current_balance": 204.93,
-  "pnl_total": -49.07,
-  "pnl_pct": -19.32,
-  "tunnel_url": "https://rpm-depend-cities-unlikely.trycloudflare.com",
+  "current_balance": 334.29,
+  "equity": 334.29,
+  "pnl_total": -50.8,
+  "pnl_pct": -20.0,
+  "tunnel_url": "https://piece-chapters-sig-bryan.trycloudflare.com",
   "arb_gold": {
     "trades": [
       {
@@ -40,6 +40,20 @@
       },
       {
         "direction": "SELL",
+        "duration_min": 226,
+        "ea_name": "ARB-Gold",
+        "entry_price": 4331.73,
+        "entry_time": "2026-06-17 00:00 UTC",
+        "exit_comment": "Cierre remoto pa",
+        "exit_price": 4333.46,
+        "exit_time": "2026-06-17 03:46 UTC",
+        "magic": 20260613,
+        "profit_usd": -1.73,
+        "result": "LOSS",
+        "ticket": "543568088"
+      },
+      {
+        "direction": "SELL",
         "duration_min": 65,
         "ea_name": "ARB-Gold",
         "entry_price": 4247.01,
@@ -68,23 +82,14 @@
       }
     ],
     "summary": {
-      "total": 4,
+      "total": 5,
       "wins": 1,
-      "losses": 3,
-      "pnl": -49.07,
-      "win_rate": 25.0,
-      "profit_factor": 0.28,
-      "target_wr": 45
+      "losses": 4,
+      "pnl": -50.8,
+      "win_rate": 20.0,
+      "profit_factor": 0.28
     },
-    "open_position": null,
-    "params": {
-      "sl_mult": 1.5,
-      "tp_mult": 3.0,
-      "atr_period": 14,
-      "timeframe": "M15",
-      "lot": 0.02,
-      "magic": 20260613
-    }
+    "open_position": null
   },
   "stoch_c2": {
     "trades": [],
@@ -94,18 +99,21 @@
       "losses": 0,
       "pnl": 0.0,
       "win_rate": 0,
-      "profit_factor": 0,
-      "target_wr": 60
+      "profit_factor": 0
     },
-    "open_position": null,
-    "params": {
-      "sl_mult": 1.5,
-      "tp_mult": 1.2,
-      "stoch_k": 14,
-      "timeframe": "M5",
-      "lot": 0.01,
-      "magic": 20260624
-    }
+    "open_position": null
+  },
+  "ma50": {
+    "trades": [],
+    "summary": {
+      "total": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0.0,
+      "win_rate": 0,
+      "profit_factor": 0
+    },
+    "open_position": null
   },
   "trades": [
     {
@@ -138,6 +146,20 @@
     },
     {
       "direction": "SELL",
+      "duration_min": 226,
+      "ea_name": "ARB-Gold",
+      "entry_price": 4331.73,
+      "entry_time": "2026-06-17 00:00 UTC",
+      "exit_comment": "Cierre remoto pa",
+      "exit_price": 4333.46,
+      "exit_time": "2026-06-17 03:46 UTC",
+      "magic": 20260613,
+      "profit_usd": -1.73,
+      "result": "LOSS",
+      "ticket": "543568088"
+    },
+    {
+      "direction": "SELL",
       "duration_min": 65,
       "ea_name": "ARB-Gold",
       "entry_price": 4247.01,
@@ -166,31 +188,13 @@
     }
   ],
   "open_positions": [],
-  "open_position": null,
   "summary": {
-    "total": 4,
+    "total": 5,
     "wins": 1,
-    "losses": 3,
-    "pnl": -49.07,
-    "win_rate": 25.0,
-    "profit_factor": 0.28,
-    "target_wr": 50
-  },
-  "arb_summary": {
-    "total": 4,
-    "wins": 1,
-    "losses": 3,
-    "pnl": -49.07,
-    "win_rate": 25.0,
+    "losses": 4,
+    "pnl": -50.8,
+    "win_rate": 20.0,
     "profit_factor": 0.28
   },
-  "c2_summary": {
-    "total": 0,
-    "wins": 0,
-    "losses": 0,
-    "pnl": 0.0,
-    "win_rate": 0,
-    "profit_factor": 0
-  },
-  "message": "PC detectada pero Flask server no responde. Datos anteriores conservados."
+  "message": "Balance $334.29 | ARB:5 C2:0 MA50:0 | Tunnel:https://piece-chapters-sig-bryan.trycloudflare.com"
 }
