@@ -1,7 +1,7 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-26T10:45:50Z",
-  "last_updated": "2026-06-26T10:45:50Z",
+  "updated_at": "2026-06-26T11:45:57Z",
+  "last_updated": "2026-06-26T11:45:57Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 203.2,
@@ -193,8 +193,32 @@
       "ticket": "549396359"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4047.185,
+      "ea_name": "MA50-Pullback",
+      "entrada": 4046.891,
+      "lotes": 0.01,
+      "magic": 550105,
+      "profit": 0.3,
+      "sl": 4037.758,
+      "ticket": 553943177,
+      "tipo": "BUY",
+      "tp": 4053.741
+    }
+  ],
+  "open_position": {
+    "actual": 4047.185,
+    "ea_name": "MA50-Pullback",
+    "entrada": 4046.891,
+    "lotes": 0.01,
+    "magic": 550105,
+    "profit": 0.3,
+    "sl": 4037.758,
+    "ticket": 553943177,
+    "tipo": "BUY",
+    "tp": 4053.741
+  },
   "summary": {
     "total": 5,
     "wins": 1,
