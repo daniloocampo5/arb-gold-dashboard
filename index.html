@@ -230,6 +230,21 @@ tr:last-child td{border:none}
 .chip.c2{background:#110028;color:var(--c2);border:1px solid #220050}
 .chip.ma50{background:#001a18;color:var(--ma50);border:1px solid #003030}
 
+/* ── Botón actualizar ── */
+.refresh-btn{
+  display:flex;align-items:center;gap:7px;
+  padding:8px 16px;border-radius:20px;border:1px solid var(--gold);
+  background:transparent;color:var(--gold2);font-size:12px;font-weight:700;
+  cursor:pointer;transition:all .2s;white-space:nowrap;
+}
+.refresh-btn:hover{background:#1a1000;border-color:var(--gold2)}
+.refresh-btn:disabled{opacity:.5;cursor:not-allowed}
+.refresh-btn.loading .ri{animation:spin .7s linear infinite}
+.refresh-btn.ok{border-color:var(--green);color:var(--green)}
+.refresh-btn.err{border-color:var(--red);color:var(--red)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ri{display:inline-block;font-size:14px}
+
 /* ══ FOOTER ════════════════════════════════════════════════════════ */
 .footer{text-align:center;color:var(--dim);font-size:10px;margin-top:24px;
   padding-top:14px;border-top:1px solid var(--border)}
@@ -245,6 +260,9 @@ tr:last-child td{border:none}
   </div>
   <div class="header-right">
     <span class="badge" id="badge">...</span>
+    <button class="refresh-btn" id="refresh-btn" onclick="refreshLive()">
+      <span class="ri">⟳</span> Actualizar
+    </button>
     <span class="updated" id="updated-at">-</span>
   </div>
 </div>
@@ -485,7 +503,9 @@ tr:last-child td{border:none}
 </div>
 
 <script>
-const STATUS_URL = 'data/status.json';
+const STATUS_URL  = 'data/status.json';
+const FLASK_KEY   = 'mt5nani2026';
+const BASE_BAL    = 254;
 
 // ── Helpers ───────────────────────────────────────────────────────
 const fp = v => (v >= 0 ? '+' : '') + '$' + Math.abs(v).toFixed(2);
@@ -639,77 +659,169 @@ function renderHist(trades) {
   }).join('');
 }
 
-// ── Carga principal ───────────────────────────────────────────────
+// ── Carga principal desde GitHub ──────────────────────────────────
 async function load() {
   try {
     const r = await fetch(STATUS_URL + '?t=' + Date.now());
-    const d = await r.json();
-
-    // Badge + timestamp
-    const badge = document.getElementById('badge');
-    badge.textContent = d.pc_online ? '🟢 Online' : '🔴 Offline';
-    badge.className   = 'badge ' + (d.pc_online ? 'on' : 'off');
-    if (d.updated_at) {
-      const ua = new Date(d.updated_at);
-      document.getElementById('updated-at').textContent =
-        'Act: ' + ua.toLocaleString('es-CO',{timeZone:'America/Bogota',hour12:false}).slice(0,16) + ' (Col)';
-    }
-
-    // ── General ─────────────────────────────────────────────
-    const all    = d.trades || [];
-    const today  = todayUTC();
-    const todayT = all.filter(t => (t.entry_time||'').startsWith(today));
-    const pnlHoy = todayT.reduce((a,t) => a+(t.profit_usd||0), 0);
-
-    const openArr    = d.open_positions || [];
-    const unrealized = openArr.reduce((a,p) => a+(p.profit||0), 0);
-    const bal        = d.current_balance || d.start_balance || 254;
-    const equity     = bal + unrealized;
-    const pnlAcum    = d.pnl_total || 0;
-    const pnlPct     = d.pnl_pct   || (d.start_balance ? Math.round(pnlAcum/d.start_balance*10000)/100 : 0);
-    const allStats   = d.summary   || calcStats(all);
-
-    document.getElementById('g-balance').textContent  = '$' + bal.toFixed(2);
-    document.getElementById('g-equity').textContent   = 'Equity $' + equity.toFixed(2);
-
-    const phEl = document.getElementById('g-pnl-hoy');
-    phEl.textContent = fp(pnlHoy);
-    phEl.className   = 'gval';
-    document.getElementById('gc-pnl-hoy').className   = 'gcard ' + (pnlHoy >= 0 ? 'g' : 'r');
-    document.getElementById('g-pnl-hoy-n').textContent= todayT.length + ' trades hoy';
-
-    const paEl = document.getElementById('g-pnl-acum');
-    paEl.textContent = fp(pnlAcum);
-    paEl.className   = 'gval';
-    document.getElementById('gc-pnl-acum').className  = 'gcard ' + (pnlAcum >= 0 ? 'g' : 'r');
-    document.getElementById('g-pnl-pct').textContent  = (pnlPct >= 0 ? '+' : '') + pnlPct + '% vs inicio';
-
-    document.getElementById('g-trades-hoy').textContent  = todayT.length;
-    document.getElementById('g-trades-total').textContent = 'Total acumulado: ' + (allStats.total||0);
-
-    // ── Estrategias ─────────────────────────────────────────
-    const arbData  = d.arb_gold || {};
-    const arbOpen  = openArr.find(p => p.magic === 20260613) || arbData.open_position || null;
-    renderS('arb', arbData, arbOpen);
-
-    const c2Data   = d.stoch_c2 || {};
-    const c2Open   = openArr.find(p => p.magic === 20260624) || c2Data.open_position || null;
-    renderS('c2', c2Data, c2Open);
-
-    const ma50Raw    = d.ma50 || {};
-    const ma50Trades = ma50Raw.trades || all.filter(t => t.magic === 550105);
-    const ma50Data   = {trades: ma50Trades, summary: ma50Raw.summary || calcStats(ma50Trades)};
-    const ma50Open   = openArr.find(p => p.magic === 550105) || ma50Raw.open_position || null;
-    renderS('ma50', ma50Data, ma50Open);
-
-    // ── Historial ────────────────────────────────────────────
-    renderHist(all);
-
+    _data = await r.json();
+    render(_data);
   } catch(e) {
     console.error(e);
     document.getElementById('badge').textContent = '⚠️ Error';
     document.getElementById('badge').className   = 'badge off';
   }
+}
+
+// ── Convertir respuesta Flask → formato status.json ───────────────
+function flaskToStatus(f) {
+  const all   = f.closed_trades || [];
+  const pnl   = Math.round(all.reduce((a,t) => a+(t.profit_usd||0), 0)*100)/100;
+  const bal   = f.balance || (BASE_BAL + pnl);
+  const eq    = f.equity  || bal;
+  return {
+    pc_online:       true,
+    current_balance: bal,
+    equity:          eq,
+    pnl_total:       pnl,
+    pnl_pct:         Math.round(pnl / BASE_BAL * 10000) / 100,
+    trades:          all,
+    open_positions:  f.open_positions || [],
+    summary:         f.summary       || calcStats(all),
+    arb_gold: {
+      trades:        f.arb_gold_trades || [],
+      summary:       f.arb_summary    || calcStats(f.arb_gold_trades||[]),
+      open_position: (f.arb_open||[])[0] || null,
+    },
+    stoch_c2: {
+      trades:        f.c2_trades   || [],
+      summary:       f.c2_summary  || calcStats(f.c2_trades||[]),
+      open_position: (f.c2_open||[])[0] || null,
+    },
+    ma50: {
+      trades:        f.ma50_trades  || [],
+      summary:       f.ma50_summary || calcStats(f.ma50_trades||[]),
+      open_position: (f.ma50_open||[])[0] || null,
+    },
+    updated_at: new Date().toISOString(),
+  };
+}
+
+// ── Actualizar directo al Flask via Cloudflare tunnel ─────────────
+async function refreshLive() {
+  const btn = document.getElementById('refresh-btn');
+  btn.disabled = true;
+  btn.classList.add('loading');
+  btn.innerHTML = '<span class="ri">⟳</span> Actualizando...';
+
+  const tunnel = _data && _data.tunnel_url;
+  let ok = false;
+
+  if (tunnel) {
+    try {
+      const r = await fetch(
+        `${tunnel}/trades?key=${FLASK_KEY}&horas=2000`,
+        { signal: AbortSignal.timeout(15000) }
+      );
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const live = await r.json();
+      if (!live.ok) throw new Error(live.mensaje || 'Flask error');
+
+      _data = { ..._data, ...flaskToStatus(live), tunnel_url: tunnel };
+      render(_data);
+      ok = true;
+    } catch(e) {
+      console.warn('Flask directo falló:', e.message, '— usando GitHub fallback');
+    }
+  }
+
+  if (!ok) {
+    // Fallback: re-leer status.json de GitHub
+    try {
+      const r = await fetch(STATUS_URL + '?t=' + Date.now());
+      _data = await r.json();
+      render(_data);
+      ok = true;
+    } catch(e) {
+      console.error('Fallback GitHub también falló:', e);
+    }
+  }
+
+  btn.classList.remove('loading');
+  if (ok) {
+    btn.classList.add('ok');
+    btn.innerHTML = '<span class="ri">✓</span> Actualizado';
+    setTimeout(() => {
+      btn.classList.remove('ok');
+      btn.innerHTML = '<span class="ri">⟳</span> Actualizar';
+      btn.disabled = false;
+    }, 2500);
+  } else {
+    btn.classList.add('err');
+    btn.innerHTML = '<span class="ri">✗</span> Sin conexión';
+    setTimeout(() => {
+      btn.classList.remove('err');
+      btn.innerHTML = '<span class="ri">⟳</span> Actualizar';
+      btn.disabled = false;
+    }, 3000);
+  }
+}
+
+// ── Separar render del fetch para poder reusar ────────────────────
+function render(d) {
+  // Badge
+  const badge = document.getElementById('badge');
+  badge.textContent = d.pc_online ? '🟢 Online' : '🔴 Offline';
+  badge.className   = 'badge ' + (d.pc_online ? 'on' : 'off');
+  if (d.updated_at) {
+    const ua = new Date(d.updated_at);
+    document.getElementById('updated-at').textContent =
+      'Act: ' + ua.toLocaleString('es-CO',{timeZone:'America/Bogota',hour12:false}).slice(0,16) + ' (Col)';
+  }
+  const all    = d.trades || [];
+  const today  = todayUTC();
+  const todayT = all.filter(t => (t.entry_time||'').startsWith(today));
+  const pnlHoy = todayT.reduce((a,t) => a+(t.profit_usd||0), 0);
+  const openArr    = d.open_positions || [];
+  const unrealized = openArr.reduce((a,p) => a+(p.profit||0), 0);
+  const bal     = d.current_balance || d.start_balance || BASE_BAL;
+  const equity  = d.equity || (bal + unrealized);
+  const pnlAcum = d.pnl_total || 0;
+  const pnlPct  = d.pnl_pct   || (Math.round(pnlAcum/BASE_BAL*10000)/100);
+  const allStats= d.summary   || calcStats(all);
+
+  document.getElementById('g-balance').textContent  = '$' + bal.toFixed(2);
+  document.getElementById('g-equity').textContent   = 'Equity $' + equity.toFixed(2);
+
+  const phEl = document.getElementById('g-pnl-hoy');
+  phEl.textContent = fp(pnlHoy);
+  phEl.className   = 'gval';
+  document.getElementById('gc-pnl-hoy').className   = 'gcard ' + (pnlHoy >= 0 ? 'g' : 'r');
+  document.getElementById('g-pnl-hoy-n').textContent= todayT.length + ' trades hoy';
+
+  const paEl = document.getElementById('g-pnl-acum');
+  paEl.textContent = fp(pnlAcum);
+  paEl.className   = 'gval';
+  document.getElementById('gc-pnl-acum').className  = 'gcard ' + (pnlAcum >= 0 ? 'g' : 'r');
+  document.getElementById('g-pnl-pct').textContent  = (pnlPct >= 0 ? '+' : '') + pnlPct + '% vs inicio';
+
+  document.getElementById('g-trades-hoy').textContent   = todayT.length;
+  document.getElementById('g-trades-total').textContent = 'Total acumulado: ' + (allStats.total||0);
+
+  const arbData  = d.arb_gold || {};
+  const arbOpen  = openArr.find(p => p.magic === 20260613) || arbData.open_position || null;
+  renderS('arb', arbData, arbOpen);
+
+  const c2Data   = d.stoch_c2 || {};
+  const c2Open   = openArr.find(p => p.magic === 20260624) || c2Data.open_position || null;
+  renderS('c2', c2Data, c2Open);
+
+  const ma50Raw    = d.ma50 || {};
+  const ma50Trades = ma50Raw.trades || all.filter(t => t.magic === 550105);
+  const ma50Data   = {trades: ma50Trades, summary: ma50Raw.summary || calcStats(ma50Trades)};
+  const ma50Open   = openArr.find(p => p.magic === 550105) || ma50Raw.open_position || null;
+  renderS('ma50', ma50Data, ma50Open);
+
+  renderHist(all);
 }
 
 // ARB abierto por defecto
