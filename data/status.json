@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-26T11:45:57Z",
-  "last_updated": "2026-06-26T11:45:57Z",
+  "updated_at": "2026-06-26T12:46:04Z",
+  "last_updated": "2026-06-26T12:46:04Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
-  "current_balance": 203.2,
-  "pnl_total": -50.8,
-  "pnl_pct": -20.0,
+  "current_balance": 194.07,
+  "pnl_total": -59.93,
+  "pnl_pct": -23.59,
   "tunnel_url": "https://piece-chapters-sig-bryan.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -191,41 +191,31 @@
       "profit_usd": -39.01,
       "result": "LOSS",
       "ticket": "549396359"
-    }
-  ],
-  "open_positions": [
+    },
     {
-      "actual": 4047.185,
+      "direction": "BUY",
+      "duration_min": 57,
       "ea_name": "MA50-Pullback",
-      "entrada": 4046.891,
-      "lotes": 0.01,
+      "entry_price": 4046.89,
+      "entry_time": "2026-06-26 11:45 UTC",
+      "exit_comment": "[sl 4037.758]",
+      "exit_price": 4037.76,
+      "exit_time": "2026-06-26 12:42 UTC",
       "magic": 550105,
-      "profit": 0.3,
-      "sl": 4037.758,
-      "ticket": 553943177,
-      "tipo": "BUY",
-      "tp": 4053.741
+      "profit_usd": -9.13,
+      "result": "LOSS",
+      "ticket": "553943177"
     }
   ],
-  "open_position": {
-    "actual": 4047.185,
-    "ea_name": "MA50-Pullback",
-    "entrada": 4046.891,
-    "lotes": 0.01,
-    "magic": 550105,
-    "profit": 0.3,
-    "sl": 4037.758,
-    "ticket": 553943177,
-    "tipo": "BUY",
-    "tp": 4053.741
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 5,
+    "total": 6,
     "wins": 1,
-    "losses": 4,
-    "pnl": -50.8,
-    "win_rate": 20.0,
-    "profit_factor": 0.28,
+    "losses": 5,
+    "pnl": -59.93,
+    "win_rate": 16.7,
+    "profit_factor": 0.25,
     "target_wr": 50
   },
   "arb_summary": {
@@ -244,5 +234,5 @@
     "win_rate": 0,
     "profit_factor": 0
   },
-  "message": "ARB-Gold: 5 trades $-50.80 | StochC2: 0 trades $+0.00 | PnL total: $-50.8"
+  "message": "ARB-Gold: 5 trades $-50.80 | StochC2: 0 trades $+0.00 | PnL total: $-59.93"
 }
