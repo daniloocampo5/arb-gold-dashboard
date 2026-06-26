@@ -1,10 +1,10 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-26T06:31:25Z",
+  "updated_at": "2026-06-26T07:45:32Z",
+  "last_updated": "2026-06-26T07:45:32Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
-  "current_balance": 334.29,
-  "equity": 334.29,
+  "current_balance": 203.2,
   "pnl_total": -50.8,
   "pnl_pct": -20.0,
   "tunnel_url": "https://piece-chapters-sig-bryan.trycloudflare.com",
@@ -87,9 +87,18 @@
       "losses": 4,
       "pnl": -50.8,
       "win_rate": 20.0,
-      "profit_factor": 0.28
+      "profit_factor": 0.28,
+      "target_wr": 45
     },
-    "open_position": null
+    "open_position": null,
+    "params": {
+      "sl_mult": 1.5,
+      "tp_mult": 3.0,
+      "atr_period": 14,
+      "timeframe": "M15",
+      "lot": 0.02,
+      "magic": 20260613
+    }
   },
   "stoch_c2": {
     "trades": [],
@@ -99,21 +108,18 @@
       "losses": 0,
       "pnl": 0.0,
       "win_rate": 0,
-      "profit_factor": 0
+      "profit_factor": 0,
+      "target_wr": 60
     },
-    "open_position": null
-  },
-  "ma50": {
-    "trades": [],
-    "summary": {
-      "total": 0,
-      "wins": 0,
-      "losses": 0,
-      "pnl": 0.0,
-      "win_rate": 0,
-      "profit_factor": 0
-    },
-    "open_position": null
+    "open_position": null,
+    "params": {
+      "sl_mult": 1.5,
+      "tp_mult": 1.2,
+      "stoch_k": 14,
+      "timeframe": "M5",
+      "lot": 0.01,
+      "magic": 20260624
+    }
   },
   "trades": [
     {
@@ -188,7 +194,17 @@
     }
   ],
   "open_positions": [],
+  "open_position": null,
   "summary": {
+    "total": 5,
+    "wins": 1,
+    "losses": 4,
+    "pnl": -50.8,
+    "win_rate": 20.0,
+    "profit_factor": 0.28,
+    "target_wr": 50
+  },
+  "arb_summary": {
     "total": 5,
     "wins": 1,
     "losses": 4,
@@ -196,5 +212,13 @@
     "win_rate": 20.0,
     "profit_factor": 0.28
   },
-  "message": "Balance $334.29 | ARB:5 C2:0 MA50:0 | Tunnel:https://piece-chapters-sig-bryan.trycloudflare.com"
+  "c2_summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "win_rate": 0,
+    "profit_factor": 0
+  },
+  "message": "ARB-Gold: 5 trades $-50.80 | StochC2: 0 trades $+0.00 | PnL total: $-50.8"
 }
