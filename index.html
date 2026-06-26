@@ -3,272 +3,662 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Trading Dashboard — Exness Demo</title>
+<title>DANILO O. | TRADING DESK</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:#080d1a;color:#e2e8f0;min-height:100vh;padding:16px}
-.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px}
-.title{font-size:22px;font-weight:700;color:#f8fafc}
-.title span{color:#94a3b8;font-size:13px;display:block;font-weight:400}
-.badge{padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}
-.badge.on{background:#052e16;color:#4ade80;border:1px solid #166534}
-.badge.off{background:#1c1917;color:#f87171;border:1px solid #7f1d1d}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:16px}
-.card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:16px}
-.card .label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
-.card .value{font-size:24px;font-weight:700;color:#f8fafc}
-.card .sub{font-size:12px;color:#94a3b8;margin-top:4px}
-.card.green{border-color:#166534}.card.green .value{color:#4ade80}
-.card.red{border-color:#7f1d1d}.card.red .value{color:#f87171}
-.card.yellow{border-color:#78350f}.card.yellow .value{color:#fbbf24}
-.card.blue{border-color:#1d4ed8}.card.blue .value{color:#60a5fa}
-.section{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:16px;margin-bottom:16px}
-.section h3{font-size:13px;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
-.ea-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
-@media(max-width:600px){.ea-grid{grid-template-columns:1fr}}
-.ea-card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
-.ea-card.arb{border-color:#1d4ed8}
-.ea-card.c2{border-color:#7c3aed}
-.ea-title{font-size:15px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.ea-badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}
-.ea-badge.m15{background:#1e3a5f;color:#60a5fa}
-.ea-badge.m5{background:#2d1b69;color:#a78bfa}
-.stat-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #1e293b;font-size:13px}
-.stat-row:last-child{border:none}
-.stat-row .lbl{color:#94a3b8}
-.stat-row .val{font-weight:600;color:#e2e8f0}
-.val.green{color:#4ade80}.val.red{color:#f87171}.val.yellow{color:#fbbf24}
-.wr-bar{background:#1e293b;border-radius:4px;height:6px;margin-top:10px;overflow:hidden}
-.wr-fill{height:100%;border-radius:4px;transition:width .6s ease}
-.pos-card{background:#080d1a;border-radius:8px;padding:12px;margin-bottom:8px}
-.pos-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.pos-ea{font-size:11px;font-weight:600;padding:2px 8px;border-radius:8px}
-.pos-ea.arb{background:#1e3a5f;color:#60a5fa}
-.pos-ea.c2{background:#2d1b69;color:#a78bfa}
-.pos-type{font-size:14px;font-weight:700}
-.pos-type.buy{color:#4ade80}.pos-type.sell{color:#f87171}
-.pos-row{display:flex;justify-content:space-between;font-size:12px;color:#94a3b8;padding:2px 0}
-.pos-profit{font-size:18px;font-weight:700;text-align:right;margin-top:6px}
-.no-pos{color:#475569;font-size:14px;text-align:center;padding:16px}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th{text-align:left;padding:8px 8px;color:#475569;font-weight:500;border-bottom:1px solid #1e293b}
-td{padding:8px 8px;border-bottom:1px solid #0f172a;color:#cbd5e1;vertical-align:middle}
+
+:root{
+  --bg:       #060503;
+  --surface:  #0d0b07;
+  --surface2: #141208;
+  --border:   #211e14;
+  --border2:  #2e2918;
+  --gold:     #c9991a;
+  --gold2:    #f0c040;
+  --gold3:    #ffe880;
+  --green:    #00c878;
+  --red:      #ff4060;
+  --text:     #e8dfc8;
+  --muted:    #7a6e58;
+  --muted2:   #4a4535;
+  --arb:      #c9991a;
+  --c2:       #9f7aea;
+  --ma50:     #06c0c0;
+}
+
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:16px 12px 32px}
+
+/* ── HEADER ── */
+.header{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  margin-bottom:24px;padding-bottom:18px;
+  border-bottom:1px solid var(--border);
+  flex-wrap:wrap;gap:12px;
+}
+.title-block{}
+.title{
+  font-size:clamp(22px,5vw,36px);font-weight:900;letter-spacing:1px;
+  background:linear-gradient(135deg,var(--gold2) 0%,var(--gold3) 40%,var(--gold) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1.1;
+}
+.subtitle{font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:.5px}
+.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.badge{padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.5px}
+.badge.on{background:#062010;color:var(--green);border:1px solid #0a4025}
+.badge.off{background:#1a0610;color:var(--red);border:1px solid #4a0020}
+.updated{font-size:10px;color:var(--muted);text-align:right}
+
+/* ── GENERAL CARDS ── */
+.general{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:10px;margin-bottom:24px;
+}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:10px;
+  padding:14px 12px;position:relative;overflow:hidden;
+}
+.card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--gold);opacity:.35;
+}
+.card.green-card::before{background:var(--green)}
+.card.red-card::before{background:var(--red)}
+.card.blue-card::before{background:#4a9cf5}
+.card .lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.card .val{font-size:26px;font-weight:800;color:var(--gold2);line-height:1}
+.card.green-card .val{color:var(--green)}
+.card.red-card .val{color:var(--red)}
+.card.blue-card .val{color:#4a9cf5}
+.card .sub{font-size:11px;color:var(--muted);margin-top:5px}
+
+/* ── ACCORDION BUTTONS ── */
+.strategy-tabs{display:flex;gap:8px;margin-bottom:2px;flex-wrap:wrap}
+.stab{
+  flex:1;min-width:100px;
+  padding:13px 10px;border-radius:10px 10px 0 0;
+  border:1px solid var(--border2);border-bottom:none;
+  background:var(--surface);cursor:pointer;
+  font-size:13px;font-weight:700;letter-spacing:.4px;
+  color:var(--muted);text-align:center;
+  transition:all .2s ease;
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+}
+.stab:hover{background:var(--surface2)}
+.stab .stab-name{font-size:13px;font-weight:700}
+.stab .stab-tf{font-size:10px;font-weight:500;padding:2px 7px;border-radius:8px;background:var(--border2)}
+.stab .stab-pnl{font-size:12px;font-weight:700}
+
+.stab.active-arb{background:#160e00;border-color:var(--arb);color:var(--arb)}
+.stab.active-arb .stab-tf{background:#2a1c00;color:var(--arb)}
+.stab.active-c2{background:#0f0818;border-color:var(--c2);color:var(--c2)}
+.stab.active-c2 .stab-tf{background:#1e0f30;color:var(--c2)}
+.stab.active-ma50{background:#001818;border-color:var(--ma50);color:var(--ma50)}
+.stab.active-ma50 .stab-tf{background:#00282a;color:var(--ma50)}
+
+/* ── STRATEGY PANELS ── */
+.spanel{
+  background:var(--surface);border:1px solid var(--border2);
+  border-radius:0 0 10px 10px;padding:16px;margin-bottom:16px;
+  display:none;
+}
+.spanel.open{display:block}
+
+.spanel-arb{border-color:var(--arb)}
+.spanel-c2{border-color:var(--c2)}
+.spanel-ma50{border-color:var(--ma50)}
+
+.stats-row{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
+  gap:8px;margin-bottom:14px;
+}
+.stat-box{
+  background:var(--surface2);border-radius:8px;padding:10px;
+  border:1px solid var(--border);
+}
+.stat-box .sl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:3px}
+.stat-box .sv{font-size:20px;font-weight:800;color:var(--text)}
+.sv.g{color:var(--green)}.sv.r{color:var(--red)}.sv.gold{color:var(--gold2)}
+
+.wr-bar{background:var(--border);border-radius:4px;height:5px;overflow:hidden;margin-top:6px}
+.wr-fill{height:100%;border-radius:4px;transition:width .7s ease}
+
+.params-row{
+  display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;
+}
+.param-tag{
+  font-size:10px;padding:3px 9px;border-radius:12px;
+  background:var(--surface2);border:1px solid var(--border);
+  color:var(--muted);
+}
+
+.pos-card{
+  background:var(--bg);border-radius:8px;padding:11px 13px;
+  border:1px solid var(--border);margin-bottom:10px;
+}
+.pos-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.pos-dir{font-size:15px;font-weight:800}
+.pos-dir.buy{color:var(--green)}.pos-dir.sell{color:var(--red)}
+.pos-p{font-size:11px;color:var(--muted)}
+.pos-details{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px}
+.pos-d{font-size:11px;color:var(--muted)}
+.pos-d span{color:var(--text);font-weight:600}
+.pos-profit{
+  font-size:22px;font-weight:800;text-align:right;margin-top:8px;
+}
+
+.no-data{font-size:13px;color:var(--muted2);text-align:center;padding:16px}
+
+/* ── MINI TRADES TABLE ── */
+.mini-title{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px}
+.mini-table{width:100%;border-collapse:collapse;font-size:11px}
+.mini-table th{color:var(--muted2);font-weight:500;padding:4px 6px;text-align:left;border-bottom:1px solid var(--border)}
+.mini-table td{padding:5px 6px;border-bottom:1px solid var(--surface2);color:var(--muted)}
+.mini-table tr:last-child td{border:none}
+.w{color:var(--green);font-weight:700}.l{color:var(--red);font-weight:700}
+
+/* ── FULL HISTORY ACCORDION ── */
+.hist-toggle{
+  width:100%;padding:13px 16px;background:var(--surface);
+  border:1px solid var(--border2);border-radius:10px;
+  color:var(--muted);font-size:13px;font-weight:600;
+  cursor:pointer;text-align:left;display:flex;
+  justify-content:space-between;align-items:center;
+  transition:background .2s;margin-bottom:2px;
+}
+.hist-toggle:hover{background:var(--surface2)}
+.hist-toggle.open-hist{color:var(--gold2);border-color:var(--gold);border-radius:10px 10px 0 0}
+.hist-arrow{font-size:16px;transition:transform .2s}
+.hist-toggle.open-hist .hist-arrow{transform:rotate(180deg)}
+
+.hist-panel{
+  background:var(--surface);border:1px solid var(--gold);
+  border-top:none;border-radius:0 0 10px 10px;
+  padding:0;overflow:hidden;max-height:0;
+  transition:max-height .4s ease;
+}
+.hist-panel.open{max-height:2000px}
+.hist-inner{padding:14px;overflow-x:auto}
+
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{text-align:left;padding:7px 8px;color:var(--muted2);font-weight:500;border-bottom:1px solid var(--border)}
+td{padding:6px 8px;border-bottom:1px solid var(--surface2);color:var(--muted);vertical-align:middle}
 tr:last-child td{border:none}
-.win{color:#4ade80;font-weight:600}.loss{color:#f87171;font-weight:600}
-.ea-tag{font-size:10px;padding:1px 7px;border-radius:8px;font-weight:600}
-.ea-tag.arb{background:#1e3a5f;color:#60a5fa}
-.ea-tag.c2{background:#2d1b69;color:#a78bfa}
-.footer{text-align:center;color:#334155;font-size:12px;margin-top:20px;padding-bottom:20px}
-.updated{font-size:11px;color:#475569;margin-top:4px}
+.ea-chip{
+  font-size:9px;padding:2px 7px;border-radius:8px;font-weight:700;white-space:nowrap;
+}
+.ea-chip.arb{background:#1a1000;color:var(--arb);border:1px solid #2a1c00}
+.ea-chip.c2{background:#0d0020;color:var(--c2);border:1px solid #1e0f30}
+.ea-chip.ma50{background:#001a1a;color:var(--ma50);border:1px solid #002a28}
+
+/* ── FOOTER ── */
+.footer{text-align:center;color:var(--muted2);font-size:11px;margin-top:24px;padding-top:16px;border-top:1px solid var(--border)}
+
+@media(max-width:480px){
+  .stab{padding:10px 6px}
+  .stab .stab-name{font-size:11px}
+  .title{font-size:24px}
+}
 </style>
 </head>
 <body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════ -->
 <div class="header">
-  <div class="title">
-    Trading Dashboard
-    <span id="subtitle">Exness Demo — ARB-Gold + StochC2</span>
+  <div class="title-block">
+    <div class="title">DANILO O. | TRADING DESK</div>
+    <div class="subtitle">Exness Demo · XAUUSDm · ARB Gold + StochC2 + MA50 Pullback</div>
   </div>
-  <span class="badge" id="badge">...</span>
-</div>
-
-<!-- Portfolio combinado -->
-<div class="cards" id="portfolio-cards">
-  <div class="card" id="c-balance"><div class="label">Balance</div><div class="value" id="balance">-</div><div class="sub" id="pnl-pct">-</div></div>
-  <div class="card" id="c-pnl"><div class="label">PnL Total</div><div class="value" id="pnl">-</div><div class="sub" id="pnl-sub">-</div></div>
-  <div class="card" id="c-wr"><div class="label">Win Rate</div><div class="value" id="wr">-</div><div class="sub" id="wr-sub">-</div></div>
-  <div class="card" id="c-trades"><div class="label">Trades</div><div class="value" id="total-trades">-</div><div class="sub" id="trades-sub">-</div></div>
-</div>
-
-<!-- Dos EAs -->
-<div class="ea-grid">
-  <!-- ARB-Gold -->
-  <div class="ea-card arb">
-    <div class="ea-title">📊 ARB-Gold <span class="ea-badge m15">M15</span></div>
-    <div class="stat-row"><span class="lbl">Trades</span><span class="val" id="arb-trades">-</span></div>
-    <div class="stat-row"><span class="lbl">Win Rate</span><span class="val" id="arb-wr">-</span></div>
-    <div class="stat-row"><span class="lbl">PnL</span><span class="val" id="arb-pnl">-</span></div>
-    <div class="stat-row"><span class="lbl">Profit Factor</span><span class="val" id="arb-pf">-</span></div>
-    <div class="stat-row"><span class="lbl">SL/TP</span><span class="val">1.5× / 3.0× ATR14</span></div>
-    <div class="wr-bar"><div class="wr-fill" id="arb-wr-fill" style="background:#3b82f6;width:0%"></div></div>
-  </div>
-  <!-- StochC2 -->
-  <div class="ea-card c2">
-    <div class="ea-title">🔄 StochC2 <span class="ea-badge m5">M5</span></div>
-    <div class="stat-row"><span class="lbl">Trades</span><span class="val" id="c2-trades">-</span></div>
-    <div class="stat-row"><span class="lbl">Win Rate</span><span class="val" id="c2-wr">-</span></div>
-    <div class="stat-row"><span class="lbl">PnL</span><span class="val" id="c2-pnl">-</span></div>
-    <div class="stat-row"><span class="lbl">Profit Factor</span><span class="val" id="c2-pf">-</span></div>
-    <div class="stat-row"><span class="lbl">SL/TP</span><span class="val">1.5× / 1.2× ATR8</span></div>
-    <div class="wr-bar"><div class="wr-fill" id="c2-wr-fill" style="background:#8b5cf6;width:0%"></div></div>
+  <div class="header-right">
+    <span class="badge" id="badge">...</span>
+    <span class="updated" id="updated-at">-</span>
   </div>
 </div>
 
-<!-- Posiciones abiertas -->
-<div class="section">
-  <h3>Posiciones abiertas</h3>
-  <div id="open-pos"><div class="no-pos">Sin posiciones abiertas</div></div>
+<!-- ══ GENERAL ACCOUNT ══════════════════════════════════════════════ -->
+<div class="general">
+  <div class="card" id="c-balance">
+    <div class="lbl">Balance</div>
+    <div class="val" id="g-balance">-</div>
+    <div class="sub" id="g-equity-sub">Equity -</div>
+  </div>
+  <div class="card" id="c-pnl-acum">
+    <div class="lbl">P&amp;L Acumulado</div>
+    <div class="val" id="g-pnl-acum">-</div>
+    <div class="sub" id="g-pnl-pct">-</div>
+  </div>
+  <div class="card" id="c-pnl-hoy">
+    <div class="lbl">P&amp;L Hoy</div>
+    <div class="val" id="g-pnl-hoy">-</div>
+    <div class="sub" id="g-pnl-hoy-n">0 trades cerrados</div>
+  </div>
+  <div class="card blue-card">
+    <div class="lbl">Trades Hoy</div>
+    <div class="val" id="g-trades-hoy">-</div>
+    <div class="sub" id="g-trades-total">Total acumulado: -</div>
+  </div>
 </div>
 
-<!-- Historial de trades -->
-<div class="section">
-  <h3>Historial de trades</h3>
+<!-- ══ STRATEGY TABS ════════════════════════════════════════════════ -->
+<div class="strategy-tabs">
+  <button class="stab" id="btn-arb" onclick="toggle('arb')">
+    <span class="stab-name">◆ ARB GOLD</span>
+    <span class="stab-tf">M15</span>
+    <span class="stab-pnl" id="tab-arb-pnl">-</span>
+  </button>
+  <button class="stab" id="btn-c2" onclick="toggle('c2')">
+    <span class="stab-name">◆ STOCHC2</span>
+    <span class="stab-tf">M5</span>
+    <span class="stab-pnl" id="tab-c2-pnl">-</span>
+  </button>
+  <button class="stab" id="btn-ma50" onclick="toggle('ma50')">
+    <span class="stab-name">◆ MA50 PULLBACK</span>
+    <span class="stab-tf">M5</span>
+    <span class="stab-pnl" id="tab-ma50-pnl">-</span>
+  </button>
+</div>
+
+<!-- ── ARB GOLD PANEL ─────────────────────────────────────────────── -->
+<div class="spanel spanel-arb" id="panel-arb">
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="sl">Win Rate</div>
+      <div class="sv gold" id="arb-wr">-</div>
+      <div class="wr-bar"><div class="wr-fill" id="arb-wr-fill" style="background:var(--arb);width:0%"></div></div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">P&amp;L Total</div>
+      <div class="sv" id="arb-pnl">-</div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">Profit Factor</div>
+      <div class="sv gold" id="arb-pf">-</div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">Trades</div>
+      <div class="sv" id="arb-trades">-</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:2px" id="arb-wl">-</div>
+    </div>
+  </div>
+  <div class="params-row">
+    <span class="param-tag">SL 1.5×ATR14</span>
+    <span class="param-tag">TP 3.0×ATR14</span>
+    <span class="param-tag">0.02 lot</span>
+    <span class="param-tag">Magic 20260613</span>
+    <span class="param-tag">Asia Range Breakout</span>
+  </div>
+  <div id="arb-pos"></div>
+  <div class="mini-title">Últimos trades</div>
   <div style="overflow-x:auto">
-    <table id="trade-table">
+    <table class="mini-table">
+      <thead><tr><th>Fecha</th><th>Dir</th><th>Entrada</th><th>Salida</th><th>Dur</th><th>P&amp;L</th></tr></thead>
+      <tbody id="arb-mini-trades"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── STOCHC2 PANEL ──────────────────────────────────────────────── -->
+<div class="spanel spanel-c2" id="panel-c2">
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="sl">Win Rate</div>
+      <div class="sv" style="color:var(--c2)" id="c2-wr">-</div>
+      <div class="wr-bar"><div class="wr-fill" id="c2-wr-fill" style="background:var(--c2);width:0%"></div></div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">P&amp;L Total</div>
+      <div class="sv" id="c2-pnl">-</div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">Profit Factor</div>
+      <div class="sv" style="color:var(--c2)" id="c2-pf">-</div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">Trades</div>
+      <div class="sv" id="c2-trades">-</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:2px" id="c2-wl">-</div>
+    </div>
+  </div>
+  <div class="params-row">
+    <span class="param-tag">SL 1.5×ATR8</span>
+    <span class="param-tag">TP 1.2×ATR8</span>
+    <span class="param-tag">Stoch(14,3) OS&lt;22/OB&gt;78</span>
+    <span class="param-tag">EMA200 trend</span>
+    <span class="param-tag">0.01 lot</span>
+    <span class="param-tag">Magic 20260624</span>
+  </div>
+  <div id="c2-pos"></div>
+  <div class="mini-title">Últimos trades</div>
+  <div style="overflow-x:auto">
+    <table class="mini-table">
+      <thead><tr><th>Fecha</th><th>Dir</th><th>Entrada</th><th>Salida</th><th>Dur</th><th>P&amp;L</th></tr></thead>
+      <tbody id="c2-mini-trades"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── MA50 PULLBACK PANEL ────────────────────────────────────────── -->
+<div class="spanel spanel-ma50" id="panel-ma50">
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="sl">Win Rate</div>
+      <div class="sv" style="color:var(--ma50)" id="ma50-wr">-</div>
+      <div class="wr-bar"><div class="wr-fill" id="ma50-wr-fill" style="background:var(--ma50);width:0%"></div></div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">P&amp;L Total</div>
+      <div class="sv" id="ma50-pnl">-</div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">Profit Factor</div>
+      <div class="sv" style="color:var(--ma50)" id="ma50-pf">-</div>
+    </div>
+    <div class="stat-box">
+      <div class="sl">Trades</div>
+      <div class="sv" id="ma50-trades">-</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:2px" id="ma50-wl">-</div>
+    </div>
+  </div>
+  <div class="params-row">
+    <span class="param-tag">SL 2.0×ATR8</span>
+    <span class="param-tag">TP 1.5×ATR8</span>
+    <span class="param-tag">SMA50 Pullback</span>
+    <span class="param-tag">RSI 35-55 / 45-65</span>
+    <span class="param-tag">0.01 lot</span>
+    <span class="param-tag">Magic 550105</span>
+  </div>
+  <div id="ma50-pos"></div>
+  <div class="mini-title">Últimos trades</div>
+  <div style="overflow-x:auto">
+    <table class="mini-table">
+      <thead><tr><th>Fecha</th><th>Dir</th><th>Entrada</th><th>Salida</th><th>Dur</th><th>P&amp;L</th></tr></thead>
+      <tbody id="ma50-mini-trades"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══ HISTORIAL COMPLETO ════════════════════════════════════════════ -->
+<button class="hist-toggle" id="hist-btn" onclick="toggleHist()">
+  <span>Historial completo de trades</span>
+  <span class="hist-arrow">▼</span>
+</button>
+<div class="hist-panel" id="hist-panel">
+  <div class="hist-inner">
+    <table>
       <thead><tr>
         <th>EA</th><th>Apertura</th><th>Dir</th>
-        <th>Entrada</th><th>Salida</th><th>Duración</th><th>P&amp;L</th><th>Resultado</th>
+        <th>Entrada</th><th>Salida</th><th>Dur</th><th>P&amp;L</th><th>Res</th>
       </tr></thead>
-      <tbody id="trade-body"><tr><td colspan="8" style="text-align:center;color:#475569;padding:20px">Cargando...</td></tr></tbody>
+      <tbody id="hist-body"><tr><td colspan="8" style="text-align:center;padding:20px;color:var(--muted2)">Cargando...</td></tr></tbody>
     </table>
   </div>
 </div>
 
 <div class="footer">
-  <div id="updated-at" class="updated">-</div>
-  <div style="margin-top:6px">ARB-Gold magic:20260613 · StochC2 magic:20260624 · Exness Demo XAUUSDm</div>
+  <div>ARB-Gold magic:20260613 · StochC2 magic:20260624 · MA50 magic:550105</div>
+  <div style="margin-top:4px;color:var(--muted2)">Exness Demo · XAUUSDm · Auto-update cada 60 min</div>
 </div>
 
 <script>
 const STATUS_URL = 'data/status.json';
+let _data = null;
 
-function fmt_pnl(v) {
-  const s = v >= 0 ? '+' : '';
-  return `${s}$${v.toFixed(2)}`;
+// ── Acordeón estrategias ──────────────────────────────────────────
+function toggle(id) {
+  const ids = ['arb','c2','ma50'];
+  ids.forEach(x => {
+    const p = document.getElementById('panel-' + x);
+    const b = document.getElementById('btn-' + x);
+    if (x === id) {
+      const isOpen = p.classList.contains('open');
+      p.classList.toggle('open', !isOpen);
+      b.className = 'stab' + (isOpen ? '' : ' active-' + x);
+    } else {
+      p.classList.remove('open');
+      b.className = 'stab';
+    }
+  });
 }
-function pnl_class(v) { return v > 0 ? 'green' : v < 0 ? 'red' : ''; }
-function wr_class(v)  { return v >= 50 ? 'green' : v >= 40 ? 'yellow' : 'red'; }
 
+// ── Acordeón historial ────────────────────────────────────────────
+function toggleHist() {
+  const panel = document.getElementById('hist-panel');
+  const btn   = document.getElementById('hist-btn');
+  const open  = panel.classList.toggle('open');
+  btn.classList.toggle('open-hist', open);
+}
+
+// ── Helpers ───────────────────────────────────────────────────────
+function fmtP(v) {
+  const s = v >= 0 ? '+' : '';
+  return `${s}$${Math.abs(v).toFixed(2)}`;
+}
+function pCls(v) { return v > 0 ? 'g' : v < 0 ? 'r' : ''; }
+function wrCls(v){ return v >= 55 ? 'g' : v >= 42 ? 'gold' : 'r'; }
+
+function todayUTC() {
+  return new Date().toISOString().slice(0,10);
+}
+
+function dur(min) {
+  if (!min && min !== 0) return '-';
+  const h = Math.floor(min / 60), m = Math.round(min % 60);
+  return h > 0 ? `${h}h${m}m` : `${m}m`;
+}
+
+function miniTradesHTML(trades) {
+  const last8 = [...trades].reverse().slice(0, 8);
+  if (!last8.length) return '<tr><td colspan="6" class="no-data">Sin trades cerrados</td></tr>';
+  return last8.map(t => {
+    const pnl  = t.profit_usd || 0;
+    const pCl  = pnl > 0 ? 'w' : 'l';
+    const dCl  = t.direction === 'BUY' ? 'w' : 'l';
+    const date = (t.entry_time || '').replace(' UTC','').slice(5,16);
+    return `<tr>
+      <td>${date}</td>
+      <td class="${dCl}">${t.direction||'?'}</td>
+      <td>${t.entry_price||'?'}</td>
+      <td>${t.exit_price||'?'}</td>
+      <td>${dur(t.duration_min)}</td>
+      <td class="${pCl}">${fmtP(pnl)}</td>
+    </tr>`;
+  }).join('');
+}
+
+function posHTML(pos, magic) {
+  if (!pos) return '';
+  const dir  = pos.tipo || pos.type || '?';
+  const dCl  = dir === 'BUY' ? 'buy' : 'sell';
+  const prof = pos.profit || 0;
+  const pCl  = prof >= 0 ? 'var(--green)' : 'var(--red)';
+  return `<div class="pos-card">
+    <div class="pos-head">
+      <span class="pos-dir ${dCl}">${dir} ${pos.lotes || pos.volume || '?'} lot</span>
+      <span class="pos-p">Posición abierta</span>
+    </div>
+    <div class="pos-details">
+      <div class="pos-d">Entrada <span>${pos.entrada || pos.price_open || '?'}</span></div>
+      <div class="pos-d">SL <span>${pos.sl || '?'}</span></div>
+      <div class="pos-d">TP <span>${pos.tp || '?'}</span></div>
+    </div>
+    <div class="pos-profit" style="color:${pCl}">${fmtP(prof)}</div>
+  </div>`;
+}
+
+function calcStats(trades) {
+  if (!trades || !trades.length) return {total:0,wins:0,losses:0,pnl:0,win_rate:0,profit_factor:0};
+  const wins   = trades.filter(t => t.result === 'WIN');
+  const losses = trades.filter(t => t.result === 'LOSS');
+  const pnl    = trades.reduce((a,t) => a + (t.profit_usd||0), 0);
+  const gw     = wins.reduce((a,t) => a + (t.profit_usd||0), 0);
+  const gl     = Math.abs(losses.reduce((a,t) => a + (t.profit_usd||0), 0));
+  return {
+    total: trades.length,
+    wins:  wins.length,
+    losses:losses.length,
+    pnl:   Math.round(pnl*100)/100,
+    win_rate: trades.length ? Math.round(wins.length/trades.length*1000)/10 : 0,
+    profit_factor: gl > 0 ? Math.round(gw/gl*100)/100 : 0
+  };
+}
+
+function renderStrategy(id, data, openPos) {
+  const s = data ? (data.summary || calcStats(data.trades || [])) : calcStats([]);
+  const trades = data ? (data.trades || []) : [];
+
+  const wr   = s.win_rate || 0;
+  const pnl  = s.pnl || 0;
+
+  document.getElementById(id+'-wr').textContent    = `${wr}%`;
+  document.getElementById(id+'-wr').className      = 'sv ' + wrCls(wr);
+  document.getElementById(id+'-wr-fill').style.width = Math.min(wr,100) + '%';
+  document.getElementById(id+'-pnl').textContent   = fmtP(pnl);
+  document.getElementById(id+'-pnl').className     = 'sv ' + pCls(pnl);
+  document.getElementById(id+'-pf').textContent    = s.profit_factor || '—';
+  document.getElementById(id+'-trades').textContent = s.total || 0;
+  document.getElementById(id+'-wl').textContent    = `${s.wins||0}W / ${s.losses||0}L`;
+
+  // Tab PnL
+  const tabPnl = document.getElementById('tab-'+id+'-pnl');
+  tabPnl.textContent  = fmtP(pnl);
+  tabPnl.style.color  = pnl >= 0 ? 'var(--green)' : 'var(--red)';
+
+  // Posición abierta
+  const posEl = document.getElementById(id+'-pos');
+  posEl.innerHTML = posHTML(openPos);
+
+  // Mini trades
+  document.getElementById(id+'-mini-trades').innerHTML = miniTradesHTML(trades);
+}
+
+// ── Historial completo ────────────────────────────────────────────
+function eaInfo(magic) {
+  if (magic === 20260613) return ['arb','ARB'];
+  if (magic === 20260624) return ['c2', 'C2'];
+  if (magic === 550105)   return ['ma50','MA50'];
+  return ['', magic];
+}
+
+function renderHist(trades) {
+  const tbody = document.getElementById('hist-body');
+  if (!trades || !trades.length) {
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:20px;color:var(--muted2)">Sin trades cerrados</td></tr>';
+    return;
+  }
+  tbody.innerHTML = [...trades].reverse().map(t => {
+    const [cls, lbl] = eaInfo(t.magic || 0);
+    const dir   = t.direction || '?';
+    const dCl   = dir === 'BUY' ? 'w' : 'l';
+    const pnl   = t.profit_usd || 0;
+    const pCl   = pnl > 0 ? 'w' : 'l';
+    const date  = (t.entry_time || '').replace(' UTC','').slice(5,16);
+    const res   = t.result || '?';
+    const rCl   = res === 'WIN' ? 'w' : 'l';
+    return `<tr>
+      <td><span class="ea-chip ${cls}">${lbl}</span></td>
+      <td>${date}</td>
+      <td class="${dCl}">${dir}</td>
+      <td>${t.entry_price||'?'}</td>
+      <td>${t.exit_price||'?'}</td>
+      <td style="color:var(--muted2)">${dur(t.duration_min)}</td>
+      <td class="${pCl}">${fmtP(pnl)}</td>
+      <td class="${rCl}">${res}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── Carga principal ───────────────────────────────────────────────
 async function load() {
   try {
     const r = await fetch(STATUS_URL + '?t=' + Date.now());
     const d = await r.json();
+    _data = d;
 
-    // Badge online/offline
+    // Badge
     const badge = document.getElementById('badge');
-    if (d.pc_online) {
-      badge.textContent = '🟢 Online';
-      badge.className = 'badge on';
-    } else {
-      badge.textContent = '🔴 Offline';
-      badge.className = 'badge off';
-    }
+    badge.textContent = d.pc_online ? '🟢 Online' : '🔴 Offline';
+    badge.className   = 'badge ' + (d.pc_online ? 'on' : 'off');
 
-    // Balance
-    const bal = d.current_balance || d.start_balance || 254;
-    const pnl = d.pnl_total || 0;
-    const pnl_pct = d.pnl_pct || 0;
-    document.getElementById('balance').textContent = `$${bal.toFixed(2)}`;
-    document.getElementById('pnl').textContent = fmt_pnl(pnl);
-    document.getElementById('pnl').className = 'value ' + pnl_class(pnl);
-    document.getElementById('c-pnl').className = 'card ' + (pnl >= 0 ? 'green' : 'red');
-    document.getElementById('pnl-pct').textContent = `${pnl_pct >= 0 ? '+' : ''}${pnl_pct}% desde inicio`;
-
-    // Stats combinadas
-    const s = d.summary || {};
-    const wr = s.win_rate || 0;
-    document.getElementById('wr').textContent = `${wr}%`;
-    document.getElementById('wr').className = 'value ' + wr_class(wr);
-    document.getElementById('wr-sub').textContent = `${s.wins || 0}W / ${s.losses || 0}L`;
-    document.getElementById('total-trades').textContent = s.total || 0;
-    document.getElementById('trades-sub').textContent = `PF: ${s.profit_factor || '—'}`;
-    document.getElementById('pnl-sub').textContent = `Inicio $${d.start_balance || 254}`;
-
-    // ARB-Gold
-    const arb = (d.arb_gold && d.arb_gold.summary) || d.arb_summary || {};
-    document.getElementById('arb-trades').textContent = arb.total || 0;
-    const arb_wr = arb.win_rate || 0;
-    document.getElementById('arb-wr').textContent = `${arb_wr}%`;
-    document.getElementById('arb-wr').className = 'val ' + wr_class(arb_wr);
-    document.getElementById('arb-pnl').textContent = fmt_pnl(arb.pnl || 0);
-    document.getElementById('arb-pnl').className = 'val ' + pnl_class(arb.pnl || 0);
-    document.getElementById('arb-pf').textContent = arb.profit_factor || '—';
-    document.getElementById('arb-wr-fill').style.width = Math.min(arb_wr, 100) + '%';
-
-    // StochC2
-    const c2 = (d.stoch_c2 && d.stoch_c2.summary) || d.c2_summary || {};
-    document.getElementById('c2-trades').textContent = c2.total || 0;
-    const c2_wr = c2.win_rate || 0;
-    document.getElementById('c2-wr').textContent = `${c2_wr}%`;
-    document.getElementById('c2-wr').className = 'val ' + wr_class(c2_wr);
-    document.getElementById('c2-pnl').textContent = fmt_pnl(c2.pnl || 0);
-    document.getElementById('c2-pnl').className = 'val ' + pnl_class(c2.pnl || 0);
-    document.getElementById('c2-pf').textContent = c2.profit_factor || '—';
-    document.getElementById('c2-wr-fill').style.width = Math.min(c2_wr, 100) + '%';
-
-    // Posiciones abiertas
-    const positions = d.open_positions || (d.open_position ? [d.open_position] : []);
-    const posDiv = document.getElementById('open-pos');
-    if (positions.length === 0) {
-      posDiv.innerHTML = '<div class="no-pos">Sin posiciones abiertas</div>';
-    } else {
-      posDiv.innerHTML = positions.map(p => {
-        const isArb  = p.magic === 20260613 || p.ea_name === 'ARB-Gold';
-        const eaCls  = isArb ? 'arb' : 'c2';
-        const eaLbl  = p.ea_name || (isArb ? 'ARB-Gold' : 'StochC2');
-        const tipo   = p.tipo || p.type || '?';
-        const tipoCls= tipo === 'BUY' ? 'buy' : 'sell';
-        const prof   = p.profit || 0;
-        const profCol= prof >= 0 ? '#4ade80' : '#f87171';
-        const profSign= prof >= 0 ? '+' : '';
-        return `<div class="pos-card">
-          <div class="pos-header">
-            <span class="pos-ea ${eaCls}">${eaLbl}</span>
-            <span class="pos-type ${tipoCls}">${tipo} ${p.lotes || p.volume || '?'} lot</span>
-          </div>
-          <div class="pos-row"><span>Entrada</span><span>${p.entrada || p.price_open || '?'}</span></div>
-          <div class="pos-row"><span>Actual</span><span>${p.actual || '?'}</span></div>
-          <div class="pos-row"><span>SL</span><span>${p.sl || '?'}</span></div>
-          <div class="pos-row"><span>TP</span><span>${p.tp || '?'}</span></div>
-          <div class="pos-profit" style="color:${profCol}">${profSign}$${Math.abs(prof).toFixed(2)} USD</div>
-        </div>`;
-      }).join('');
-    }
-
-    // Tabla de trades
-    const trades = (d.trades || []).slice().reverse();
-    const tbody = document.getElementById('trade-body');
-    if (trades.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#475569;padding:20px">Sin trades cerrados</td></tr>';
-    } else {
-      tbody.innerHTML = trades.map(t => {
-        const isArb  = t.magic === 20260613 || t.ea_name === 'ARB-Gold';
-        const eaCls  = isArb ? 'arb' : 'c2';
-        const eaLbl  = t.ea_name || (isArb ? 'ARB-Gold' : 'StochC2');
-        const dir    = t.direction || '?';
-        const dirCls = dir === 'BUY' ? 'win' : 'loss';
-        const pnl_v  = t.profit_usd || 0;
-        const pnlCls = pnl_v > 0 ? 'win' : 'loss';
-        const resCls = t.result === 'WIN' ? 'win' : 'loss';
-        const dur    = t.duration_min ? `${Math.floor(t.duration_min/60)}h${t.duration_min%60}m` : '?';
-        const entry_time = (t.entry_time || '').replace(' UTC','').substring(5);
-        return `<tr>
-          <td><span class="ea-tag ${eaCls}">${eaLbl}</span></td>
-          <td>${entry_time}</td>
-          <td class="${dirCls}">${dir}</td>
-          <td>${t.entry_price || '?'}</td>
-          <td>${t.exit_price || '?'}</td>
-          <td style="color:#64748b">${dur}</td>
-          <td class="${pnlCls}">${pnl_v >= 0 ? '+' : ''}$${Math.abs(pnl_v).toFixed(2)}</td>
-          <td class="${resCls}">${t.result || '?'}</td>
-        </tr>`;
-      }).join('');
-    }
-
-    // Footer
+    // Updated at
     if (d.updated_at) {
       const ua = new Date(d.updated_at);
       document.getElementById('updated-at').textContent =
-        `Última actualización: ${ua.toLocaleString('es-CO', {timeZone:'America/Bogota'})} (Col)`;
+        'Act: ' + ua.toLocaleString('es-CO', {timeZone:'America/Bogota',hour12:false}).slice(0,16) + ' Col';
     }
+
+    // ── General ─────────────────────────────────────────────
+    const allTrades = d.trades || [];
+    const today     = todayUTC();
+
+    // P&L hoy (filtra trades de hoy en UTC)
+    const todayTrades = allTrades.filter(t => (t.entry_time||'').startsWith(today));
+    const pnlHoy      = todayTrades.reduce((a,t) => a + (t.profit_usd||0), 0);
+
+    // Open positions unrealized P&L → equity
+    const openPos = d.open_positions || [];
+    const unrealized = openPos.reduce((a,p) => a + (p.profit||0), 0);
+
+    const bal     = d.current_balance || (d.start_balance || 254);
+    const equity  = bal + unrealized;
+    const pnlAcum = d.pnl_total || 0;
+    const pnlPct  = d.pnl_pct  || (d.start_balance ? Math.round(pnlAcum/d.start_balance*10000)/100 : 0);
+    const allStats= d.summary || calcStats(allTrades);
+
+    document.getElementById('g-balance').textContent    = '$' + bal.toFixed(2);
+    document.getElementById('g-equity-sub').textContent = 'Equity $' + equity.toFixed(2);
+
+    const pAcumEl = document.getElementById('g-pnl-acum');
+    pAcumEl.textContent  = fmtP(pnlAcum);
+    pAcumEl.className    = 'val ' + (pnlAcum >= 0 ? '' : 'red-card-val');
+    document.getElementById('c-pnl-acum').className = 'card ' + (pnlAcum >= 0 ? 'green-card' : 'red-card');
+    document.getElementById('g-pnl-pct').textContent = `${pnlPct >= 0 ? '+' : ''}${pnlPct}% vs inicio`;
+
+    const pHoyEl = document.getElementById('g-pnl-hoy');
+    pHoyEl.textContent  = fmtP(pnlHoy);
+    pHoyEl.className    = 'val';
+    document.getElementById('c-pnl-hoy').className = 'card ' + (pnlHoy >= 0 ? 'green-card' : 'red-card');
+    document.getElementById('g-pnl-hoy-n').textContent = `${todayTrades.length} trades cerrados`;
+
+    document.getElementById('g-trades-hoy').textContent   = todayTrades.length;
+    document.getElementById('g-trades-total').textContent = `Total acumulado: ${allStats.total || 0}`;
+
+    // ── Estrategias ─────────────────────────────────────────
+    // ARB Gold
+    const arbData = d.arb_gold || {};
+    const arbOpen = (d.open_positions || []).find(p => p.magic === 20260613)
+                 || (arbData.open_position) || null;
+    renderStrategy('arb', arbData, arbOpen);
+
+    // StochC2
+    const c2Data  = d.stoch_c2 || {};
+    const c2Open  = (d.open_positions || []).find(p => p.magic === 20260624)
+                 || (c2Data.open_position) || null;
+    renderStrategy('c2', c2Data, c2Open);
+
+    // MA50 Pullback — filtrar de trades generales si no viene separado
+    const ma50Raw   = d.ma50 || {};
+    const ma50Trades = ma50Raw.trades || allTrades.filter(t => t.magic === 550105);
+    const ma50Data   = { trades: ma50Trades, summary: ma50Raw.summary || calcStats(ma50Trades) };
+    const ma50Open   = (d.open_positions || []).find(p => p.magic === 550105)
+                    || (ma50Raw.open_position) || null;
+    renderStrategy('ma50', ma50Data, ma50Open);
+
+    // ── Historial completo ───────────────────────────────────
+    renderHist(allTrades);
+
   } catch(e) {
     console.error(e);
-    document.getElementById('badge').textContent = '⚠️ Error';
-    document.getElementById('badge').className = 'badge off';
+    document.getElementById('badge').textContent = '⚠️ Error cargando datos';
+    document.getElementById('badge').className   = 'badge off';
   }
 }
 
-load();
-// Auto-refresh cada 5 min
+// Abrir ARB Gold por defecto al cargar
+window.addEventListener('DOMContentLoaded', () => {
+  load();
+  toggle('arb');
+});
 setInterval(load, 5 * 60 * 1000);
 </script>
 </body>
