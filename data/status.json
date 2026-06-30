@@ -1,6 +1,7 @@
 {
   "pc_online": true,
-  "updated_at": "2026-06-30T06:00:25Z",
+  "updated_at": "2026-06-30T07:01:59Z",
+  "last_updated": "2026-06-30T07:01:59Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
   "current_balance": 331.91,
@@ -87,9 +88,18 @@
       "losses": 4,
       "pnl": -50.8,
       "win_rate": 20.0,
-      "profit_factor": 0.28
+      "profit_factor": 0.28,
+      "target_wr": 45
     },
-    "open_position": null
+    "open_position": null,
+    "params": {
+      "sl_mult": 1.5,
+      "tp_mult": 3.0,
+      "atr_period": 14,
+      "timeframe": "M15",
+      "lot": 0.02,
+      "magic": 20260613
+    }
   },
   "stoch_c2": {
     "trades": [],
@@ -99,9 +109,18 @@
       "losses": 0,
       "pnl": 0.0,
       "win_rate": 0,
-      "profit_factor": 0
+      "profit_factor": 0,
+      "target_wr": 60
     },
-    "open_position": null
+    "open_position": null,
+    "params": {
+      "sl_mult": 1.5,
+      "tp_mult": 1.2,
+      "stoch_k": 14,
+      "timeframe": "M5",
+      "lot": 0.01,
+      "magic": 20260624
+    }
   },
   "ma50": {
     "trades": [
@@ -140,9 +159,18 @@
       "losses": 1,
       "pnl": -2.38,
       "win_rate": 50.0,
-      "profit_factor": 0.74
+      "profit_factor": 0.74,
+      "target_wr": 55
     },
-    "open_position": null
+    "open_position": null,
+    "params": {
+      "sl_mult": 2.0,
+      "tp_mult": 1.5,
+      "atr_period": 8,
+      "timeframe": "M5",
+      "lot": 0.01,
+      "magic": 550105
+    }
   },
   "trades": [
     {
@@ -245,12 +273,39 @@
     }
   ],
   "open_positions": [],
+  "open_position": null,
   "summary": {
     "total": 7,
     "wins": 2,
     "losses": 5,
     "pnl": -53.18,
     "win_rate": 28.6,
-    "profit_factor": 0.33
-  }
+    "profit_factor": 0.33,
+    "target_wr": 50
+  },
+  "arb_summary": {
+    "total": 5,
+    "wins": 1,
+    "losses": 4,
+    "pnl": -50.8,
+    "win_rate": 20.0,
+    "profit_factor": 0.28
+  },
+  "c2_summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "win_rate": 0,
+    "profit_factor": 0
+  },
+  "ma50_summary": {
+    "total": 2,
+    "wins": 1,
+    "losses": 1,
+    "pnl": -2.38,
+    "win_rate": 50.0,
+    "profit_factor": 0.74
+  },
+  "message": "ARB: 5 trades $-50.80 | C2: 0 trades $+0.00 | MA50: 2 trades $-2.38 | Total: $-53.18"
 }
