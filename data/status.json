@@ -1,11 +1,11 @@
 {
     "pc_online":  true,
-    "updated_at":  "2026-07-01T20:11:12Z",
-    "last_updated":  "2026-07-01T20:11:12Z",
+    "updated_at":  "2026-07-01T23:09:24Z",
+    "last_updated":  "2026-07-01T23:09:24Z",
     "start_date":  "2026-06-13",
     "start_balance":  254,
     "current_balance":  337.07,
-    "equity":  337.07,
+    "equity":  337.65,
     "pnl_total":  -48.02,
     "pnl_pct":  -18.91,
     "tunnel_url":  "https://happy-prophet-plumbing-select.trycloudflare.com",
@@ -343,7 +343,18 @@
                                  "profit_factor":  1.2,
                                  "target_wr":  55
                              },
-                 "open_position":  null,
+                 "open_position":  {
+                                       "actual":  4042.657,
+                                       "ea_name":  "MA50-Pullback",
+                                       "entrada":  4043.241,
+                                       "lotes":  0.01,
+                                       "magic":  550105,
+                                       "profit":  0.58,
+                                       "sl":  4048.191,
+                                       "ticket":  558866294,
+                                       "tipo":  "SELL",
+                                       "tp":  4039.529
+                                   },
                  "params":  {
                                 "sl_mult":  2,
                                 "tp_mult":  1.5,
@@ -636,7 +647,16 @@
                    }
                ],
     "open_positions":  {
-
+                           "actual":  4042.657,
+                           "ea_name":  "MA50-Pullback",
+                           "entrada":  4043.241,
+                           "lotes":  0.01,
+                           "magic":  550105,
+                           "profit":  0.58,
+                           "sl":  4048.191,
+                           "ticket":  558866294,
+                           "tipo":  "SELL",
+                           "tp":  4039.529
                        },
     "summary":  {
                     "total":  20,
