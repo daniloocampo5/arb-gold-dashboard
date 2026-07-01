@@ -1,7 +1,7 @@
 {
     "pc_online":  true,
-    "updated_at":  "2026-07-01T20:09:23Z",
-    "last_updated":  "2026-07-01T20:09:23Z",
+    "updated_at":  "2026-07-01T20:11:12Z",
+    "last_updated":  "2026-07-01T20:11:12Z",
     "start_date":  "2026-06-13",
     "start_balance":  254,
     "current_balance":  337.07,
@@ -117,12 +117,12 @@
                                     "ticket":  "558651688"
                                 },
                      "summary":  {
-                                     "total":  null,
-                                     "wins":  null,
-                                     "losses":  null,
-                                     "pnl":  null,
-                                     "win_rate":  null,
-                                     "profit_factor":  null,
+                                     "total":  1,
+                                     "wins":  0,
+                                     "losses":  1,
+                                     "pnl":  -6.92,
+                                     "win_rate":  0,
+                                     "profit_factor":  0,
                                      "target_wr":  60
                                  },
                      "open_position":  null,
@@ -647,5 +647,5 @@
                     "profit_factor":  0.62,
                     "target_wr":  50
                 },
-    "message":  "ARB: 5 trades $-50.8 | C2:  trades $ | MA50: 14 trades $9.7 | Total: $-48.02"
+    "message":  "ARB: 5 trades $-50.8 | C2: 1 trades $-6.92 | MA50: 14 trades $9.7 | Total: $-48.02"
 }
