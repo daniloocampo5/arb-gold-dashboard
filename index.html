@@ -528,7 +528,7 @@ function calcStats(trades) {
   };
 }
 
-function todayUTC() { return new Date().toISOString().slice(0,10); }
+function todayUTC() { return new Date(Date.now()-5*3600000).toISOString().slice(0,10); } // Colombia UTC-5
 
 function miniRows(trades) {
   const rows = [...trades].reverse().slice(0,8);
