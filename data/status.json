@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-02T10:05:00Z",
-  "last_updated": "2026-07-02T10:05:00Z",
+  "updated_at": "2026-07-02T11:05:06Z",
+  "last_updated": "2026-07-02T11:05:06Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
-  "current_balance": 340.56,
-  "equity": 332.79,
-  "pnl_total": -44.53,
-  "pnl_pct": -17.53,
+  "current_balance": 336.58,
+  "equity": 336.58,
+  "pnl_total": -48.51,
+  "pnl_pct": -19.1,
   "tunnel_url": "https://happy-prophet-plumbing-select.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -432,29 +432,46 @@
         "profit_usd": 8.98,
         "result": "WIN",
         "ticket": "559237124"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 65,
+        "ea_name": "MA50-Pullback",
+        "entry_price": 4071.47,
+        "entry_time": "2026-07-02 09:10 UTC",
+        "exit_comment": "[sl 4062.372]",
+        "exit_price": 4062.37,
+        "exit_time": "2026-07-02 10:15 UTC",
+        "magic": 550105,
+        "profit_usd": -9.1,
+        "result": "LOSS",
+        "ticket": "559307131"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 3,
+        "ea_name": "MA50-Pullback",
+        "entry_price": 4066.6,
+        "entry_time": "2026-07-02 11:00 UTC",
+        "exit_comment": "[sl 4061.481]",
+        "exit_price": 4061.48,
+        "exit_time": "2026-07-02 11:03 UTC",
+        "magic": 550105,
+        "profit_usd": 5.12,
+        "result": "WIN",
+        "ticket": "559389501"
       }
     ],
     "summary": {
-      "total": 21,
-      "wins": 13,
-      "losses": 8,
-      "pnl": 13.19,
-      "win_rate": 61.9,
-      "profit_factor": 1.18,
+      "total": 23,
+      "wins": 14,
+      "losses": 9,
+      "pnl": 9.21,
+      "win_rate": 60.9,
+      "profit_factor": 1.11,
       "target_wr": 55
     },
-    "open_position": {
-      "actual": 4063.696,
-      "ea_name": "MA50-Pullback",
-      "entrada": 4071.467,
-      "lotes": 0.01,
-      "magic": 550105,
-      "profit": -7.77,
-      "sl": 4062.372,
-      "ticket": 559307131,
-      "tipo": "BUY",
-      "tp": 4078.289
-    },
+    "open_position": null,
     "params": {
       "sl_mult": 2.0,
       "tp_mult": 1.5,
@@ -842,40 +859,44 @@
       "profit_usd": 8.98,
       "result": "WIN",
       "ticket": "559237124"
-    }
-  ],
-  "open_positions": [
+    },
     {
-      "actual": 4063.696,
+      "direction": "BUY",
+      "duration_min": 65,
       "ea_name": "MA50-Pullback",
-      "entrada": 4071.467,
-      "lotes": 0.01,
+      "entry_price": 4071.47,
+      "entry_time": "2026-07-02 09:10 UTC",
+      "exit_comment": "[sl 4062.372]",
+      "exit_price": 4062.37,
+      "exit_time": "2026-07-02 10:15 UTC",
       "magic": 550105,
-      "profit": -7.77,
-      "sl": 4062.372,
-      "ticket": 559307131,
-      "tipo": "BUY",
-      "tp": 4078.289
+      "profit_usd": -9.1,
+      "result": "LOSS",
+      "ticket": "559307131"
+    },
+    {
+      "direction": "SELL",
+      "duration_min": 3,
+      "ea_name": "MA50-Pullback",
+      "entry_price": 4066.6,
+      "entry_time": "2026-07-02 11:00 UTC",
+      "exit_comment": "[sl 4061.481]",
+      "exit_price": 4061.48,
+      "exit_time": "2026-07-02 11:03 UTC",
+      "magic": 550105,
+      "profit_usd": 5.12,
+      "result": "WIN",
+      "ticket": "559389501"
     }
   ],
-  "open_position": {
-    "actual": 4063.696,
-    "ea_name": "MA50-Pullback",
-    "entrada": 4071.467,
-    "lotes": 0.01,
-    "magic": 550105,
-    "profit": -7.77,
-    "sl": 4062.372,
-    "ticket": 559307131,
-    "tipo": "BUY",
-    "tp": 4078.289
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 27,
-    "wins": 14,
-    "losses": 13,
-    "pnl": -44.53,
-    "win_rate": 51.9,
+    "total": 29,
+    "wins": 15,
+    "losses": 14,
+    "pnl": -48.51,
+    "win_rate": 51.7,
     "profit_factor": 0.7,
     "target_wr": 50
   },
@@ -896,12 +917,12 @@
     "profit_factor": 0.0
   },
   "ma50_summary": {
-    "total": 21,
-    "wins": 13,
-    "losses": 8,
-    "pnl": 13.19,
-    "win_rate": 61.9,
-    "profit_factor": 1.18
+    "total": 23,
+    "wins": 14,
+    "losses": 9,
+    "pnl": 9.21,
+    "win_rate": 60.9,
+    "profit_factor": 1.11
   },
-  "message": "ARB: 5 trades $-50.80 | C2: 1 trades $-6.92 | MA50: 21 trades $+13.19 | Total: $-44.53"
+  "message": "ARB: 5 trades $-50.80 | C2: 1 trades $-6.92 | MA50: 23 trades $+9.21 | Total: $-48.51"
 }
