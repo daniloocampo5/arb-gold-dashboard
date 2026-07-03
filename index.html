@@ -816,7 +816,7 @@ function render(d) {
   renderS('c2', c2Data, c2Open);
 
   const ma50Raw    = d.ma50 || {};
-  const ma50Trades = ma50Raw.trades || all.filter(t => t.magic === 550105);
+  const ma50Trades = ma50Raw.trades || all.filter(t => t.magic === 550105 || t.magic === 550169);
   const ma50Data   = {trades: ma50Trades, summary: ma50Raw.summary || calcStats(ma50Trades)};
   const ma50Open   = openArr.find(p => p.magic === 550105 || p.magic === 550169) || ma50Raw.open_position || null;
   renderS('ma50', ma50Data, ma50Open);
