@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-03T09:06:23Z",
-  "last_updated": "2026-07-03T09:06:23Z",
+  "updated_at": "2026-07-03T10:06:30Z",
+  "last_updated": "2026-07-03T10:06:30Z",
   "start_date": "2026-06-13",
   "start_balance": 254,
-  "current_balance": 298.86,
-  "equity": 301.91,
-  "pnl_total": -86.23,
-  "pnl_pct": -33.95,
+  "current_balance": 290.12,
+  "equity": 287.79,
+  "pnl_total": -94.97,
+  "pnl_pct": -37.39,
   "tunnel_url": "https://happy-prophet-plumbing-select.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -572,28 +572,42 @@
         "profit_usd": -9.23,
         "result": "LOSS",
         "ticket": "560634200"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 48,
+        "ea_name": "MA50-Pullback",
+        "entry_price": 4177.43,
+        "entry_time": "2026-07-03 08:50 UTC",
+        "exit_comment": "[sl 4168.694]",
+        "exit_price": 4168.69,
+        "exit_time": "2026-07-03 09:38 UTC",
+        "magic": 550105,
+        "profit_usd": -8.74,
+        "result": "LOSS",
+        "ticket": "560694551"
       }
     ],
     "summary": {
-      "total": 31,
+      "total": 32,
       "wins": 16,
-      "losses": 15,
-      "pnl": -28.51,
-      "win_rate": 51.6,
-      "profit_factor": 0.79,
+      "losses": 16,
+      "pnl": -37.25,
+      "win_rate": 50.0,
+      "profit_factor": 0.74,
       "target_wr": 55
     },
     "open_position": {
-      "actual": 4180.484,
+      "actual": 4177.008,
       "ea_name": "MA50-Pullback",
-      "entrada": 4177.425,
+      "entrada": 4174.681,
       "lotes": 0.01,
       "magic": 550105,
-      "profit": 3.05,
-      "sl": 4168.694,
-      "ticket": 560694551,
-      "tipo": "BUY",
-      "tp": 4184.086
+      "profit": -2.33,
+      "sl": 4181.712,
+      "ticket": 560743474,
+      "tipo": "SELL",
+      "tp": 4169.315
     },
     "params": {
       "sl_mult": 2.0,
@@ -1122,41 +1136,55 @@
       "profit_usd": -9.23,
       "result": "LOSS",
       "ticket": "560634200"
+    },
+    {
+      "direction": "BUY",
+      "duration_min": 48,
+      "ea_name": "MA50-Pullback",
+      "entry_price": 4177.43,
+      "entry_time": "2026-07-03 08:50 UTC",
+      "exit_comment": "[sl 4168.694]",
+      "exit_price": 4168.69,
+      "exit_time": "2026-07-03 09:38 UTC",
+      "magic": 550105,
+      "profit_usd": -8.74,
+      "result": "LOSS",
+      "ticket": "560694551"
     }
   ],
   "open_positions": [
     {
-      "actual": 4180.484,
+      "actual": 4177.008,
       "ea_name": "MA50-Pullback",
-      "entrada": 4177.425,
+      "entrada": 4174.681,
       "lotes": 0.01,
       "magic": 550105,
-      "profit": 3.05,
-      "sl": 4168.694,
-      "ticket": 560694551,
-      "tipo": "BUY",
-      "tp": 4184.086
+      "profit": -2.33,
+      "sl": 4181.712,
+      "ticket": 560743474,
+      "tipo": "SELL",
+      "tp": 4169.315
     }
   ],
   "open_position": {
-    "actual": 4180.484,
+    "actual": 4177.008,
     "ea_name": "MA50-Pullback",
-    "entrada": 4177.425,
+    "entrada": 4174.681,
     "lotes": 0.01,
     "magic": 550105,
-    "profit": 3.05,
-    "sl": 4168.694,
-    "ticket": 560694551,
-    "tipo": "BUY",
-    "tp": 4184.086
+    "profit": -2.33,
+    "sl": 4181.712,
+    "ticket": 560743474,
+    "tipo": "SELL",
+    "tp": 4169.315
   },
   "summary": {
-    "total": 37,
+    "total": 38,
     "wins": 17,
-    "losses": 20,
-    "pnl": -86.23,
-    "win_rate": 45.9,
-    "profit_factor": 0.59,
+    "losses": 21,
+    "pnl": -94.97,
+    "win_rate": 44.7,
+    "profit_factor": 0.57,
     "target_wr": 50
   },
   "arb_summary": {
@@ -1176,12 +1204,12 @@
     "profit_factor": 0.0
   },
   "ma50_summary": {
-    "total": 31,
+    "total": 32,
     "wins": 16,
-    "losses": 15,
-    "pnl": -28.51,
-    "win_rate": 51.6,
-    "profit_factor": 0.79
+    "losses": 16,
+    "pnl": -37.25,
+    "win_rate": 50.0,
+    "profit_factor": 0.74
   },
-  "message": "ARB: 5 trades $-50.80 | C2: 1 trades $-6.92 | MA50: 31 trades $-28.51 | Total: $-86.23"
+  "message": "ARB: 5 trades $-50.80 | C2: 1 trades $-6.92 | MA50: 32 trades $-37.25 | Total: $-94.97"
 }
