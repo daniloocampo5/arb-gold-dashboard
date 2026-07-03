@@ -24,6 +24,7 @@
   --arb:     #e0a820;
   --c2:      #a78bfa;
   --ma50:    #22d3c8;
+  --ma50h1:  #4ade80;
 }
 
 body{
@@ -149,6 +150,13 @@ body{
 .strat-panel.open-arb{border-color:var(--arb);max-height:1500px}
 .strat-panel.open-c2{border-color:var(--c2);max-height:1500px}
 .strat-panel.open-ma50{border-color:var(--ma50);max-height:1500px}
+.strat-head.open-ma50h1{background:#021a08;border-color:var(--ma50h1);border-radius:10px 10px 0 0}
+.stripe-ma50h1{background:var(--ma50h1)}
+.strat-name.ma50h1-col{color:var(--ma50h1)}
+.tag-ma50h1{background:#021a08;color:var(--ma50h1);border:1px solid #054020}
+.chip.ma50h1{background:#021a08;color:var(--ma50h1);border:1px solid #054020}
+.sv.ma50h1{color:var(--ma50h1)}
+.strat-panel.open-ma50h1{border-color:var(--ma50h1);max-height:1500px}
 
 .strat-inner{padding:16px}
 
@@ -421,11 +429,11 @@ tr:last-child td{border:none}
       <div class="strat-head" id="head-ma50">
         <div class="strat-stripe stripe-ma50"></div>
         <div class="strat-info">
-          <div class="strat-name ma50-col">◆ MA50 PULLBACK v1.70-H1</div>
+          <div class="strat-name ma50-col">◆ MA50 PULLBACK v1.69-F</div>
           <div class="strat-meta">
-            <span class="strat-tag tag-ma50">SMA50 + RSI + H1 Trend</span>
+            <span class="strat-tag tag-ma50">SMA50 + RSI + Slope</span>
             <span class="strat-tag tag-tf">M5</span>
-            <span class="strat-tag tag-ma50">magic 550105 + 550169</span>
+            <span class="strat-tag tag-ma50">magic 550105</span>
           </div>
         </div>
         <div class="strat-kpis">
@@ -495,7 +503,69 @@ tr:last-child td{border:none}
         <tr><td colspan="8" style="text-align:center;padding:20px;color:var(--dim)">Cargando...</td></tr>
       </tbody>
     </table>
+  
+  <!-- ── MA50 PULLBACK v1.70-H1 ──────────────────────────────────── -->
+  <div>
+    <button class="strat-btn" onclick="toggleS('ma50h1')">
+      <div class="strat-head" id="head-ma50h1">
+        <div class="strat-stripe stripe-ma50h1"></div>
+        <div class="strat-info">
+          <div class="strat-name ma50h1-col">&#9670; MA50 v1.70-H1</div>
+          <div class="strat-meta">
+            <span class="strat-tag tag-ma50h1">SMA50 + H1 Trend Filter</span>
+            <span class="strat-tag tag-tf">M5</span>
+            <span class="strat-tag tag-ma50h1">magic 550169</span>
+          </div>
+        </div>
+        <div class="strat-kpis">
+          <span class="kpi-pnl" id="ma50h1-head-pnl">-</span>
+          <span class="kpi-wr" id="ma50h1-head-wr">WR -</span>
+        </div>
+        <span class="strat-arrow" id="arrow-ma50h1">&#9660;</span>
+      </div>
+    </button>
+    <div class="strat-panel" id="panel-ma50h1">
+      <div class="strat-inner">
+        <div class="stats-grid">
+          <div class="sbox">
+            <div class="sl">Win Rate</div>
+            <div class="sv ma50h1" id="ma50h1-wr">-</div>
+            <div class="wr-bar"><div class="wr-fill" id="ma50h1-wrf" style="background:var(--ma50h1);width:0%"></div></div>
+          </div>
+          <div class="sbox">
+            <div class="sl">P&amp;L Total</div>
+            <div class="sv" id="ma50h1-pnl">-</div>
+          </div>
+          <div class="sbox">
+            <div class="sl">Profit Factor</div>
+            <div class="sv ma50h1" id="ma50h1-pf">-</div>
+          </div>
+          <div class="sbox">
+            <div class="sl">Trades</div>
+            <div class="sv neutral" id="ma50h1-trades">-</div>
+            <div class="swl" id="ma50h1-wl">-W/-L</div>
+          </div>
+        </div>
+        <div class="ptags">
+          <span class="ptag">SL 2.0&times; ATR8</span>
+          <span class="ptag">TP 1.5&times; ATR8</span>
+          <span class="ptag">H1 SMA50 Trend</span>
+          <span class="ptag">RSI 35-55 / 45-65</span>
+          <span class="ptag">MA Exit</span>
+          <span class="ptag">0.01 lot</span>
+        </div>
+        <div id="ma50h1-pos"></div>
+        <div class="section-title">&#218;ltimos trades</div>
+        <div style="overflow-x:auto">
+          <table class="mini-t">
+            <thead><tr><th>Fecha</th><th>Dir</th><th>Entrada</th><th>Salida</th><th>Dur</th><th>P&amp;L</th></tr></thead>
+            <tbody id="ma50h1-mini"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="footer">
@@ -571,7 +641,7 @@ function posHTML(pos) {
 }
 
 // ── Acordeón estrategias ──────────────────────────────────────────
-const STRATS = ['arb','c2','ma50'];
+const STRATS = ['arb','c2','ma50','ma50h1'];
 function toggleS(id) {
   STRATS.forEach(x => {
     const head  = document.getElementById('head-'+x);
@@ -698,9 +768,14 @@ function flaskToStatus(f) {
       open_position: (f.c2_open||[])[0] || null,
     },
     ma50: {
-      trades:        f.ma50_trades  || [],
-      summary:       f.ma50_summary || calcStats(f.ma50_trades||[]),
+      trades:        f.ma50_trades   || [],
+      summary:       f.ma50_summary  || calcStats(f.ma50_trades||[]),
       open_position: (f.ma50_open||[])[0] || null,
+    },
+    ma50h1: {
+      trades:        f.ma50h1_trades   || [],
+      summary:       f.ma50h1_summary  || calcStats(f.ma50h1_trades||[]),
+      open_position: (f.ma50h1_open||[])[0] || null,
     },
     updated_at: new Date().toISOString(),
   };
@@ -816,10 +891,16 @@ function render(d) {
   renderS('c2', c2Data, c2Open);
 
   const ma50Raw    = d.ma50 || {};
-  const ma50Trades = ma50Raw.trades || all.filter(t => t.magic === 550105 || t.magic === 550169);
+  const ma50Trades = ma50Raw.trades || all.filter(t => t.magic === 550105);
   const ma50Data   = {trades: ma50Trades, summary: ma50Raw.summary || calcStats(ma50Trades)};
-  const ma50Open   = openArr.find(p => p.magic === 550105 || p.magic === 550169) || ma50Raw.open_position || null;
+  const ma50Open   = openArr.find(p => p.magic === 550105) || ma50Raw.open_position || null;
   renderS('ma50', ma50Data, ma50Open);
+
+  const ma50h1Raw    = d.ma50h1 || {};
+  const ma50h1Trades = ma50h1Raw.trades || all.filter(t => t.magic === 550169);
+  const ma50h1Data   = {trades: ma50h1Trades, summary: ma50h1Raw.summary || calcStats(ma50h1Trades)};
+  const ma50h1Open   = openArr.find(p => p.magic === 550169) || ma50h1Raw.open_position || null;
+  renderS('ma50h1', ma50h1Data, ma50h1Open);
 
   renderHist(all);
 }
