@@ -1,1 +1,112 @@
-{"tunnel_url":"https://male-senator-listen-link.trycloudflare.com","trades":[],"updated_at":"2026-07-07T08:09:02Z","last_updated":"2026-07-07T07:12:57Z","start_date":"2026-06-13","current_balance":799.93,"pc_online":false,"equity":797.6,"pnl_total":0.0,"summary":{"total":0,"wins":0,"losses":0,"pnl":0.0,"win_rate":0,"profit_factor":0,"target_wr":50},"open_position":null,"arb_summary":{"total":0,"wins":0,"losses":0,"pnl":0.0,"win_rate":0,"profit_factor":0},"message":"PC offline o tunel expirado. Datos anteriores conservados.","start_balance":254,"c2_summary":{"total":0,"wins":0,"losses":0,"pnl":0.0,"win_rate":0,"profit_factor":0},"stoch_c2":{"trades":[],"summary":{"total":0,"wins":0,"losses":0,"pnl":0.0,"win_rate":0,"profit_factor":0,"target_wr":60},"open_position":null,"params":{"sl_mult":1.5,"tp_mult":1.2,"stoch_k":14,"timeframe":"M5","lot":0.01,"magic":20260624}},"ma50":{"trades":[],"summary":{"total":0,"wins":0,"losses":0,"pnl":0.0,"win_rate":0,"profit_factor":0,"target_wr":55},"open_position":null,"params":{"sl_mult":2.0,"tp_mult":1.5,"atr_period":8,"timeframe":"M5","lot":0.01,"magic":550105}},"open_positions":[],"ma50_summary":{"total":0,"wins":0,"losses":0,"pnl":0.0,"win_rate":0,"profit_factor":0},"arb_gold":{"trades":[],"summary":{"total":0,"wins":0,"losses":0,"pnl":0.0,"win_rate":0,"profit_factor":0,"target_wr":45},"open_position":null,"params":{"sl_mult":1.5,"tp_mult":3.0,"atr_period":14,"timeframe":"M15","lot":0.02,"magic":20260613}},"pnl_pct":0.0}
+{
+  "pc_online": true,
+  "updated_at": "2026-07-07T08:13:02Z",
+  "last_updated": "2026-07-07T08:13:02Z",
+  "start_date": "2026-06-13",
+  "start_balance": 254,
+  "current_balance": 789.99,
+  "equity": 789.99,
+  "pnl_total": 0.0,
+  "pnl_pct": 0.0,
+  "tunnel_url": "https://male-senator-listen-link.trycloudflare.com",
+  "arb_gold": {
+    "trades": [],
+    "summary": {
+      "total": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0.0,
+      "win_rate": 0,
+      "profit_factor": 0,
+      "target_wr": 45
+    },
+    "open_position": null,
+    "params": {
+      "sl_mult": 1.5,
+      "tp_mult": 3.0,
+      "atr_period": 14,
+      "timeframe": "M15",
+      "lot": 0.02,
+      "magic": 20260613
+    }
+  },
+  "stoch_c2": {
+    "trades": [],
+    "summary": {
+      "total": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0.0,
+      "win_rate": 0,
+      "profit_factor": 0,
+      "target_wr": 60
+    },
+    "open_position": null,
+    "params": {
+      "sl_mult": 1.5,
+      "tp_mult": 1.2,
+      "stoch_k": 14,
+      "timeframe": "M5",
+      "lot": 0.01,
+      "magic": 20260624
+    }
+  },
+  "ma50": {
+    "trades": [],
+    "summary": {
+      "total": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0.0,
+      "win_rate": 0,
+      "profit_factor": 0,
+      "target_wr": 55
+    },
+    "open_position": null,
+    "params": {
+      "sl_mult": 2.0,
+      "tp_mult": 1.5,
+      "atr_period": 8,
+      "timeframe": "M5",
+      "lot": 0.01,
+      "magic": 550105
+    }
+  },
+  "trades": [],
+  "open_positions": [],
+  "open_position": null,
+  "summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "win_rate": 0,
+    "profit_factor": 0,
+    "target_wr": 50
+  },
+  "arb_summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "win_rate": 0,
+    "profit_factor": 0
+  },
+  "c2_summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "win_rate": 0,
+    "profit_factor": 0
+  },
+  "ma50_summary": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "win_rate": 0,
+    "profit_factor": 0
+  },
+  "message": "ARB: 0 trades $+0.00 | C2: 0 trades $+0.00 | MA50: 0 trades $+0.00 | Total: $+0.00"
+}
