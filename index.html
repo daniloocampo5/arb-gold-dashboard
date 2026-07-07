@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -264,7 +264,7 @@ tr:last-child td{border:none}
 <div class="header">
   <div>
     <div class="title">DANILO O. | TRADING DESK</div>
-    <div class="subtitle">Exness Demo · XAUUSDm · ARB Gold + StochC2 + MA50 Pullback</div>
+    <div class="subtitle">Exness Demo · XAUUSDm · ARB Gold v1.4 · StochC2 v1.1 · EMA50 · MA50 v1.71 — Inicio $500</div>
   </div>
   <div class="header-right">
     <span class="badge" id="badge">...</span>
@@ -429,7 +429,7 @@ tr:last-child td{border:none}
       <div class="strat-head" id="head-ma50">
         <div class="strat-stripe stripe-ma50"></div>
         <div class="strat-info">
-          <div class="strat-name ma50-col">◆ MA50 PULLBACK v1.69-F</div>
+          <div class="strat-name ma50-col">◆ EMA50 PULLBACK v1.68</div>
           <div class="strat-meta">
             <span class="strat-tag tag-ma50">SMA50 + RSI + Slope</span>
             <span class="strat-tag tag-tf">M5</span>
@@ -491,7 +491,7 @@ tr:last-child td{border:none}
       <div class="strat-head" id="head-ma50h1">
         <div class="strat-stripe stripe-ma50h1"></div>
         <div class="strat-info">
-          <div class="strat-name ma50h1-col">&#9670; MA50 v1.70-H1</div>
+          <div class="strat-name ma50h1-col">&#9670; MA50 v1.71-H1</div>
           <div class="strat-meta">
             <span class="strat-tag tag-ma50h1">SMA50 + H1 Trend Filter</span>
             <span class="strat-tag tag-tf">M5</span>
@@ -575,7 +575,7 @@ tr:last-child td{border:none}
 <script>
 const STATUS_URL  = 'data/status.json';
 const FLASK_KEY   = 'mt5nani2026';
-const BASE_BAL    = 254;
+const BASE_BAL    = 500;
 
 // ── Helpers ───────────────────────────────────────────────────────
 const fp = v => (v >= 0 ? '+' : '') + '$' + Math.abs(v).toFixed(2);
@@ -695,9 +695,10 @@ function renderS(id, data, openPos) {
 
 // ── Historial completo ────────────────────────────────────────────
 function eaChip(magic) {
-  if (magic === 20260613) return ['arb','ARB'];
-  if (magic === 20260624) return ['c2', 'C2'];
-  if (magic === 550105 || magic === 550169) return ['ma50','MA50'];
+  if (magic === 20260613) return ['arb',   'ARB'];
+  if (magic === 20260624) return ['c2',    'C2'];
+  if (magic === 550105)   return ['ma50',  'EMA50'];
+  if (magic === 550169)   return ['ma50h1','MA50H1'];
   return ['', magic||'?'];
 }
 
@@ -911,3 +912,4 @@ setInterval(load, 5 * 60 * 1000);
 </script>
 </body>
 </html>
+
