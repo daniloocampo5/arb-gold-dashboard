@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-08T16:31:19Z",
-  "last_updated": "2026-07-08T16:31:19Z",
+  "updated_at": "2026-07-08T17:31:21Z",
+  "last_updated": "2026-07-08T17:31:21Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 745.37,
-  "equity": 745.37,
+  "current_balance": 745.3,
+  "equity": 739.01,
   "pnl_total": -57.0,
   "pnl_pct": -7.12,
   "tunnel_url": "https://carried-pride-controlling-jan.trycloudflare.com",
@@ -85,7 +85,18 @@
       "profit_factor": 0.0,
       "target_wr": 60
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4075.58,
+      "ea_name": "StochC2",
+      "entrada": 4069.287,
+      "lotes": 0.01,
+      "magic": 20260624,
+      "profit": -6.29,
+      "sl": 4077.589,
+      "ticket": 117586542,
+      "tipo": "SELL",
+      "tp": 4062.645
+    },
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 1.2,
@@ -576,8 +587,32 @@
       "ticket": "117536019"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4075.58,
+      "ea_name": "StochC2",
+      "entrada": 4069.287,
+      "lotes": 0.01,
+      "magic": 20260624,
+      "profit": -6.29,
+      "sl": 4077.589,
+      "ticket": 117586542,
+      "tipo": "SELL",
+      "tp": 4062.645
+    }
+  ],
+  "open_position": {
+    "actual": 4075.58,
+    "ea_name": "StochC2",
+    "entrada": 4069.287,
+    "lotes": 0.01,
+    "magic": 20260624,
+    "profit": -6.29,
+    "sl": 4077.589,
+    "ticket": 117586542,
+    "tipo": "SELL",
+    "tp": 4062.645
+  },
   "summary": {
     "total": 17,
     "wins": 7,
