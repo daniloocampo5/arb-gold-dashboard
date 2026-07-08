@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-08T22:31:46Z",
-  "last_updated": "2026-07-08T22:31:46Z",
+  "updated_at": "2026-07-08T23:31:51Z",
+  "last_updated": "2026-07-08T23:31:51Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 734.05,
-  "equity": 734.05,
-  "pnl_total": -68.11,
-  "pnl_pct": -8.51,
+  "current_balance": 731.49,
+  "equity": 731.53,
+  "pnl_total": -70.53,
+  "pnl_pct": -8.82,
   "tunnel_url": "https://carried-pride-controlling-jan.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -320,15 +320,29 @@
         "profit_usd": -1.18,
         "result": "LOSS",
         "ticket": "117617969"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 10,
+        "ea_name": "MA50-v1.69F",
+        "entry_price": 4079.12,
+        "entry_time": "2026-07-08 22:50 UTC",
+        "exit_comment": "",
+        "exit_price": 4076.71,
+        "exit_time": "2026-07-08 23:00 UTC",
+        "magic": 550105,
+        "profit_usd": -2.42,
+        "result": "LOSS",
+        "ticket": "117622277"
       }
     ],
     "summary": {
-      "total": 15,
+      "total": 16,
       "wins": 6,
-      "losses": 9,
-      "pnl": -20.41,
-      "win_rate": 40.0,
-      "profit_factor": 0.58,
+      "losses": 10,
+      "pnl": -22.83,
+      "win_rate": 37.5,
+      "profit_factor": 0.55,
       "target_wr": 55
     },
     "open_position": null,
@@ -367,7 +381,18 @@
       "profit_factor": 0,
       "target_wr": 55
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4075.357,
+      "ea_name": "MA50-v1.70H1",
+      "entrada": 4075.401,
+      "lotes": 0.01,
+      "magic": 550169,
+      "profit": 0.04,
+      "sl": 4080.562,
+      "ticket": 117624170,
+      "tipo": "SELL",
+      "tp": 4071.531
+    },
     "params": {
       "sl_mult": 2.0,
       "tp_mult": 1.5,
@@ -658,17 +683,55 @@
       "profit_usd": -1.18,
       "result": "LOSS",
       "ticket": "117617969"
+    },
+    {
+      "direction": "BUY",
+      "duration_min": 10,
+      "ea_name": "MA50-v1.69F",
+      "entry_price": 4079.12,
+      "entry_time": "2026-07-08 22:50 UTC",
+      "exit_comment": "",
+      "exit_price": 4076.71,
+      "exit_time": "2026-07-08 23:00 UTC",
+      "magic": 550105,
+      "profit_usd": -2.42,
+      "result": "LOSS",
+      "ticket": "117622277"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4075.357,
+      "ea_name": "MA50-v1.70H1",
+      "entrada": 4075.401,
+      "lotes": 0.01,
+      "magic": 550169,
+      "profit": 0.04,
+      "sl": 4080.562,
+      "ticket": 117624170,
+      "tipo": "SELL",
+      "tp": 4071.531
+    }
+  ],
+  "open_position": {
+    "actual": 4075.357,
+    "ea_name": "MA50-v1.70H1",
+    "entrada": 4075.401,
+    "lotes": 0.01,
+    "magic": 550169,
+    "profit": 0.04,
+    "sl": 4080.562,
+    "ticket": 117624170,
+    "tipo": "SELL",
+    "tp": 4071.531
+  },
   "summary": {
-    "total": 20,
+    "total": 21,
     "wins": 7,
-    "losses": 13,
-    "pnl": -68.11,
-    "win_rate": 35.0,
-    "profit_factor": 0.34,
+    "losses": 14,
+    "pnl": -70.53,
+    "win_rate": 33.3,
+    "profit_factor": 0.33,
     "target_wr": 50
   },
   "arb_summary": {
@@ -688,12 +751,12 @@
     "profit_factor": 0.0
   },
   "ma50_summary": {
-    "total": 15,
+    "total": 16,
     "wins": 6,
-    "losses": 9,
-    "pnl": -20.41,
-    "win_rate": 40.0,
-    "profit_factor": 0.58
+    "losses": 10,
+    "pnl": -22.83,
+    "win_rate": 37.5,
+    "profit_factor": 0.55
   },
-  "message": "ARB: 1t $-26.49 | C2: 3t $-28.26 | MA50: 15t $-20.41 | MA50-H1: 1t $+7.05 | Total: $-68.11"
+  "message": "ARB: 1t $-26.49 | C2: 3t $-28.26 | MA50: 16t $-22.83 | MA50-H1: 1t $+7.05 | Total: $-70.53"
 }
