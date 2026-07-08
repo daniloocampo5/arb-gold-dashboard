@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-08T12:31:05Z",
-  "last_updated": "2026-07-08T12:31:05Z",
+  "updated_at": "2026-07-08T13:31:08Z",
+  "last_updated": "2026-07-08T13:31:08Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 764.53,
-  "equity": 764.53,
-  "pnl_total": -37.98,
-  "pnl_pct": -4.75,
+  "current_balance": 754.39,
+  "equity": 754.39,
+  "pnl_total": -48.05,
+  "pnl_pct": -6.01,
   "tunnel_url": "https://carried-pride-controlling-jan.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -60,13 +60,27 @@
         "profit_usd": -9.89,
         "result": "LOSS",
         "ticket": "117287726"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 7,
+        "ea_name": "StochC2",
+        "entry_price": 4072.82,
+        "entry_time": "2026-07-08 12:40 UTC",
+        "exit_comment": "[sl 4082.887]",
+        "exit_price": 4082.89,
+        "exit_time": "2026-07-08 12:47 UTC",
+        "magic": 20260624,
+        "profit_usd": -10.07,
+        "result": "LOSS",
+        "ticket": "117510721"
       }
     ],
     "summary": {
-      "total": 1,
+      "total": 2,
       "wins": 0,
-      "losses": 1,
-      "pnl": -9.89,
+      "losses": 2,
+      "pnl": -19.96,
       "win_rate": 0.0,
       "profit_factor": 0.0,
       "target_wr": 60
@@ -518,17 +532,31 @@
       "profit_usd": 0.02,
       "result": "WIN",
       "ticket": "117497779"
+    },
+    {
+      "direction": "SELL",
+      "duration_min": 7,
+      "ea_name": "StochC2",
+      "entry_price": 4072.82,
+      "entry_time": "2026-07-08 12:40 UTC",
+      "exit_comment": "[sl 4082.887]",
+      "exit_price": 4082.89,
+      "exit_time": "2026-07-08 12:47 UTC",
+      "magic": 20260624,
+      "profit_usd": -10.07,
+      "result": "LOSS",
+      "ticket": "117510721"
     }
   ],
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 15,
+    "total": 16,
     "wins": 7,
-    "losses": 8,
-    "pnl": -37.98,
-    "win_rate": 46.7,
-    "profit_factor": 0.48,
+    "losses": 9,
+    "pnl": -48.05,
+    "win_rate": 43.8,
+    "profit_factor": 0.42,
     "target_wr": 50
   },
   "arb_summary": {
@@ -540,10 +568,10 @@
     "profit_factor": 0.0
   },
   "c2_summary": {
-    "total": 1,
+    "total": 2,
     "wins": 0,
-    "losses": 1,
-    "pnl": -9.89,
+    "losses": 2,
+    "pnl": -19.96,
     "win_rate": 0.0,
     "profit_factor": 0.0
   },
@@ -555,5 +583,5 @@
     "win_rate": 50.0,
     "profit_factor": 0.76
   },
-  "message": "ARB: 1t $-26.49 | C2: 1t $-9.89 | MA50: 12t $-8.65 | MA50-H1: 1t $+7.05 | Total: $-37.98"
+  "message": "ARB: 1t $-26.49 | C2: 2t $-19.96 | MA50: 12t $-8.65 | MA50-H1: 1t $+7.05 | Total: $-48.05"
 }
