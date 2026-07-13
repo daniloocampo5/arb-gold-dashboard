@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-13T09:04:56Z",
-  "last_updated": "2026-07-13T09:04:56Z",
+  "updated_at": "2026-07-13T10:05:00Z",
+  "last_updated": "2026-07-13T10:05:00Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 728.31,
-  "equity": 728.31,
+  "current_balance": 728.24,
+  "equity": 730.11,
   "pnl_total": -71.54,
   "pnl_pct": -8.94,
   "tunnel_url": "https://talked-martial-permits-driver.trycloudflare.com",
@@ -723,7 +723,18 @@
       "profit_factor": 0.61,
       "target_wr": 55
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4070.293,
+      "ea_name": "MA50-v1.69F",
+      "entrada": 4068.421,
+      "lotes": 0.01,
+      "magic": 550105,
+      "profit": 1.87,
+      "sl": 4061.773,
+      "ticket": 118385803,
+      "tipo": "BUY",
+      "tp": 4073.407
+    },
     "params": {
       "sl_mult": 2.0,
       "tp_mult": 1.5,
@@ -1556,8 +1567,32 @@
       "ticket": "118341961"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4070.293,
+      "ea_name": "MA50-v1.69F",
+      "entrada": 4068.421,
+      "lotes": 0.01,
+      "magic": 550105,
+      "profit": 1.87,
+      "sl": 4061.773,
+      "ticket": 118385803,
+      "tipo": "BUY",
+      "tp": 4073.407
+    }
+  ],
+  "open_position": {
+    "actual": 4070.293,
+    "ea_name": "MA50-v1.69F",
+    "entrada": 4068.421,
+    "lotes": 0.01,
+    "magic": 550105,
+    "profit": 1.87,
+    "sl": 4061.773,
+    "ticket": 118385803,
+    "tipo": "BUY",
+    "tp": 4073.407
+  },
   "summary": {
     "total": 52,
     "wins": 15,
