@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-13T18:05:35Z",
-  "last_updated": "2026-07-13T18:05:35Z",
+  "updated_at": "2026-07-13T19:05:38Z",
+  "last_updated": "2026-07-13T19:05:38Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 741.81,
-  "equity": 741.81,
-  "pnl_total": -57.83,
-  "pnl_pct": -7.23,
+  "current_balance": 736.83,
+  "equity": 736.83,
+  "pnl_total": -62.74,
+  "pnl_pct": -7.84,
   "tunnel_url": "https://talked-martial-permits-driver.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -740,15 +740,29 @@
         "profit_usd": 7.92,
         "result": "WIN",
         "ticket": "118444460"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 15,
+        "ea_name": "MA50-v1.69F",
+        "entry_price": 3998.97,
+        "entry_time": "2026-07-13 18:40 UTC",
+        "exit_comment": "",
+        "exit_price": 4003.88,
+        "exit_time": "2026-07-13 18:55 UTC",
+        "magic": 550105,
+        "profit_usd": -4.91,
+        "result": "LOSS",
+        "ticket": "118533653"
       }
     ],
     "summary": {
-      "total": 43,
+      "total": 44,
       "wins": 13,
-      "losses": 30,
-      "pnl": -41.89,
-      "win_rate": 30.2,
-      "profit_factor": 0.66,
+      "losses": 31,
+      "pnl": -46.8,
+      "win_rate": 29.5,
+      "profit_factor": 0.64,
       "target_wr": 55
     },
     "open_position": null,
@@ -1638,17 +1652,31 @@
       "profit_usd": 7.92,
       "result": "WIN",
       "ticket": "118444460"
+    },
+    {
+      "direction": "SELL",
+      "duration_min": 15,
+      "ea_name": "MA50-v1.69F",
+      "entry_price": 3998.97,
+      "entry_time": "2026-07-13 18:40 UTC",
+      "exit_comment": "",
+      "exit_price": 4003.88,
+      "exit_time": "2026-07-13 18:55 UTC",
+      "magic": 550105,
+      "profit_usd": -4.91,
+      "result": "LOSS",
+      "ticket": "118533653"
     }
   ],
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 55,
+    "total": 56,
     "wins": 17,
-    "losses": 38,
-    "pnl": -57.83,
-    "win_rate": 30.9,
-    "profit_factor": 0.7,
+    "losses": 39,
+    "pnl": -62.74,
+    "win_rate": 30.4,
+    "profit_factor": 0.69,
     "target_wr": 50
   },
   "arb_summary": {
@@ -1668,12 +1696,12 @@
     "profit_factor": 0.0
   },
   "ma50_summary": {
-    "total": 43,
+    "total": 44,
     "wins": 13,
-    "losses": 30,
-    "pnl": -41.89,
-    "win_rate": 30.2,
-    "profit_factor": 0.66
+    "losses": 31,
+    "pnl": -46.8,
+    "win_rate": 29.5,
+    "profit_factor": 0.64
   },
-  "message": "ARB: 2t $+5.81 | C2: 4t $-32.25 | MA50: 43t $-41.89 | MA50-H1: 6t $+10.50 | Total: $-57.83"
+  "message": "ARB: 2t $+5.81 | C2: 4t $-32.25 | MA50: 44t $-46.80 | MA50-H1: 6t $+10.50 | Total: $-62.74"
 }
