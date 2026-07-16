@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-16T10:43:25Z",
-  "last_updated": "2026-07-16T10:43:25Z",
+  "updated_at": "2026-07-16T11:43:33Z",
+  "last_updated": "2026-07-16T11:43:33Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 435.38,
-  "equity": 435.38,
-  "pnl_total": -378.22,
-  "pnl_pct": -47.28,
+  "current_balance": 431.26,
+  "equity": 431.26,
+  "pnl_total": -382.27,
+  "pnl_pct": -47.78,
   "tunnel_url": "https://bags-equality-mph-nelson.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -130,15 +130,29 @@
         "profit_usd": 3.53,
         "result": "WIN",
         "ticket": "119158420"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 0,
+        "ea_name": "StochC2",
+        "entry_price": 4025.22,
+        "entry_time": "2026-07-16 11:25 UTC",
+        "exit_comment": "[sl 4021.171]",
+        "exit_price": 4021.17,
+        "exit_time": "2026-07-16 11:25 UTC",
+        "magic": 20260624,
+        "profit_usd": -4.05,
+        "result": "LOSS",
+        "ticket": "119207686"
       }
     ],
     "summary": {
-      "total": 5,
+      "total": 6,
       "wins": 1,
-      "losses": 4,
-      "pnl": -28.72,
-      "win_rate": 20.0,
-      "profit_factor": 0.11,
+      "losses": 5,
+      "pnl": -32.77,
+      "win_rate": 16.7,
+      "profit_factor": 0.1,
       "target_wr": 60
     },
     "open_position": null,
@@ -2506,16 +2520,30 @@
       "profit_usd": 3.53,
       "result": "WIN",
       "ticket": "119158420"
+    },
+    {
+      "direction": "BUY",
+      "duration_min": 0,
+      "ea_name": "StochC2",
+      "entry_price": 4025.22,
+      "entry_time": "2026-07-16 11:25 UTC",
+      "exit_comment": "[sl 4021.171]",
+      "exit_price": 4021.17,
+      "exit_time": "2026-07-16 11:25 UTC",
+      "magic": 20260624,
+      "profit_usd": -4.05,
+      "result": "LOSS",
+      "ticket": "119207686"
     }
   ],
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 86,
+    "total": 87,
     "wins": 24,
-    "losses": 62,
-    "pnl": -378.22,
-    "win_rate": 27.9,
+    "losses": 63,
+    "pnl": -382.27,
+    "win_rate": 27.6,
     "profit_factor": 0.31,
     "target_wr": 50
   },
@@ -2528,12 +2556,12 @@
     "profit_factor": 1.22
   },
   "c2_summary": {
-    "total": 5,
+    "total": 6,
     "wins": 1,
-    "losses": 4,
-    "pnl": -28.72,
-    "win_rate": 20.0,
-    "profit_factor": 0.11
+    "losses": 5,
+    "pnl": -32.77,
+    "win_rate": 16.7,
+    "profit_factor": 0.1
   },
   "ma50_summary": {
     "total": 57,
@@ -2543,5 +2571,5 @@
     "win_rate": 29.8,
     "profit_factor": 0.59
   },
-  "message": "ARB: 2t $+5.81 | C2: 5t $-28.72 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | Total: $-378.22"
+  "message": "ARB: 2t $+5.81 | C2: 6t $-32.77 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | Total: $-382.27"
 }
