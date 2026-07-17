@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-17T12:46:04Z",
-  "last_updated": "2026-07-17T12:46:04Z",
+  "updated_at": "2026-07-17T13:46:10Z",
+  "last_updated": "2026-07-17T13:46:10Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 459.78,
-  "equity": 461.93,
-  "pnl_total": -353.61,
-  "pnl_pct": -44.2,
+  "current_balance": 448.05,
+  "equity": 448.05,
+  "pnl_total": -365.34,
+  "pnl_pct": -45.67,
   "tunnel_url": "https://bags-equality-mph-nelson.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -52,29 +52,32 @@
         "profit_usd": 28.66,
         "result": "WIN",
         "ticket": "119259803"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 52,
+        "ea_name": "ARB-Gold",
+        "entry_price": 3969.75,
+        "entry_time": "2026-07-17 12:45 UTC",
+        "exit_comment": "[sl 3981.484]",
+        "exit_price": 3981.48,
+        "exit_time": "2026-07-17 13:37 UTC",
+        "magic": 20260613,
+        "profit_usd": -11.73,
+        "result": "LOSS",
+        "ticket": "119592344"
       }
     ],
     "summary": {
-      "total": 3,
+      "total": 4,
       "wins": 2,
-      "losses": 1,
-      "pnl": 34.47,
-      "win_rate": 66.7,
-      "profit_factor": 2.3,
+      "losses": 2,
+      "pnl": 22.74,
+      "win_rate": 50.0,
+      "profit_factor": 1.59,
       "target_wr": 45
     },
-    "open_position": {
-      "actual": 3967.599,
-      "ea_name": "ARB-Gold",
-      "entrada": 3969.75,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": 2.15,
-      "sl": 3981.484,
-      "ticket": 119592344,
-      "tipo": "SELL",
-      "tp": 3950.49
-    },
+    "open_position": null,
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 3.0,
@@ -2573,50 +2576,40 @@
       "profit_usd": 28.66,
       "result": "WIN",
       "ticket": "119259803"
-    }
-  ],
-  "open_positions": [
+    },
     {
-      "actual": 3967.599,
+      "direction": "SELL",
+      "duration_min": 52,
       "ea_name": "ARB-Gold",
-      "entrada": 3969.75,
-      "lotes": 0.01,
+      "entry_price": 3969.75,
+      "entry_time": "2026-07-17 12:45 UTC",
+      "exit_comment": "[sl 3981.484]",
+      "exit_price": 3981.48,
+      "exit_time": "2026-07-17 13:37 UTC",
       "magic": 20260613,
-      "profit": 2.15,
-      "sl": 3981.484,
-      "ticket": 119592344,
-      "tipo": "SELL",
-      "tp": 3950.49
+      "profit_usd": -11.73,
+      "result": "LOSS",
+      "ticket": "119592344"
     }
   ],
-  "open_position": {
-    "actual": 3967.599,
-    "ea_name": "ARB-Gold",
-    "entrada": 3969.75,
-    "lotes": 0.01,
-    "magic": 20260613,
-    "profit": 2.15,
-    "sl": 3981.484,
-    "ticket": 119592344,
-    "tipo": "SELL",
-    "tp": 3950.49
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 88,
+    "total": 89,
     "wins": 25,
-    "losses": 63,
-    "pnl": -353.61,
-    "win_rate": 28.4,
-    "profit_factor": 0.36,
+    "losses": 64,
+    "pnl": -365.34,
+    "win_rate": 28.1,
+    "profit_factor": 0.35,
     "target_wr": 50
   },
   "arb_summary": {
-    "total": 3,
+    "total": 4,
     "wins": 2,
-    "losses": 1,
-    "pnl": 34.47,
-    "win_rate": 66.7,
-    "profit_factor": 2.3
+    "losses": 2,
+    "pnl": 22.74,
+    "win_rate": 50.0,
+    "profit_factor": 1.59
   },
   "c2_summary": {
     "total": 6,
@@ -2634,5 +2627,5 @@
     "win_rate": 29.8,
     "profit_factor": 0.59
   },
-  "message": "ARB: 3t $+34.47 | C2: 6t $-32.77 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | Total: $-353.61"
+  "message": "ARB: 4t $+22.74 | C2: 6t $-32.77 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | Total: $-365.34"
 }
