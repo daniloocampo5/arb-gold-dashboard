@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-17T11:45:57Z",
-  "last_updated": "2026-07-17T11:45:57Z",
+  "updated_at": "2026-07-17T12:46:04Z",
+  "last_updated": "2026-07-17T12:46:04Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 459.85,
-  "equity": 459.85,
+  "current_balance": 459.78,
+  "equity": 461.93,
   "pnl_total": -353.61,
   "pnl_pct": -44.2,
   "tunnel_url": "https://bags-equality-mph-nelson.trycloudflare.com",
@@ -63,7 +63,18 @@
       "profit_factor": 2.3,
       "target_wr": 45
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 3967.599,
+      "ea_name": "ARB-Gold",
+      "entrada": 3969.75,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 2.15,
+      "sl": 3981.484,
+      "ticket": 119592344,
+      "tipo": "SELL",
+      "tp": 3950.49
+    },
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 3.0,
@@ -2564,8 +2575,32 @@
       "ticket": "119259803"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 3967.599,
+      "ea_name": "ARB-Gold",
+      "entrada": 3969.75,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 2.15,
+      "sl": 3981.484,
+      "ticket": 119592344,
+      "tipo": "SELL",
+      "tp": 3950.49
+    }
+  ],
+  "open_position": {
+    "actual": 3967.599,
+    "ea_name": "ARB-Gold",
+    "entrada": 3969.75,
+    "lotes": 0.01,
+    "magic": 20260613,
+    "profit": 2.15,
+    "sl": 3981.484,
+    "ticket": 119592344,
+    "tipo": "SELL",
+    "tp": 3950.49
+  },
   "summary": {
     "total": 88,
     "wins": 25,
