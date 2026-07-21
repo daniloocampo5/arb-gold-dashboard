@@ -723,7 +723,7 @@ function flaskToStatus(f) {
 }
 
 // ── Actualizar directo al Flask via Cloudflare tunnel ─────────────
-async async function refreshLive() {
+async function refreshLive() {
   const btn = document.getElementById('refresh-btn');
   btn.disabled = true;
   btn.classList.add('loading');
