@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -264,7 +264,7 @@ tr:last-child td{border:none}
 <div class="header">
   <div>
     <div class="title">DANILO O. | TRADING DESK</div>
-    <div class="subtitle">Exness Demo · XAUUSDm · ARB Gold v1.4 · StochC2 v1.1 · EMA50 · MA50 v1.71 — Inicio $800</div>
+    <div class="subtitle">Exness Demo · XAUUSDm · ARB Gold v1.5 · StochC2 v1.1 — Inicio $800</div>
   </div>
   <div class="header-right">
     <span class="badge" id="badge">...</span>
@@ -423,129 +423,6 @@ tr:last-child td{border:none}
     </div>
   </div>
 
-  <!-- ── MA50 PULLBACK ────────────────────────────────────────────── -->
-  <div>
-    <button class="strat-btn" onclick="toggleS('ma50')">
-      <div class="strat-head" id="head-ma50">
-        <div class="strat-stripe stripe-ma50"></div>
-        <div class="strat-info">
-          <div class="strat-name ma50-col">◆ EMA50 PULLBACK v1.68</div>
-          <div class="strat-meta">
-            <span class="strat-tag tag-ma50">SMA50 + RSI + Slope</span>
-            <span class="strat-tag tag-tf">M5</span>
-            <span class="strat-tag tag-ma50">magic 550105</span>
-          </div>
-        </div>
-        <div class="strat-kpis">
-          <span class="kpi-pnl" id="ma50-head-pnl">-</span>
-          <span class="kpi-wr" id="ma50-head-wr">WR -</span>
-        </div>
-        <span class="strat-arrow" id="arrow-ma50">▼</span>
-      </div>
-    </button>
-    <div class="strat-panel" id="panel-ma50">
-      <div class="strat-inner">
-        <div class="stats-grid">
-          <div class="sbox">
-            <div class="sl">Win Rate</div>
-            <div class="sv ma50" id="ma50-wr">-</div>
-            <div class="wr-bar"><div class="wr-fill" id="ma50-wrf" style="background:var(--ma50);width:0%"></div></div>
-          </div>
-          <div class="sbox">
-            <div class="sl">P&amp;L Total</div>
-            <div class="sv" id="ma50-pnl">-</div>
-          </div>
-          <div class="sbox">
-            <div class="sl">Profit Factor</div>
-            <div class="sv ma50" id="ma50-pf">-</div>
-          </div>
-          <div class="sbox">
-            <div class="sl">Trades</div>
-            <div class="sv neutral" id="ma50-trades">-</div>
-            <div class="swl" id="ma50-wl">-W/-L</div>
-          </div>
-        </div>
-        <div class="ptags">
-          <span class="ptag">SL 2.0× ATR8</span>
-          <span class="ptag">TP 1.5× ATR8</span>
-          <span class="ptag">SMA50 Pullback</span>
-          <span class="ptag">RSI 35-55 / 45-65</span>
-          <span class="ptag">Slope filter</span>
-          <span class="ptag">0.01 lot</span>
-        </div>
-        <div id="ma50-pos"></div>
-        <div class="section-title">Últimos trades</div>
-        <div style="overflow-x:auto">
-          <table class="mini-t">
-            <thead><tr><th>Fecha</th><th>Dir</th><th>Entrada</th><th>Salida</th><th>Dur</th><th>P&amp;L</th></tr></thead>
-            <tbody id="ma50-mini"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── MA50 PULLBACK v1.70-H1 ──────────────────────────────────── -->
-  <div>
-    <button class="strat-btn" onclick="toggleS('ma50h1')">
-      <div class="strat-head" id="head-ma50h1">
-        <div class="strat-stripe stripe-ma50h1"></div>
-        <div class="strat-info">
-          <div class="strat-name ma50h1-col">&#9670; MA50 v1.71-H1</div>
-          <div class="strat-meta">
-            <span class="strat-tag tag-ma50h1">SMA50 + H1 Trend Filter</span>
-            <span class="strat-tag tag-tf">M5</span>
-            <span class="strat-tag tag-ma50h1">magic 550169</span>
-          </div>
-        </div>
-        <div class="strat-kpis">
-          <span class="kpi-pnl" id="ma50h1-head-pnl">-</span>
-          <span class="kpi-wr" id="ma50h1-head-wr">WR -</span>
-        </div>
-        <span class="strat-arrow" id="arrow-ma50h1">&#9660;</span>
-      </div>
-    </button>
-    <div class="strat-panel" id="panel-ma50h1">
-      <div class="strat-inner">
-        <div class="stats-grid">
-          <div class="sbox">
-            <div class="sl">Win Rate</div>
-            <div class="sv ma50h1" id="ma50h1-wr">-</div>
-            <div class="wr-bar"><div class="wr-fill" id="ma50h1-wrf" style="background:var(--ma50h1);width:0%"></div></div>
-          </div>
-          <div class="sbox">
-            <div class="sl">P&amp;L Total</div>
-            <div class="sv" id="ma50h1-pnl">-</div>
-          </div>
-          <div class="sbox">
-            <div class="sl">Profit Factor</div>
-            <div class="sv ma50h1" id="ma50h1-pf">-</div>
-          </div>
-          <div class="sbox">
-            <div class="sl">Trades</div>
-            <div class="sv neutral" id="ma50h1-trades">-</div>
-            <div class="swl" id="ma50h1-wl">-W/-L</div>
-          </div>
-        </div>
-        <div class="ptags">
-          <span class="ptag">SL 2.0&times; ATR8</span>
-          <span class="ptag">TP 1.5&times; ATR8</span>
-          <span class="ptag">H1 SMA50 Trend</span>
-          <span class="ptag">RSI 35-55 / 45-65</span>
-          <span class="ptag">MA Exit</span>
-          <span class="ptag">0.01 lot</span>
-        </div>
-        <div id="ma50h1-pos"></div>
-        <div class="section-title">&#218;ltimos trades</div>
-        <div style="overflow-x:auto">
-          <table class="mini-t">
-            <thead><tr><th>Fecha</th><th>Dir</th><th>Entrada</th><th>Salida</th><th>Dur</th><th>P&amp;L</th></tr></thead>
-            <tbody id="ma50h1-mini"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
 </div><!-- /strategies -->
 
 <!-- ══ HISTORIAL COMPLETO ════════════════════════════════════════════ -->
@@ -569,7 +446,7 @@ tr:last-child td{border:none}
 </div>
 
 <div class="footer">
-  <div>ARB-Gold · StochC2 · MA50 Pullback — Exness Demo XAUUSDm</div>
+  <div>ARB-Gold v1.5 · StochC2 v1.1 — Exness Demo XAUUSDm</div>
 </div>
 
 <script>
@@ -641,7 +518,7 @@ function posHTML(pos) {
 }
 
 // ── Acordeón estrategias ──────────────────────────────────────────
-const STRATS = ['arb','c2','ma50','ma50h1'];
+const STRATS = ['arb','c2'];
 function toggleS(id) {
   STRATS.forEach(x => {
     const head  = document.getElementById('head-'+x);
@@ -768,22 +645,12 @@ function flaskToStatus(f) {
       summary:       f.c2_summary  || calcStats(f.c2_trades||[]),
       open_position: (f.c2_open||[])[0] || null,
     },
-    ma50: {
-      trades:        f.ma50_trades   || [],
-      summary:       f.ma50_summary  || calcStats(f.ma50_trades||[]),
-      open_position: (f.ma50_open||[])[0] || null,
-    },
-    ma50h1: {
-      trades:        f.ma50h1_trades   || [],
-      summary:       f.ma50h1_summary  || calcStats(f.ma50h1_trades||[]),
-      open_position: (f.ma50h1_open||[])[0] || null,
-    },
     updated_at: new Date().toISOString(),
   };
 }
 
 // ── Actualizar directo al Flask via Cloudflare tunnel ─────────────
-async function refreshLive() {
+async async function refreshLive() {
   const btn = document.getElementById('refresh-btn');
   btn.disabled = true;
   btn.classList.add('loading');
@@ -853,7 +720,8 @@ function render(d) {
     document.getElementById('updated-at').textContent =
       'Act: ' + ua.toLocaleString('es-CO',{timeZone:'America/Bogota',hour12:false}).slice(0,16) + ' (Col)';
   }
-  const all    = d.trades || [];
+  const ACTIVE_MAGICS = new Set([20260613, 20260624]);
+  const all    = (d.trades || []).filter(t => ACTIVE_MAGICS.has(t.magic));
   const today  = todayUTC();
   const todayT = all.filter(t => (t.entry_time||'').startsWith(today));
   const pnlHoy = todayT.reduce((a,t) => a+(t.profit_usd||0), 0);
@@ -891,18 +759,6 @@ function render(d) {
   const c2Open   = openArr.find(p => p.magic === 20260624) || c2Data.open_position || null;
   renderS('c2', c2Data, c2Open);
 
-  const ma50Raw    = d.ma50 || {};
-  const ma50Trades = ma50Raw.trades || all.filter(t => t.magic === 550105);
-  const ma50Data   = {trades: ma50Trades, summary: ma50Raw.summary || calcStats(ma50Trades)};
-  const ma50Open   = openArr.find(p => p.magic === 550105) || ma50Raw.open_position || null;
-  renderS('ma50', ma50Data, ma50Open);
-
-  const ma50h1Raw    = d.ma50h1 || {};
-  const ma50h1Trades = ma50h1Raw.trades || all.filter(t => t.magic === 550169);
-  const ma50h1Data   = {trades: ma50h1Trades, summary: ma50h1Raw.summary || calcStats(ma50h1Trades)};
-  const ma50h1Open   = openArr.find(p => p.magic === 550169) || ma50h1Raw.open_position || null;
-  renderS('ma50h1', ma50h1Data, ma50h1Open);
-
   renderHist(all);
 }
 
@@ -912,4 +768,5 @@ setInterval(load, 5 * 60 * 1000);
 </script>
 </body>
 </html>
+
 
