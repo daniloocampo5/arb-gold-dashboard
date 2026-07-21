@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -25,6 +25,7 @@
   --c2:      #a78bfa;
   --ma50:    #22d3c8;
   --ma50h1:  #4ade80;
+  --ema200:  #38bdf8;
 }
 
 body{
@@ -92,9 +93,10 @@ body{
 }
 .strat-head:hover{background:var(--surf2)}
 
-.strat-head.open-arb{background:#0f0900;border-color:var(--arb);border-radius:10px 10px 0 0}
-.strat-head.open-c2 {background:#0a0518;border-color:var(--c2); border-radius:10px 10px 0 0}
-.strat-head.open-ma50{background:#001818;border-color:var(--ma50);border-radius:10px 10px 0 0}
+.strat-head.open-arb  {background:#0f0900;border-color:var(--arb);  border-radius:10px 10px 0 0}
+.strat-head.open-c2   {background:#0a0518;border-color:var(--c2);   border-radius:10px 10px 0 0}
+.strat-head.open-ma50 {background:#001818;border-color:var(--ma50); border-radius:10px 10px 0 0}
+.strat-head.open-ema200{background:#00131f;border-color:var(--ema200);border-radius:10px 10px 0 0}
 
 /* Franja izquierda de color */
 .strat-stripe{
@@ -157,6 +159,13 @@ body{
 .chip.ma50h1{background:#021a08;color:var(--ma50h1);border:1px solid #054020}
 .sv.ma50h1{color:var(--ma50h1)}
 .strat-panel.open-ma50h1{border-color:var(--ma50h1);max-height:1500px}
+
+.stripe-ema200{background:var(--ema200)}
+.strat-name.ema200-col{color:var(--ema200)}
+.tag-ema200{background:#00131f;color:var(--ema200);border:1px solid #003c5a}
+.chip.ema200{background:#00131f;color:var(--ema200);border:1px solid #003c5a}
+.sv.ema200{color:var(--ema200)}
+.strat-panel.open-ema200{border-color:var(--ema200);max-height:1500px}
 
 .strat-inner{padding:16px}
 
@@ -264,7 +273,7 @@ tr:last-child td{border:none}
 <div class="header">
   <div>
     <div class="title">DANILO O. | TRADING DESK</div>
-    <div class="subtitle">Exness Demo · XAUUSDm · ARB Gold v1.5 · StochC2 v1.1 — Inicio $800</div>
+    <div class="subtitle">Exness Demo · XAUUSDm · ARB Gold v1.5 · StochC2 v1.1 · EMA200 NY M5 v1.0 — Inicio $800</div>
   </div>
   <div class="header-right">
     <span class="badge" id="badge">...</span>
@@ -423,6 +432,69 @@ tr:last-child td{border:none}
     </div>
   </div>
 
+
+  <!-- ── EMA200 NY M5 ─────────────────────────────────────────────── -->
+  <div>
+    <button class="strat-btn" onclick="toggleS('ema200')">
+      <div class="strat-head" id="head-ema200">
+        <div class="strat-stripe stripe-ema200"></div>
+        <div class="strat-info">
+          <div class="strat-name ema200-col">◆ EMA200 NY M5</div>
+          <div class="strat-meta">
+            <span class="strat-tag tag-ema200">Reversión EMA200 + Sesión NY</span>
+            <span class="strat-tag tag-tf">M5</span>
+            <span class="strat-tag tag-ema200">magic 550208</span>
+          </div>
+        </div>
+        <div class="strat-kpis">
+          <span class="kpi-pnl" id="ema200-head-pnl">-</span>
+          <span class="kpi-wr" id="ema200-head-wr">WR -</span>
+        </div>
+        <span class="strat-arrow" id="arrow-ema200">▼</span>
+      </div>
+    </button>
+    <div class="strat-panel" id="panel-ema200">
+      <div class="strat-inner">
+        <div class="stats-grid">
+          <div class="sbox">
+            <div class="sl">Win Rate</div>
+            <div class="sv ema200" id="ema200-wr">-</div>
+            <div class="wr-bar"><div class="wr-fill" id="ema200-wrf" style="background:var(--ema200);width:0%"></div></div>
+          </div>
+          <div class="sbox">
+            <div class="sl">P&amp;L Total</div>
+            <div class="sv" id="ema200-pnl">-</div>
+          </div>
+          <div class="sbox">
+            <div class="sl">Profit Factor</div>
+            <div class="sv ema200" id="ema200-pf">-</div>
+          </div>
+          <div class="sbox">
+            <div class="sl">Trades</div>
+            <div class="sv neutral" id="ema200-trades">-</div>
+            <div class="swl" id="ema200-wl">-W/-L</div>
+          </div>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Dist &gt;5× ATR8 de EMA200</span>
+          <span class="ptag">TP 0.8× ATR8</span>
+          <span class="ptag">SL 3.0× ATR8</span>
+          <span class="ptag">NY 13-17h UTC</span>
+          <span class="ptag">Timeout 120 barras (10h)</span>
+          <span class="ptag">0.01 lot</span>
+        </div>
+        <div id="ema200-pos"></div>
+        <div class="section-title">Últimos trades</div>
+        <div style="overflow-x:auto">
+          <table class="mini-t">
+            <thead><tr><th>Fecha</th><th>Dir</th><th>Entrada</th><th>Salida</th><th>Dur</th><th>P&amp;L</th></tr></thead>
+            <tbody id="ema200-mini"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div><!-- /strategies -->
 
 <!-- ══ HISTORIAL COMPLETO ════════════════════════════════════════════ -->
@@ -446,7 +518,7 @@ tr:last-child td{border:none}
 </div>
 
 <div class="footer">
-  <div>ARB-Gold v1.5 · StochC2 v1.1 — Exness Demo XAUUSDm</div>
+  <div>ARB-Gold v1.5 · StochC2 v1.1 · EMA200 NY M5 v1.0 — Exness Demo XAUUSDm</div>
 </div>
 
 <script>
@@ -518,7 +590,7 @@ function posHTML(pos) {
 }
 
 // ── Acordeón estrategias ──────────────────────────────────────────
-const STRATS = ['arb','c2'];
+const STRATS = ['arb','c2','ema200'];
 function toggleS(id) {
   STRATS.forEach(x => {
     const head  = document.getElementById('head-'+x);
@@ -572,10 +644,11 @@ function renderS(id, data, openPos) {
 
 // ── Historial completo ────────────────────────────────────────────
 function eaChip(magic) {
-  if (magic === 20260613) return ['arb',   'ARB'];
-  if (magic === 20260624) return ['c2',    'C2'];
-  if (magic === 550105)   return ['ma50',  'EMA50'];
-  if (magic === 550169)   return ['ma50h1','MA50H1'];
+  if (magic === 20260613) return ['arb',    'ARB'];
+  if (magic === 20260624) return ['c2',     'C2'];
+  if (magic === 550105)   return ['ma50',   'EMA50'];
+  if (magic === 550169)   return ['ma50h1', 'MA50H1'];
+  if (magic === 550208)   return ['ema200', 'EMA200'];
   return ['', magic||'?'];
 }
 
@@ -720,7 +793,7 @@ function render(d) {
     document.getElementById('updated-at').textContent =
       'Act: ' + ua.toLocaleString('es-CO',{timeZone:'America/Bogota',hour12:false}).slice(0,16) + ' (Col)';
   }
-  const ACTIVE_MAGICS = new Set([20260613, 20260624]);
+  const ACTIVE_MAGICS = new Set([20260613, 20260624, 550208]);
   const all    = (d.trades || []).filter(t => ACTIVE_MAGICS.has(t.magic));
   const today  = todayUTC();
   const todayT = all.filter(t => (t.entry_time||'').startsWith(today));
@@ -759,6 +832,10 @@ function render(d) {
   const c2Open   = openArr.find(p => p.magic === 20260624) || c2Data.open_position || null;
   renderS('c2', c2Data, c2Open);
 
+  const ema200Data = d.ema200_ny || {};
+  const ema200Open = openArr.find(p => p.magic === 550208) || ema200Data.open_position || null;
+  renderS('ema200', ema200Data, ema200Open);
+
   renderHist(all);
 }
 
@@ -768,5 +845,6 @@ setInterval(load, 5 * 60 * 1000);
 </script>
 </body>
 </html>
+
 
 
