@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-21T09:00:17Z",
-  "last_updated": "2026-07-21T09:00:17Z",
+  "updated_at": "2026-07-21T10:00:24Z",
+  "last_updated": "2026-07-21T10:00:24Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 447.98,
-  "equity": 448.29,
-  "pnl_total": -365.34,
-  "pnl_pct": -45.67,
+  "current_balance": 451.9,
+  "equity": 451.9,
+  "pnl_total": -361.42,
+  "pnl_pct": -45.18,
   "tunnel_url": "https://johns-double-justify-enables.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -172,29 +172,32 @@
         "profit_usd": -4.05,
         "result": "LOSS",
         "ticket": "119207686"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 50,
+        "ea_name": "StochC2",
+        "entry_price": 4063.58,
+        "entry_time": "2026-07-21 08:30 UTC",
+        "exit_comment": "[tp 4067.499]",
+        "exit_price": 4067.5,
+        "exit_time": "2026-07-21 09:20 UTC",
+        "magic": 20260624,
+        "profit_usd": 3.92,
+        "result": "WIN",
+        "ticket": "120183666"
       }
     ],
     "summary": {
-      "total": 6,
-      "wins": 1,
+      "total": 7,
+      "wins": 2,
       "losses": 5,
-      "pnl": -32.77,
-      "win_rate": 16.7,
-      "profit_factor": 0.1,
+      "pnl": -28.85,
+      "win_rate": 28.6,
+      "profit_factor": 0.21,
       "target_wr": 60
     },
-    "open_position": {
-      "actual": 4063.891,
-      "ea_name": "StochC2",
-      "entrada": 4063.584,
-      "lotes": 0.01,
-      "magic": 20260624,
-      "profit": 0.31,
-      "sl": 4058.691,
-      "ticket": 120183666,
-      "tipo": "BUY",
-      "tp": 4067.499
-    },
+    "open_position": null,
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 1.2,
@@ -2601,41 +2604,31 @@
       "profit_usd": -11.73,
       "result": "LOSS",
       "ticket": "119592344"
-    }
-  ],
-  "open_positions": [
+    },
     {
-      "actual": 4063.891,
+      "direction": "BUY",
+      "duration_min": 50,
       "ea_name": "StochC2",
-      "entrada": 4063.584,
-      "lotes": 0.01,
+      "entry_price": 4063.58,
+      "entry_time": "2026-07-21 08:30 UTC",
+      "exit_comment": "[tp 4067.499]",
+      "exit_price": 4067.5,
+      "exit_time": "2026-07-21 09:20 UTC",
       "magic": 20260624,
-      "profit": 0.31,
-      "sl": 4058.691,
-      "ticket": 120183666,
-      "tipo": "BUY",
-      "tp": 4067.499
+      "profit_usd": 3.92,
+      "result": "WIN",
+      "ticket": "120183666"
     }
   ],
-  "open_position": {
-    "actual": 4063.891,
-    "ea_name": "StochC2",
-    "entrada": 4063.584,
-    "lotes": 0.01,
-    "magic": 20260624,
-    "profit": 0.31,
-    "sl": 4058.691,
-    "ticket": 120183666,
-    "tipo": "BUY",
-    "tp": 4067.499
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 89,
-    "wins": 25,
+    "total": 90,
+    "wins": 26,
     "losses": 64,
-    "pnl": -365.34,
-    "win_rate": 28.1,
-    "profit_factor": 0.35,
+    "pnl": -361.42,
+    "win_rate": 28.9,
+    "profit_factor": 0.36,
     "target_wr": 50
   },
   "arb_summary": {
@@ -2647,12 +2640,12 @@
     "profit_factor": 1.59
   },
   "c2_summary": {
-    "total": 6,
-    "wins": 1,
+    "total": 7,
+    "wins": 2,
     "losses": 5,
-    "pnl": -32.77,
-    "win_rate": 16.7,
-    "profit_factor": 0.1
+    "pnl": -28.85,
+    "win_rate": 28.6,
+    "profit_factor": 0.21
   },
   "ma50_summary": {
     "total": 57,
@@ -2662,5 +2655,5 @@
     "win_rate": 29.8,
     "profit_factor": 0.59
   },
-  "message": "ARB: 4t $+22.74 | C2: 6t $-32.77 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | Total: $-365.34"
+  "message": "ARB: 4t $+22.74 | C2: 7t $-28.85 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | Total: $-361.42"
 }
