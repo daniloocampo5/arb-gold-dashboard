@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-22T16:24:28Z",
-  "last_updated": "2026-07-22T16:24:28Z",
+  "updated_at": "2026-07-22T17:24:35Z",
+  "last_updated": "2026-07-22T17:24:35Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 466.81,
-  "equity": 466.81,
+  "current_balance": 466.74,
+  "equity": 466.98,
   "pnl_total": -362.48,
   "pnl_pct": -45.31,
   "tunnel_url": "https://johns-double-justify-enables.trycloudflare.com",
@@ -211,7 +211,18 @@
       "profit_factor": 0.16,
       "target_wr": 60
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4144.749,
+      "ea_name": "StochC2",
+      "entrada": 4144.505,
+      "lotes": 0.01,
+      "magic": 20260624,
+      "profit": 0.24,
+      "sl": 4138.658,
+      "ticket": 120667646,
+      "tipo": "BUY",
+      "tp": 4149.091
+    },
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 1.2,
@@ -2728,8 +2739,32 @@
       "ticket": "120627812"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4144.749,
+      "ea_name": "StochC2",
+      "entrada": 4144.505,
+      "lotes": 0.01,
+      "magic": 20260624,
+      "profit": 0.24,
+      "sl": 4138.658,
+      "ticket": 120667646,
+      "tipo": "BUY",
+      "tp": 4149.091
+    }
+  ],
+  "open_position": {
+    "actual": 4144.749,
+    "ea_name": "StochC2",
+    "entrada": 4144.505,
+    "lotes": 0.01,
+    "magic": 20260624,
+    "profit": 0.24,
+    "sl": 4138.658,
+    "ticket": 120667646,
+    "tipo": "BUY",
+    "tp": 4149.091
+  },
   "summary": {
     "total": 93,
     "wins": 28,
