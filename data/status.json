@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-22T15:24:24Z",
-  "last_updated": "2026-07-22T15:24:24Z",
+  "updated_at": "2026-07-22T16:24:28Z",
+  "last_updated": "2026-07-22T16:24:28Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 450.56,
-  "equity": 468.31,
+  "current_balance": 466.81,
+  "equity": 466.81,
   "pnl_total": -362.48,
   "pnl_pct": -45.31,
   "tunnel_url": "https://johns-double-justify-enables.trycloudflare.com",
@@ -77,18 +77,7 @@
       "profit_factor": 1.59,
       "target_wr": 45
     },
-    "open_position": {
-      "actual": 4161.019,
-      "ea_name": "ARB-Gold",
-      "entrada": 4143.266,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": 17.75,
-      "sl": 4127.055,
-      "ticket": 120615439,
-      "tipo": "BUY",
-      "tp": 4169.656
-    },
+    "open_position": null,
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 3.0,
@@ -2739,32 +2728,8 @@
       "ticket": "120627812"
     }
   ],
-  "open_positions": [
-    {
-      "actual": 4161.019,
-      "ea_name": "ARB-Gold",
-      "entrada": 4143.266,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": 17.75,
-      "sl": 4127.055,
-      "ticket": 120615439,
-      "tipo": "BUY",
-      "tp": 4169.656
-    }
-  ],
-  "open_position": {
-    "actual": 4161.019,
-    "ea_name": "ARB-Gold",
-    "entrada": 4143.266,
-    "lotes": 0.01,
-    "magic": 20260613,
-    "profit": 17.75,
-    "sl": 4127.055,
-    "ticket": 120615439,
-    "tipo": "BUY",
-    "tp": 4169.656
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
     "total": 93,
     "wins": 28,
