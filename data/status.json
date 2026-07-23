@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-23T14:26:35Z",
-  "last_updated": "2026-07-23T14:26:35Z",
+  "updated_at": "2026-07-23T15:26:40Z",
+  "last_updated": "2026-07-23T15:26:40Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 461.49,
-  "equity": 461.49,
-  "pnl_total": -367.45,
-  "pnl_pct": -45.93,
+  "current_balance": 465.74,
+  "equity": 465.74,
+  "pnl_total": -363.13,
+  "pnl_pct": -45.39,
   "tunnel_url": "https://johns-double-justify-enables.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -1471,13 +1471,27 @@
         "profit_usd": 6.63,
         "result": "WIN",
         "ticket": "120930190"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 2,
+        "ea_name": "EMA200-NY",
+        "entry_price": 4051.11,
+        "entry_time": "2026-07-23 15:15 UTC",
+        "exit_comment": "[tp 4055.430]",
+        "exit_price": 4055.43,
+        "exit_time": "2026-07-23 15:17 UTC",
+        "magic": 550208,
+        "profit_usd": 4.32,
+        "result": "WIN",
+        "ticket": "120976993"
       }
     ],
     "summary": {
-      "total": 3,
-      "wins": 3,
+      "total": 4,
+      "wins": 4,
       "losses": 0,
-      "pnl": 15.57,
+      "pnl": 19.89,
       "win_rate": 100.0,
       "profit_factor": 0,
       "target_wr": 84
@@ -2866,17 +2880,31 @@
       "profit_usd": 6.63,
       "result": "WIN",
       "ticket": "120930190"
+    },
+    {
+      "direction": "BUY",
+      "duration_min": 2,
+      "ea_name": "EMA200-NY",
+      "entry_price": 4051.11,
+      "entry_time": "2026-07-23 15:15 UTC",
+      "exit_comment": "[tp 4055.430]",
+      "exit_price": 4055.43,
+      "exit_time": "2026-07-23 15:17 UTC",
+      "magic": 550208,
+      "profit_usd": 4.32,
+      "result": "WIN",
+      "ticket": "120976993"
     }
   ],
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 98,
-    "wins": 30,
+    "total": 99,
+    "wins": 31,
     "losses": 68,
-    "pnl": -367.45,
-    "win_rate": 30.6,
-    "profit_factor": 0.38,
+    "pnl": -363.13,
+    "win_rate": 31.3,
+    "profit_factor": 0.39,
     "target_wr": 50
   },
   "arb_summary": {
@@ -2903,5 +2931,5 @@
     "win_rate": 29.8,
     "profit_factor": 0.59
   },
-  "message": "ARB: 4t $+22.74 | C2: 12t $-50.45 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | EMA200: 3t $+15.57 | Total: $-367.45"
+  "message": "ARB: 4t $+22.74 | C2: 12t $-50.45 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | EMA200: 4t $+19.89 | Total: $-363.13"
 }
