@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-24T16:29:08Z",
-  "last_updated": "2026-07-24T16:29:08Z",
+  "updated_at": "2026-07-24T17:29:15Z",
+  "last_updated": "2026-07-24T17:29:15Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
-  "current_balance": 470.25,
-  "equity": 472.81,
-  "pnl_total": -358.48,
-  "pnl_pct": -44.81,
+  "current_balance": 473.89,
+  "equity": 473.89,
+  "pnl_total": -354.84,
+  "pnl_pct": -44.35,
   "tunnel_url": "https://johns-double-justify-enables.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -1499,29 +1499,32 @@
         "profit_usd": 4.32,
         "result": "WIN",
         "ticket": "120976993"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 25,
+        "ea_name": "EMA200-NY",
+        "entry_price": 4076.95,
+        "entry_time": "2026-07-24 16:05 UTC",
+        "exit_comment": "[tp 4073.312]",
+        "exit_price": 4073.31,
+        "exit_time": "2026-07-24 16:30 UTC",
+        "magic": 550208,
+        "profit_usd": 3.64,
+        "result": "WIN",
+        "ticket": "121350876"
       }
     ],
     "summary": {
-      "total": 4,
-      "wins": 4,
+      "total": 5,
+      "wins": 5,
       "losses": 0,
-      "pnl": 19.89,
+      "pnl": 23.53,
       "win_rate": 100.0,
       "profit_factor": 0,
       "target_wr": 84
     },
-    "open_position": {
-      "actual": 4074.388,
-      "ea_name": "EMA200-NY",
-      "entrada": 4076.952,
-      "lotes": 0.01,
-      "magic": 550208,
-      "profit": 2.56,
-      "sl": 4089.149,
-      "ticket": 121350876,
-      "tipo": "SELL",
-      "tp": 4073.312
-    },
+    "open_position": null,
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -2933,41 +2936,31 @@
       "profit_usd": 4.65,
       "result": "WIN",
       "ticket": "121003904"
-    }
-  ],
-  "open_positions": [
+    },
     {
-      "actual": 4074.388,
+      "direction": "SELL",
+      "duration_min": 25,
       "ea_name": "EMA200-NY",
-      "entrada": 4076.952,
-      "lotes": 0.01,
+      "entry_price": 4076.95,
+      "entry_time": "2026-07-24 16:05 UTC",
+      "exit_comment": "[tp 4073.312]",
+      "exit_price": 4073.31,
+      "exit_time": "2026-07-24 16:30 UTC",
       "magic": 550208,
-      "profit": 2.56,
-      "sl": 4089.149,
-      "ticket": 121350876,
-      "tipo": "SELL",
-      "tp": 4073.312
+      "profit_usd": 3.64,
+      "result": "WIN",
+      "ticket": "121350876"
     }
   ],
-  "open_position": {
-    "actual": 4074.388,
-    "ea_name": "EMA200-NY",
-    "entrada": 4076.952,
-    "lotes": 0.01,
-    "magic": 550208,
-    "profit": 2.56,
-    "sl": 4089.149,
-    "ticket": 121350876,
-    "tipo": "SELL",
-    "tp": 4073.312
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 100,
-    "wins": 32,
+    "total": 101,
+    "wins": 33,
     "losses": 68,
-    "pnl": -358.48,
-    "win_rate": 32.0,
-    "profit_factor": 0.39,
+    "pnl": -354.84,
+    "win_rate": 32.7,
+    "profit_factor": 0.4,
     "target_wr": 50
   },
   "arb_summary": {
@@ -2994,5 +2987,5 @@
     "win_rate": 29.8,
     "profit_factor": 0.59
   },
-  "message": "ARB: 4t $+22.74 | C2: 13t $-45.80 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | EMA200: 4t $+19.89 | Total: $-358.48"
+  "message": "ARB: 4t $+22.74 | C2: 13t $-45.80 | MA50: 57t $-70.99 | MA50-H1: 22t $-284.32 | EMA200: 5t $+23.53 | Total: $-354.84"
 }
