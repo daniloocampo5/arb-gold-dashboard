@@ -900,23 +900,43 @@ function render(d) {
   // Gcards (usa renderGcards que respeta la vista activa)
   renderGcards(d);
 
-  const ACTIVE_MAGICS = new Set([20260613, 20260624, 550208]);
-  const all    = (d.trades || []).filter(t => ACTIVE_MAGICS.has(t.magic));
-  const openArr = d.open_positions || [];
+  const realAcc  = d.real_account  || {};   // datos cuenta REAL (desde 2026-07-26)
+  const demoAcc  = d.demo_account  || {};   // datos cuenta DEMO
+  const REAL_OPEN = (realAcc.open_positions || []);
+  const DEMO_OPEN = (d.open_positions || []);
 
-  const arbData  = d.arb_gold || {};
-  const arbOpen  = openArr.find(p => p.magic === 20260613) || arbData.open_position || null;
-  renderS('arb', arbData, arbOpen);
+  // ── Fuente de datos según vista ───────────────────────────────────
+  // Vista REAL: ARB y EMA200 leen de real_account (parten de 0 el 26-jul)
+  // Vista DEMO / TODAS: ARB y EMA200 leen del demo acumulado
+  const isRealView = _currentView === 'real';
 
-  const c2Data   = d.stoch_c2 || {};
-  const c2Open   = openArr.find(p => p.magic === 20260624) || c2Data.open_position || null;
+  const arbSrc   = isRealView ? (realAcc.arb_gold  || {}) : (d.arb_gold   || {});
+  const emaSrc   = isRealView ? (realAcc.ema200_ny || {}) : (d.ema200_ny  || {});
+  const arbOpenP = isRealView
+    ? (REAL_OPEN.find(p => p.magic === 20260613) || arbSrc.open_position || null)
+    : (DEMO_OPEN.find(p => p.magic === 20260613) || (d.arb_gold||{}).open_position || null);
+  const emaOpenP = isRealView
+    ? (REAL_OPEN.find(p => p.magic === 550208)   || emaSrc.open_position || null)
+    : (DEMO_OPEN.find(p => p.magic === 550208)   || (d.ema200_ny||{}).open_position || null);
+
+  renderS('arb',    arbSrc, arbOpenP);
+  renderS('ema200', emaSrc, emaOpenP);
+
+  const c2Data = d.stoch_c2 || {};
+  const c2Open = DEMO_OPEN.find(p => p.magic === 20260624) || c2Data.open_position || null;
   renderS('c2', c2Data, c2Open);
 
-  const ema200Data = d.ema200_ny || {};
-  const ema200Open = openArr.find(p => p.magic === 550208) || ema200Data.open_position || null;
-  renderS('ema200', ema200Data, ema200Open);
-
-  renderHist(all);
+  // Historial: filtrar según vista
+  const ACTIVE_MAGICS = new Set([20260613, 20260624, 550208]);
+  let histTrades;
+  if (isRealView) {
+    histTrades = (realAcc.trades || []);
+  } else if (_currentView === 'demo') {
+    histTrades = (demoAcc.trades || (d.trades||[]).filter(t => t.magic === 20260624));
+  } else {
+    histTrades = (d.trades || []).filter(t => ACTIVE_MAGICS.has(t.magic));
+  }
+  renderHist(histTrades);
   renderAccounts(d);
 }
 
@@ -964,14 +984,12 @@ let _lastData    = null;
 
 function setView(v) {
   _currentView = v;
-  // body class para CSS
   document.body.className = v === 'all' ? '' : 'mode-' + v;
-  // botones activos
   document.querySelectorAll('.view-tab').forEach(t =>
     t.classList.toggle('active', t.dataset.view === v)
   );
-  // actualizar gcards con datos de la vista seleccionada
-  if (_lastData) renderGcards(_lastData);
+  // re-renderizar completo con los datos en memoria
+  if (_lastData) render(_lastData);
 }
 
 function renderGcards(d) {
