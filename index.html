@@ -262,6 +262,34 @@ tr:last-child td{border:none}
 @keyframes spin{to{transform:rotate(360deg)}}
 .ri{display:inline-block;font-size:14px}
 
+/* ══ REAL vs DEMO ══════════════════════════════════════════════════ */
+.accounts-split{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;
+}
+.account-card{
+  border-radius:12px;padding:14px 16px;
+  border:1px solid var(--border2);position:relative;overflow:hidden;
+}
+.real-card{background:#040d00;border-color:#00c878}
+.demo-card{background:#07001a;border-color:var(--c2)}
+.ac-label{
+  display:flex;align-items:center;gap:8px;margin-bottom:10px;
+}
+.ac-badge{
+  font-size:8px;font-weight:800;letter-spacing:1.5px;
+  padding:2px 8px;border-radius:8px;
+}
+.real-badge{background:#082800;color:#00c878;border:1px solid #00c878}
+.demo-badge{background:#110028;color:var(--c2);border:1px solid var(--c2)}
+.ac-eas{font-size:9px;color:var(--muted)}
+.ac-balance{font-size:clamp(18px,4vw,26px);font-weight:800;color:var(--text);margin-bottom:2px}
+.ac-pnl{font-size:13px;font-weight:700;margin-bottom:8px}
+.ac-pnl.g{color:var(--green)}.ac-pnl.r{color:var(--red)}.ac-pnl.neutral{color:var(--muted)}
+.ac-row{display:flex;gap:14px;flex-wrap:wrap}
+.ac-stat{font-size:9px;color:var(--muted)}
+.ac-stat span{font-size:11px;font-weight:700;color:var(--text);display:block;margin-top:1px}
+.ac-divider{width:1px;background:var(--border);margin:0 2px}
+
 /* ══ FOOTER ════════════════════════════════════════════════════════ */
 .footer{text-align:center;color:var(--dim);font-size:10px;margin-top:24px;
   padding-top:14px;border-top:1px solid var(--border)}
@@ -305,6 +333,42 @@ tr:last-child td{border:none}
     <div class="glbl">P&amp;L Acumulado</div>
     <div class="gval" id="g-pnl-acum">-</div>
     <div class="gsub" id="g-pnl-pct">-</div>
+  </div>
+</div>
+
+<!-- ══ REAL vs DEMO ═════════════════════════════════════════════════ -->
+<div class="accounts-split" id="accounts-split">
+  <!-- REAL ACCOUNT -->
+  <div class="account-card real-card">
+    <div class="ac-label">
+      <span class="ac-badge real-badge">REAL</span>
+      <span class="ac-eas" id="real-eas">ARB-Gold · EMA200-NY</span>
+    </div>
+    <div class="ac-balance" id="real-balance">—</div>
+    <div class="ac-pnl neutral" id="real-pnl">P&amp;L: —</div>
+    <div class="ac-row">
+      <div class="ac-stat">Trades<span id="real-trades">—</span></div>
+      <div class="ac-divider"></div>
+      <div class="ac-stat">Win Rate<span id="real-wr">—</span></div>
+      <div class="ac-divider"></div>
+      <div class="ac-stat">Retorno<span id="real-ret">—</span></div>
+    </div>
+  </div>
+  <!-- DEMO ACCOUNT -->
+  <div class="account-card demo-card">
+    <div class="ac-label">
+      <span class="ac-badge demo-badge">DEMO</span>
+      <span class="ac-eas" id="demo-eas">StochC2</span>
+    </div>
+    <div class="ac-balance" id="demo-balance">—</div>
+    <div class="ac-pnl neutral" id="demo-pnl">P&amp;L: —</div>
+    <div class="ac-row">
+      <div class="ac-stat">Trades<span id="demo-trades">—</span></div>
+      <div class="ac-divider"></div>
+      <div class="ac-stat">Win Rate<span id="demo-wr">—</span></div>
+      <div class="ac-divider"></div>
+      <div class="ac-stat">Retorno<span id="demo-ret">—</span></div>
+    </div>
   </div>
 </div>
 
@@ -837,6 +901,45 @@ function render(d) {
   renderS('ema200', ema200Data, ema200Open);
 
   renderHist(all);
+  renderAccounts(d);
+}
+
+function renderAccounts(d) {
+  const fmt = v => (v >= 0 ? '+' : '') + v.toFixed(2);
+  const pct = v => (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+  const pnlClass = v => v > 0 ? 'g' : v < 0 ? 'r' : 'neutral';
+
+  // REAL
+  const real = d.real_account || null;
+  if (real) {
+    const rb = document.getElementById('real-balance');
+    const rp = document.getElementById('real-pnl');
+    const rt = document.getElementById('real-trades');
+    const rw = document.getElementById('real-wr');
+    const rr = document.getElementById('real-ret');
+    if(rb) rb.textContent = '$' + (real.balance || 0).toFixed(2);
+    const rpnl = real.pnl || 0;
+    if(rp){ rp.textContent = 'P&L: ' + fmt(rpnl); rp.className = 'ac-pnl ' + pnlClass(rpnl); }
+    if(rt) rt.textContent = (real.trades || []).length;
+    if(rw) rw.textContent = real.win_rate != null ? real.win_rate.toFixed(1) + '%' : '—';
+    if(rr) rr.textContent = real.pnl_pct != null ? pct(real.pnl_pct) : '—';
+  }
+
+  // DEMO
+  const demo = d.demo_account || null;
+  if (demo) {
+    const db = document.getElementById('demo-balance');
+    const dp = document.getElementById('demo-pnl');
+    const dt = document.getElementById('demo-trades');
+    const dw = document.getElementById('demo-wr');
+    const dr = document.getElementById('demo-ret');
+    if(db) db.textContent = '$' + (demo.balance || 0).toFixed(2);
+    const dpnl = demo.pnl || 0;
+    if(dp){ dp.textContent = 'P&L: ' + fmt(dpnl); dp.className = 'ac-pnl ' + pnlClass(dpnl); }
+    if(dt) dt.textContent = (demo.trades || []).length;
+    if(dw) dw.textContent = demo.win_rate != null ? demo.win_rate.toFixed(1) + '%' : '—';
+    if(dr) dr.textContent = demo.pnl_pct != null ? pct(demo.pnl_pct) : '—';
+  }
 }
 
 // ARB abierto por defecto
