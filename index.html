@@ -262,6 +262,36 @@ tr:last-child td{border:none}
 @keyframes spin{to{transform:rotate(360deg)}}
 .ri{display:inline-block;font-size:14px}
 
+/* ══ VIEW TABS ══════════════════════════════════════════════════════ */
+.view-tabs{
+  display:flex;gap:6px;margin-bottom:18px;
+}
+.view-tab{
+  flex:1;padding:9px 4px;border-radius:8px;border:1px solid var(--border2);
+  background:var(--surf);color:var(--muted);font-size:11px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;cursor:pointer;
+  transition:background .15s,color .15s,border-color .15s;
+}
+.view-tab:hover{color:var(--text)}
+.view-tab[data-view="real"].active{
+  background:#040d00;border-color:#00c878;color:#00c878;
+}
+.view-tab[data-view="demo"].active{
+  background:#110028;border-color:var(--c2);color:var(--c2);
+}
+.view-tab[data-view="all"].active{
+  background:var(--surf2);border-color:var(--gold);color:var(--gold2);
+}
+
+/* Filtrado por vista */
+body.mode-real [data-acct="demo"]{ display:none }
+body.mode-real .demo-card{ display:none }
+body.mode-demo [data-acct="real"]{ display:none }
+body.mode-demo .real-card{ display:none }
+/* En single-card, la split pasa a 1 columna */
+body.mode-real .accounts-split,
+body.mode-demo .accounts-split{ grid-template-columns:1fr }
+
 /* ══ REAL vs DEMO ══════════════════════════════════════════════════ */
 .accounts-split{
   display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;
@@ -310,6 +340,13 @@ tr:last-child td{border:none}
     </button>
     <span class="updated" id="updated-at">-</span>
   </div>
+</div>
+
+<!-- ══ TABS REAL / DEMO ══════════════════════════════════════════════ -->
+<div class="view-tabs">
+  <button class="view-tab active" data-view="all"  onclick="setView('all')">Todas</button>
+  <button class="view-tab"        data-view="real" onclick="setView('real')">Real</button>
+  <button class="view-tab"        data-view="demo" onclick="setView('demo')">Demo</button>
 </div>
 
 <!-- ══ CUENTA GENERAL ════════════════════════════════════════════════ -->
@@ -376,7 +413,7 @@ tr:last-child td{border:none}
 <div class="strategies">
 
   <!-- ── ARB GOLD ─────────────────────────────────────────────────── -->
-  <div>
+  <div data-acct="real">
     <button class="strat-btn" onclick="toggleS('arb')">
       <div class="strat-head" id="head-arb">
         <div class="strat-stripe stripe-arb"></div>
@@ -436,7 +473,7 @@ tr:last-child td{border:none}
   </div>
 
   <!-- ── STOCHC2 ──────────────────────────────────────────────────── -->
-  <div>
+  <div data-acct="demo">
     <button class="strat-btn" onclick="toggleS('c2')">
       <div class="strat-head" id="head-c2">
         <div class="strat-stripe stripe-c2"></div>
@@ -498,7 +535,7 @@ tr:last-child td{border:none}
 
 
   <!-- ── EMA200 NY M5 ─────────────────────────────────────────────── -->
-  <div>
+  <div data-acct="real">
     <button class="strat-btn" onclick="toggleS('ema200')">
       <div class="strat-head" id="head-ema200">
         <div class="strat-stripe stripe-ema200"></div>
@@ -848,6 +885,8 @@ async function refreshLive() {
 
 // ── Separar render del fetch para poder reusar ────────────────────
 function render(d) {
+  _lastData = d;
+
   // Badge
   const badge = document.getElementById('badge');
   badge.textContent = d.pc_online ? '🟢 Online' : '🔴 Offline';
@@ -857,36 +896,13 @@ function render(d) {
     document.getElementById('updated-at').textContent =
       'Act: ' + ua.toLocaleString('es-CO',{timeZone:'America/Bogota',hour12:false}).slice(0,16) + ' (Col)';
   }
+
+  // Gcards (usa renderGcards que respeta la vista activa)
+  renderGcards(d);
+
   const ACTIVE_MAGICS = new Set([20260613, 20260624, 550208]);
   const all    = (d.trades || []).filter(t => ACTIVE_MAGICS.has(t.magic));
-  const today  = todayUTC();
-  const todayT = all.filter(t => (t.entry_time||'').startsWith(today));
-  const pnlHoy = todayT.reduce((a,t) => a+(t.profit_usd||0), 0);
-  const openArr    = d.open_positions || [];
-  const unrealized = openArr.reduce((a,p) => a+(p.profit||0), 0);
-  const bal     = d.current_balance || d.start_balance || BASE_BAL;
-  const equity  = d.equity || (bal + unrealized);
-  const pnlAcum = d.pnl_total || 0;
-  const pnlPct  = d.pnl_pct   || (Math.round(pnlAcum/BASE_BAL*10000)/100);
-  const allStats= d.summary   || calcStats(all);
-
-  document.getElementById('g-balance').textContent  = '$' + bal.toFixed(2);
-  document.getElementById('g-equity').textContent   = 'Equity $' + equity.toFixed(2);
-
-  const phEl = document.getElementById('g-pnl-hoy');
-  phEl.textContent = fp(pnlHoy);
-  phEl.className   = 'gval';
-  document.getElementById('gc-pnl-hoy').className   = 'gcard ' + (pnlHoy >= 0 ? 'g' : 'r');
-  document.getElementById('g-pnl-hoy-n').textContent= todayT.length + ' trades hoy';
-
-  const paEl = document.getElementById('g-pnl-acum');
-  paEl.textContent = fp(pnlAcum);
-  paEl.className   = 'gval';
-  document.getElementById('gc-pnl-acum').className  = 'gcard ' + (pnlAcum >= 0 ? 'g' : 'r');
-  document.getElementById('g-pnl-pct').textContent  = (pnlPct >= 0 ? '+' : '') + pnlPct + '% vs inicio';
-
-  document.getElementById('g-trades-hoy').textContent   = todayT.length;
-  document.getElementById('g-trades-total').textContent = 'Total acumulado: ' + (allStats.total||0);
+  const openArr = d.open_positions || [];
 
   const arbData  = d.arb_gold || {};
   const arbOpen  = openArr.find(p => p.magic === 20260613) || arbData.open_position || null;
@@ -940,6 +956,84 @@ function renderAccounts(d) {
     if(dw) dw.textContent = demo.win_rate != null ? demo.win_rate.toFixed(1) + '%' : '—';
     if(dr) dr.textContent = demo.pnl_pct != null ? pct(demo.pnl_pct) : '—';
   }
+}
+
+// ── Vista REAL / DEMO / TODAS ─────────────────────────────────────
+let _currentView = 'all';
+let _lastData    = null;
+
+function setView(v) {
+  _currentView = v;
+  // body class para CSS
+  document.body.className = v === 'all' ? '' : 'mode-' + v;
+  // botones activos
+  document.querySelectorAll('.view-tab').forEach(t =>
+    t.classList.toggle('active', t.dataset.view === v)
+  );
+  // actualizar gcards con datos de la vista seleccionada
+  if (_lastData) renderGcards(_lastData);
+}
+
+function renderGcards(d) {
+  const fmt = (v,d=2) => (v>=0?'+':'')+v.toFixed(d);
+  const today  = todayUTC();
+  let bal, equity, pnlAcum, pnlPct, totalTrades, todayCount, pnlHoy;
+
+  if (_currentView === 'real' && d.real_account) {
+    const r = d.real_account;
+    bal        = r.balance  || 600;
+    equity     = r.equity   || bal;
+    pnlAcum    = r.pnl      || 0;
+    pnlPct     = r.pnl_pct  || 0;
+    const trs  = r.trades   || [];
+    totalTrades = trs.length;
+    const todayT = trs.filter(t => (t.entry_time||'').startsWith(today));
+    todayCount = todayT.length;
+    pnlHoy     = todayT.reduce((a,t)=>a+(t.profit_usd||0), 0);
+  } else if (_currentView === 'demo' && d.demo_account) {
+    const dm   = d.demo_account;
+    bal        = dm.balance || 800;
+    equity     = bal;
+    pnlAcum    = dm.pnl     || 0;
+    pnlPct     = dm.pnl_pct || 0;
+    const trs  = dm.trades  || [];
+    totalTrades = trs.length;
+    const todayT = trs.filter(t => (t.entry_time||'').startsWith(today));
+    todayCount = todayT.length;
+    pnlHoy     = todayT.reduce((a,t)=>a+(t.profit_usd||0), 0);
+  } else {
+    // vista "todas" — datos combinados del JSON
+    const ACTIVE_MAGICS = new Set([20260613, 20260624, 550208]);
+    const all    = (d.trades||[]).filter(t => ACTIVE_MAGICS.has(t.magic));
+    const openArr = d.open_positions || [];
+    const unrealized = openArr.reduce((a,p)=>a+(p.profit||0),0);
+    bal        = d.current_balance || d.start_balance || BASE_BAL;
+    equity     = d.equity || (bal + unrealized);
+    pnlAcum    = d.pnl_total || 0;
+    pnlPct     = d.pnl_pct   || Math.round(pnlAcum/BASE_BAL*10000)/100;
+    totalTrades = (d.summary||{}).total || all.length;
+    const todayT = all.filter(t => (t.entry_time||'').startsWith(today));
+    todayCount = todayT.length;
+    pnlHoy     = todayT.reduce((a,t)=>a+(t.profit_usd||0), 0);
+  }
+
+  document.getElementById('g-balance').textContent  = '$' + bal.toFixed(2);
+  document.getElementById('g-equity').textContent   = 'Equity $' + equity.toFixed(2);
+
+  const phEl = document.getElementById('g-pnl-hoy');
+  phEl.textContent = fp(pnlHoy);
+  phEl.className   = 'gval';
+  document.getElementById('gc-pnl-hoy').className   = 'gcard ' + (pnlHoy >= 0 ? 'g' : 'r');
+  document.getElementById('g-pnl-hoy-n').textContent= todayCount + ' trades hoy';
+
+  const paEl = document.getElementById('g-pnl-acum');
+  paEl.textContent = fp(pnlAcum);
+  paEl.className   = 'gval';
+  document.getElementById('gc-pnl-acum').className  = 'gcard ' + (pnlAcum >= 0 ? 'g' : 'r');
+  document.getElementById('g-pnl-pct').textContent  = fmt(pnlPct,1) + '% vs inicio';
+
+  document.getElementById('g-trades-hoy').textContent   = todayCount;
+  document.getElementById('g-trades-total').textContent = 'Total acumulado: ' + totalTrades;
 }
 
 // ARB abierto por defecto
