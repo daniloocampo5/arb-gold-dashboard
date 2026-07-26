@@ -1,7 +1,7 @@
 {
-  "pc_online": true,
-  "updated_at": "2026-07-25T23:37:04Z",
-  "last_updated": "2026-07-25T23:37:04Z",
+  "pc_online": false,
+  "updated_at": "2026-07-26T00:09:46Z",
+  "last_updated": "2026-07-26T00:09:46Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
   "current_balance": 601.0,
