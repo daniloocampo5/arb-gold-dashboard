@@ -1,7 +1,7 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-27T15:49:29Z",
-  "last_updated": "2026-07-27T15:49:29Z",
+  "updated_at": "2026-07-27T16:49:33Z",
+  "last_updated": "2026-07-27T16:49:33Z",
   "start_date": "2026-07-06",
   "start_balance": 800,
   "current_balance": 601.0,
@@ -159,7 +159,7 @@
     "start_date": "2026-07-26",
     "start_balance": 600,
     "balance": 232.27,
-    "equity": 232.27,
+    "equity": 232.99,
     "pnl": 0.0,
     "pnl_pct": 0.0,
     "win_rate": 0,
