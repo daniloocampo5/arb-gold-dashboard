@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-28T17:22:56Z",
-  "last_updated": "2026-07-28T17:22:56Z",
+  "updated_at": "2026-07-28T18:23:00Z",
+  "last_updated": "2026-07-28T18:23:00Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 617.06,
-  "equity": 617.06,
+  "current_balance": 616.99,
+  "equity": 617.49,
   "pnl_total": 16.13,
   "pnl_pct": 2.69,
   "tunnel_url": "https://william-jazz-tap-customize.trycloudflare.com",
@@ -35,7 +35,18 @@
       "profit_factor": 0,
       "target_wr": 45
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4027.996,
+      "ea_name": "ARB-Gold",
+      "entrada": 4028.502,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 0.5,
+      "sl": 4038.116,
+      "ticket": 102752317,
+      "tipo": "SELL",
+      "tp": 4012.324
+    },
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 2.5,
@@ -84,8 +95,32 @@
       "ticket": "102724132"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4027.996,
+      "ea_name": "ARB-Gold",
+      "entrada": 4028.502,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 0.5,
+      "sl": 4038.116,
+      "ticket": 102752317,
+      "tipo": "SELL",
+      "tp": 4012.324
+    }
+  ],
+  "open_position": {
+    "actual": 4027.996,
+    "ea_name": "ARB-Gold",
+    "entrada": 4028.502,
+    "lotes": 0.01,
+    "magic": 20260613,
+    "profit": 0.5,
+    "sl": 4038.116,
+    "ticket": 102752317,
+    "tipo": "SELL",
+    "tp": 4012.324
+  },
   "summary": {
     "total": 1,
     "wins": 1,
