@@ -1,97 +1,33 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-28T04:50:38Z",
-  "last_updated": "2026-07-28T04:50:38Z",
-  "start_date": "2026-07-06",
-  "start_balance": 800,
+  "updated_at": "2026-07-28T05:34:59Z",
+  "last_updated": "2026-07-28T05:34:59Z",
+  "start_date": "2026-07-26",
+  "start_balance": 600,
   "current_balance": 601.0,
   "equity": 601.0,
-  "pnl_total": 0.0,
+  "pnl_total": 0,
   "pnl_pct": 0.0,
-  "tunnel_url": "https://texture-cleaning-appointed-value.trycloudflare.com",
+  "tunnel_url": null,
   "arb_gold": {
     "trades": [],
     "summary": {
       "total": 0,
       "wins": 0,
       "losses": 0,
+      "win_rate": 0.0,
       "pnl": 0.0,
-      "win_rate": 0,
-      "profit_factor": 0,
+      "profit_factor": 0.0,
       "target_wr": 45
     },
     "open_position": null,
     "params": {
       "sl_mult": 1.5,
-      "tp_mult": 3.0,
-      "atr_period": 14,
+      "tp_mult": 2.5,
+      "atr_period": 10,
       "timeframe": "M15",
       "lot": 0.02,
       "magic": 20260613
-    }
-  },
-  "stoch_c2": {
-    "trades": [],
-    "summary": {
-      "total": 0,
-      "wins": 0,
-      "losses": 0,
-      "pnl": 0.0,
-      "win_rate": 0,
-      "profit_factor": 0,
-      "target_wr": 60
-    },
-    "open_position": null,
-    "params": {
-      "sl_mult": 1.5,
-      "tp_mult": 1.2,
-      "stoch_k": 14,
-      "timeframe": "M5",
-      "lot": 0.01,
-      "magic": 20260624
-    }
-  },
-  "ma50": {
-    "trades": [],
-    "summary": {
-      "total": 0,
-      "wins": 0,
-      "losses": 0,
-      "pnl": 0.0,
-      "win_rate": 0,
-      "profit_factor": 0,
-      "target_wr": 55
-    },
-    "open_position": null,
-    "params": {
-      "sl_mult": 2.0,
-      "tp_mult": 1.5,
-      "atr_period": 8,
-      "timeframe": "M5",
-      "lot": 0.01,
-      "magic": 550105
-    }
-  },
-  "ma50h1": {
-    "trades": [],
-    "summary": {
-      "total": 0,
-      "wins": 0,
-      "losses": 0,
-      "pnl": 0.0,
-      "win_rate": 0,
-      "profit_factor": 0,
-      "target_wr": 55
-    },
-    "open_position": null,
-    "params": {
-      "sl_mult": 2.0,
-      "tp_mult": 1.5,
-      "atr_period": 8,
-      "timeframe": "M5",
-      "lot": 0.01,
-      "magic": 550169,
-      "extra": "H1 SMA50 trend filter"
     }
   },
   "ema200_ny": {
@@ -100,9 +36,9 @@
       "total": 0,
       "wins": 0,
       "losses": 0,
+      "win_rate": 0.0,
       "pnl": 0.0,
-      "win_rate": 0,
-      "profit_factor": 0,
+      "profit_factor": 0.0,
       "target_wr": 84
     },
     "open_position": null,
@@ -114,7 +50,7 @@
       "timeframe": "M5",
       "lot": 0.01,
       "magic": 550208,
-      "extra": "NY 13-17h UTC + pico local 30b"
+      "extra": "NY 13-17h UTC"
     }
   },
   "trades": [],
@@ -124,91 +60,9 @@
     "total": 0,
     "wins": 0,
     "losses": 0,
+    "win_rate": 0.0,
     "pnl": 0.0,
-    "win_rate": 0,
-    "profit_factor": 0,
-    "target_wr": 50
+    "profit_factor": 0.0
   },
-  "arb_summary": {
-    "total": 0,
-    "wins": 0,
-    "losses": 0,
-    "pnl": 0.0,
-    "win_rate": 0,
-    "profit_factor": 0
-  },
-  "c2_summary": {
-    "total": 0,
-    "wins": 0,
-    "losses": 0,
-    "pnl": 0.0,
-    "win_rate": 0,
-    "profit_factor": 0
-  },
-  "ma50_summary": {
-    "total": 0,
-    "wins": 0,
-    "losses": 0,
-    "pnl": 0.0,
-    "win_rate": 0,
-    "profit_factor": 0
-  },
-  "message": "ARB: 0t $+0.00 | C2: 0t $+0.00 | MA50: 0t $+0.00 | MA50-H1: 0t $+0.00 | EMA200: 0t $+0.00 | Total: $+0.00",
-  "real_account": {
-    "active": true,
-    "start_date": "2026-07-26",
-    "start_balance": 600,
-    "balance": 266.5,
-    "equity": 266.5,
-    "pnl": 0.0,
-    "pnl_pct": 0.0,
-    "win_rate": 0,
-    "trades": [],
-    "open_positions": [],
-    "arb_gold": {
-      "trades": [],
-      "summary": {
-        "total": 0,
-        "wins": 0,
-        "losses": 0,
-        "pnl": 0.0,
-        "win_rate": 0,
-        "profit_factor": 0,
-        "target_wr": 45
-      },
-      "open_position": null
-    },
-    "ema200_ny": {
-      "trades": [],
-      "summary": {
-        "total": 0,
-        "wins": 0,
-        "losses": 0,
-        "pnl": 0.0,
-        "win_rate": 0,
-        "profit_factor": 0,
-        "target_wr": 84
-      },
-      "open_position": null
-    }
-  },
-  "demo_account": {
-    "balance": 601.0,
-    "pnl": 0.0,
-    "pnl_pct": 0.0,
-    "win_rate": 0,
-    "trades": [],
-    "stoch_c2": {
-      "trades": [],
-      "summary": {
-        "total": 0,
-        "wins": 0,
-        "losses": 0,
-        "pnl": 0.0,
-        "win_rate": 0,
-        "profit_factor": 0,
-        "target_wr": 60
-      }
-    }
-  }
+  "message": "[MT5-directo] ARB:0t $+0.00 | EMA200:0t $+0.00 | Balance:$601.0 | Total:$+0.00"
 }
