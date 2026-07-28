@@ -1,23 +1,38 @@
 {
-  "pc_online": false,
-  "updated_at": "2026-07-28T05:34:59Z",
-  "last_updated": "2026-07-28T15:10:29Z",
+  "pc_online": true,
+  "updated_at": "2026-07-28T16:22:51Z",
+  "last_updated": "2026-07-28T16:22:51Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 601.0,
-  "equity": 601.0,
-  "pnl_total": 0,
-  "pnl_pct": 0.0,
-  "tunnel_url": null,
+  "current_balance": 617.06,
+  "equity": 617.06,
+  "pnl_total": 16.13,
+  "pnl_pct": 2.69,
+  "tunnel_url": "https://william-jazz-tap-customize.trycloudflare.com",
   "arb_gold": {
-    "trades": [],
+    "trades": [
+      {
+        "direction": "SELL",
+        "duration_min": 41,
+        "ea_name": "ARB-Gold",
+        "entry_price": 4033.29,
+        "entry_time": "2026-07-28 09:45 UTC",
+        "exit_comment": "[tp 4017.16000]",
+        "exit_price": 4017.16,
+        "exit_time": "2026-07-28 10:26 UTC",
+        "magic": 20260613,
+        "profit_usd": 16.13,
+        "result": "WIN",
+        "ticket": "102724132"
+      }
+    ],
     "summary": {
-      "total": 0,
-      "wins": 0,
+      "total": 1,
+      "wins": 1,
       "losses": 0,
-      "win_rate": 0.0,
-      "pnl": 0.0,
-      "profit_factor": 0.0,
+      "pnl": 16.13,
+      "win_rate": 100.0,
+      "profit_factor": 0,
       "target_wr": 45
     },
     "open_position": null,
@@ -36,9 +51,9 @@
       "total": 0,
       "wins": 0,
       "losses": 0,
-      "win_rate": 0.0,
       "pnl": 0.0,
-      "profit_factor": 0.0,
+      "win_rate": 0,
+      "profit_factor": 0,
       "target_wr": 84
     },
     "open_position": null,
@@ -53,16 +68,31 @@
       "extra": "NY 13-17h UTC"
     }
   },
-  "trades": [],
+  "trades": [
+    {
+      "direction": "SELL",
+      "duration_min": 41,
+      "ea_name": "ARB-Gold",
+      "entry_price": 4033.29,
+      "entry_time": "2026-07-28 09:45 UTC",
+      "exit_comment": "[tp 4017.16000]",
+      "exit_price": 4017.16,
+      "exit_time": "2026-07-28 10:26 UTC",
+      "magic": 20260613,
+      "profit_usd": 16.13,
+      "result": "WIN",
+      "ticket": "102724132"
+    }
+  ],
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 0,
-    "wins": 0,
+    "total": 1,
+    "wins": 1,
     "losses": 0,
-    "win_rate": 0.0,
-    "pnl": 0.0,
-    "profit_factor": 0.0
+    "pnl": 16.13,
+    "win_rate": 100.0,
+    "profit_factor": 0
   },
-  "message": "[MT5-directo] ARB:0t $+0.00 | EMA200:0t $+0.00 | Balance:$601.0 | Total:$+0.00"
+  "message": "ARB: 1t $+16.13 | EMA200: 0t $+0.00 | Total: $+16.13"
 }
