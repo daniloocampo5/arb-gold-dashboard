@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-29T16:24:42Z",
-  "last_updated": "2026-07-29T16:24:42Z",
+  "updated_at": "2026-07-29T17:24:47Z",
+  "last_updated": "2026-07-29T17:24:47Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 630.1,
-  "equity": 623.33,
-  "pnl_total": 29.31,
-  "pnl_pct": 4.88,
+  "current_balance": 616.06,
+  "equity": 616.06,
+  "pnl_total": 15.27,
+  "pnl_pct": 2.54,
   "tunnel_url": "https://william-jazz-tap-customize.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -38,29 +38,32 @@
         "profit_usd": 13.18,
         "result": "WIN",
         "ticket": "102752317"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 172,
+        "ea_name": "ARB-Gold",
+        "entry_price": 4007.57,
+        "entry_time": "2026-07-29 14:00 UTC",
+        "exit_comment": "[sl 4021.272]",
+        "exit_price": 4021.61,
+        "exit_time": "2026-07-29 16:52 UTC",
+        "magic": 20260613,
+        "profit_usd": -14.04,
+        "result": "LOSS",
+        "ticket": "102801977"
       }
     ],
     "summary": {
-      "total": 2,
+      "total": 3,
       "wins": 2,
-      "losses": 0,
-      "pnl": 29.31,
-      "win_rate": 100.0,
-      "profit_factor": 0,
+      "losses": 1,
+      "pnl": 15.27,
+      "win_rate": 66.7,
+      "profit_factor": 2.09,
       "target_wr": 45
     },
-    "open_position": {
-      "actual": 4014.344,
-      "ea_name": "ARB-Gold",
-      "entrada": 4007.565,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": -6.77,
-      "sl": 4021.272,
-      "ticket": 102801977,
-      "tipo": "SELL",
-      "tp": 3984.158
-    },
+    "open_position": null,
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 2.5,
@@ -121,41 +124,31 @@
       "profit_usd": 13.18,
       "result": "WIN",
       "ticket": "102752317"
-    }
-  ],
-  "open_positions": [
+    },
     {
-      "actual": 4014.344,
+      "direction": "SELL",
+      "duration_min": 172,
       "ea_name": "ARB-Gold",
-      "entrada": 4007.565,
-      "lotes": 0.01,
+      "entry_price": 4007.57,
+      "entry_time": "2026-07-29 14:00 UTC",
+      "exit_comment": "[sl 4021.272]",
+      "exit_price": 4021.61,
+      "exit_time": "2026-07-29 16:52 UTC",
       "magic": 20260613,
-      "profit": -6.77,
-      "sl": 4021.272,
-      "ticket": 102801977,
-      "tipo": "SELL",
-      "tp": 3984.158
+      "profit_usd": -14.04,
+      "result": "LOSS",
+      "ticket": "102801977"
     }
   ],
-  "open_position": {
-    "actual": 4014.344,
-    "ea_name": "ARB-Gold",
-    "entrada": 4007.565,
-    "lotes": 0.01,
-    "magic": 20260613,
-    "profit": -6.77,
-    "sl": 4021.272,
-    "ticket": 102801977,
-    "tipo": "SELL",
-    "tp": 3984.158
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 2,
+    "total": 3,
     "wins": 2,
-    "losses": 0,
-    "pnl": 29.31,
-    "win_rate": 100.0,
-    "profit_factor": 0
+    "losses": 1,
+    "pnl": 15.27,
+    "win_rate": 66.7,
+    "profit_factor": 2.09
   },
-  "message": "ARB: 2t $+29.31 | EMA200: 0t $+0.00 | Total: $+29.31"
+  "message": "ARB: 3t $+15.27 | EMA200: 0t $+0.00 | Total: $+15.27"
 }
