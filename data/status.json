@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-30T13:26:06Z",
-  "last_updated": "2026-07-30T13:26:06Z",
+  "updated_at": "2026-07-30T14:26:10Z",
+  "last_updated": "2026-07-30T14:26:10Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 616.06,
-  "equity": 616.06,
-  "pnl_total": 15.27,
-  "pnl_pct": 2.54,
+  "current_balance": 596.81,
+  "equity": 596.81,
+  "pnl_total": -3.91,
+  "pnl_pct": -0.65,
   "tunnel_url": "https://william-jazz-tap-customize.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -52,15 +52,29 @@
         "profit_usd": -14.04,
         "result": "LOSS",
         "ticket": "102801977"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 18,
+        "ea_name": "ARB-Gold",
+        "entry_price": 4112.22,
+        "entry_time": "2026-07-30 14:00 UTC",
+        "exit_comment": "[sl 4093.041]",
+        "exit_price": 4093.04,
+        "exit_time": "2026-07-30 14:18 UTC",
+        "magic": 20260613,
+        "profit_usd": -19.18,
+        "result": "LOSS",
+        "ticket": "102884513"
       }
     ],
     "summary": {
-      "total": 3,
+      "total": 4,
       "wins": 2,
-      "losses": 1,
-      "pnl": 15.27,
-      "win_rate": 66.7,
-      "profit_factor": 2.09,
+      "losses": 2,
+      "pnl": -3.91,
+      "win_rate": 50.0,
+      "profit_factor": 0.88,
       "target_wr": 45
     },
     "open_position": null,
@@ -138,17 +152,31 @@
       "profit_usd": -14.04,
       "result": "LOSS",
       "ticket": "102801977"
+    },
+    {
+      "direction": "BUY",
+      "duration_min": 18,
+      "ea_name": "ARB-Gold",
+      "entry_price": 4112.22,
+      "entry_time": "2026-07-30 14:00 UTC",
+      "exit_comment": "[sl 4093.041]",
+      "exit_price": 4093.04,
+      "exit_time": "2026-07-30 14:18 UTC",
+      "magic": 20260613,
+      "profit_usd": -19.18,
+      "result": "LOSS",
+      "ticket": "102884513"
     }
   ],
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 3,
+    "total": 4,
     "wins": 2,
-    "losses": 1,
-    "pnl": 15.27,
-    "win_rate": 66.7,
-    "profit_factor": 2.09
+    "losses": 2,
+    "pnl": -3.91,
+    "win_rate": 50.0,
+    "profit_factor": 0.88
   },
-  "message": "ARB: 3t $+15.27 | EMA200: 0t $+0.00 | Total: $+15.27"
+  "message": "ARB: 4t $-3.91 | EMA200: 0t $+0.00 | Total: $-3.91"
 }
