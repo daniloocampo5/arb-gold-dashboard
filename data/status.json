@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-07-30T15:26:14Z",
-  "last_updated": "2026-07-30T15:26:14Z",
+  "updated_at": "2026-07-30T16:26:18Z",
+  "last_updated": "2026-07-30T16:26:18Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 596.81,
-  "equity": 596.81,
+  "current_balance": 596.74,
+  "equity": 585.75,
   "pnl_total": -3.91,
   "pnl_pct": -0.65,
   "tunnel_url": "https://william-jazz-tap-customize.trycloudflare.com",
@@ -98,7 +98,18 @@
       "profit_factor": 0,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4117.075,
+      "ea_name": "EMA200-NY",
+      "entrada": 4106.091,
+      "lotes": 0.01,
+      "magic": 550208,
+      "profit": -10.99,
+      "sl": 4125.797,
+      "ticket": 102895192,
+      "tipo": "SELL",
+      "tp": 4100.836
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -168,8 +179,32 @@
       "ticket": "102884513"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4117.075,
+      "ea_name": "EMA200-NY",
+      "entrada": 4106.091,
+      "lotes": 0.01,
+      "magic": 550208,
+      "profit": -10.99,
+      "sl": 4125.797,
+      "ticket": 102895192,
+      "tipo": "SELL",
+      "tp": 4100.836
+    }
+  ],
+  "open_position": {
+    "actual": 4117.075,
+    "ea_name": "EMA200-NY",
+    "entrada": 4106.091,
+    "lotes": 0.01,
+    "magic": 550208,
+    "profit": -10.99,
+    "sl": 4125.797,
+    "ticket": 102895192,
+    "tipo": "SELL",
+    "tp": 4100.836
+  },
   "summary": {
     "total": 4,
     "wins": 2,
