@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -256,6 +256,33 @@ tr:last-child td{border:none}
 /* ══ FOOTER ════════════════════════════════════════════════════════ */
 .footer{text-align:center;color:var(--dim);font-size:10px;margin-top:24px;
   padding-top:14px;border-top:1px solid var(--border)}
+
+/* ══ EQUITY CHART ══════════════════════════════════════════════════ */
+.echart-sec{
+  background:var(--surf);border:1px solid var(--border2);border-radius:10px;
+  padding:14px 14px 10px;margin-bottom:22px;
+}
+.echart-hdr{
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;
+}
+.echart-title{
+  font-size:10px;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.9px;font-weight:700;
+}
+.echart-legend{display:flex;gap:14px;font-size:9.5px;color:var(--muted)}
+.eleg-dot{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  margin-right:3px;vertical-align:middle;
+}
+.echart-wrap{position:relative;user-select:none}
+#equity-canvas{display:block;width:100%;height:180px;cursor:crosshair}
+.echart-tip{
+  position:absolute;
+  background:rgba(13,11,7,.97);border:1px solid var(--gold);
+  border-radius:8px;padding:7px 11px;font-size:11px;color:var(--text);
+  pointer-events:none;white-space:nowrap;z-index:10;
+  box-shadow:0 4px 16px #0009;line-height:1.6;
+}
 </style>
 </head>
 <body>
@@ -296,6 +323,22 @@ tr:last-child td{border:none}
     <div class="glbl">P&amp;L Acumulado</div>
     <div class="gval" id="g-pnl-acum">-</div>
     <div class="gsub" id="g-pnl-pct">-</div>
+  </div>
+</div>
+
+<!-- ══ CURVA DE CAPITAL ═══════════════════════════════════════════════ -->
+<div class="echart-sec">
+  <div class="echart-hdr">
+    <span class="echart-title">Curva de Capital</span>
+    <div class="echart-legend">
+      <span><span class="eleg-dot" style="background:var(--gold)"></span>Total</span>
+      <span><span class="eleg-dot" style="background:var(--arb)"></span>ARB Gold</span>
+      <span><span class="eleg-dot" style="background:var(--c2)"></span>EMA200 NY</span>
+    </div>
+  </div>
+  <div class="echart-wrap">
+    <canvas id="equity-canvas"></canvas>
+    <div class="echart-tip" id="echart-tip" style="display:none"></div>
   </div>
 </div>
 
@@ -709,7 +752,208 @@ async function refreshLive() {
   }
 }
 
+// ── Equity curve chart ────────────────────────────────────────────
+let _eqPts = [];
+
+function parseT(s) {
+  return s ? new Date(s.replace(' UTC','') + ' UTC') : null;
+}
+
+function drawEquityChart(trades, startDate) {
+  const canvas = document.getElementById('equity-canvas');
+  if (!canvas || !canvas.getContext) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W   = canvas.clientWidth  || canvas.parentElement.clientWidth || 600;
+  const H   = 180;
+  canvas.width  = Math.round(W * dpr);
+  canvas.height = Math.round(H * dpr);
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  const PAD = {t:18, r:18, b:30, l:52};
+  const cW  = W - PAD.l - PAD.r;
+  const cH  = H - PAD.t - PAD.b;
+
+  // Build equity series
+  const sorted = [...trades]
+    .filter(t => t.exit_time || t.entry_time)
+    .sort((a,b) => {
+      const ta = parseT(a.exit_time||a.entry_time);
+      const tb = parseT(b.exit_time||b.entry_time);
+      return ta - tb;
+    });
+
+  const pts = [{ms: new Date(startDate+'T00:00:00Z').getTime(),
+                date: startDate, time:'', bal: BASE_BAL, magic:null, pnl:0, dir:'', res:''}];
+  let bal = BASE_BAL;
+  for (const t of sorted) {
+    bal += (t.profit_usd || 0);
+    const dt  = parseT(t.exit_time || t.entry_time);
+    const raw = (t.exit_time || t.entry_time || '');
+    pts.push({
+      ms:    dt ? dt.getTime() : Date.now(),
+      date:  raw.slice(0,10),
+      time:  raw.slice(5,16).replace(' UTC',''),
+      bal:   Math.round(bal*100)/100,
+      magic: t.magic || 0,
+      pnl:   t.profit_usd || 0,
+      dir:   t.direction || '',
+      res:   t.result || ''
+    });
+  }
+
+  // Today as last endpoint
+  const nowMs = Date.now();
+  if (pts[pts.length-1].ms < nowMs - 86400000/2) {
+    pts.push({ms: nowMs, date: new Date().toISOString().slice(0,10),
+              time:'', bal, magic:null, pnl:0, dir:'', res:''});
+  }
+
+  if (pts.length < 2) {
+    ctx.fillStyle = '#42392a'; ctx.font = '12px Segoe UI';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText('Sin trades cerrados aún', W/2, H/2);
+    return;
+  }
+
+  const ms0 = pts[0].ms, ms1 = pts[pts.length-1].ms;
+  const msR = ms1 - ms0 || 86400000;
+  const xOf = ms => PAD.l + (ms - ms0) / msR * cW;
+
+  const bals = pts.map(p => p.bal);
+  const yRaw = Math.max(...bals) - Math.min(...bals);
+  const yPd  = Math.max(yRaw * 0.2, 8);
+  const yMin = Math.min(...bals, BASE_BAL) - yPd;
+  const yMax = Math.max(...bals, BASE_BAL) + yPd;
+  const yOf  = b => PAD.t + (1 - (b - yMin)/(yMax - yMin)) * cH;
+
+  // Gridlines + Y labels
+  for (let i = 0; i <= 4; i++) {
+    const y   = PAD.t + (i/4) * cH;
+    const val = yMax - (i/4)*(yMax-yMin);
+    ctx.strokeStyle = '#1a1708'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(PAD.l, y); ctx.lineTo(PAD.l+cW, y); ctx.stroke();
+    ctx.fillStyle = '#42392a'; ctx.font = '9.5px Segoe UI';
+    ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    ctx.fillText('$'+val.toFixed(0), PAD.l-5, y);
+  }
+
+  // Base $600 dashed reference
+  const baseY = yOf(BASE_BAL);
+  if (baseY > PAD.t && baseY < PAD.t+cH) {
+    ctx.strokeStyle = '#2c2716'; ctx.lineWidth = 1;
+    ctx.setLineDash([3,4]);
+    ctx.beginPath(); ctx.moveTo(PAD.l, baseY); ctx.lineTo(PAD.l+cW, baseY); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#2c2716'; ctx.font = '8.5px Segoe UI';
+    ctx.textAlign = 'right'; ctx.textBaseline = 'bottom';
+    ctx.fillText('base', PAD.l-5, baseY-1);
+  }
+
+  // X date labels
+  const uniqueDates = [...new Set(pts.map(p=>p.date))];
+  const maxL = Math.min(7, uniqueDates.length);
+  const step = Math.ceil(uniqueDates.length / maxL);
+  const xLabels = uniqueDates.filter((_,i) => i===0 || i%step===0 || i===uniqueDates.length-1);
+  ctx.fillStyle = '#42392a'; ctx.font = '9px Segoe UI';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+  xLabels.forEach(d => {
+    const ms = new Date(d+'T12:00:00Z').getTime();
+    ctx.fillText(d.slice(5), xOf(ms), PAD.t+cH+5);
+  });
+
+  // Area fill
+  ctx.beginPath();
+  ctx.moveTo(xOf(pts[0].ms), yOf(pts[0].bal));
+  for (let i=1; i<pts.length; i++) {
+    ctx.lineTo(xOf(pts[i].ms), yOf(pts[i-1].bal));
+    ctx.lineTo(xOf(pts[i].ms), yOf(pts[i].bal));
+  }
+  ctx.lineTo(xOf(pts[pts.length-1].ms), PAD.t+cH);
+  ctx.lineTo(xOf(pts[0].ms), PAD.t+cH);
+  ctx.closePath();
+  const grad = ctx.createLinearGradient(0,PAD.t,0,PAD.t+cH);
+  grad.addColorStop(0,   'rgba(201,153,26,.16)');
+  grad.addColorStop(.65, 'rgba(201,153,26,.04)');
+  grad.addColorStop(1,   'rgba(201,153,26,.01)');
+  ctx.fillStyle = grad; ctx.fill();
+
+  // Equity line (step)
+  ctx.beginPath();
+  ctx.strokeStyle = '#c9991a'; ctx.lineWidth = 1.8; ctx.lineJoin = 'round';
+  ctx.moveTo(xOf(pts[0].ms), yOf(pts[0].bal));
+  for (let i=1; i<pts.length; i++) {
+    ctx.lineTo(xOf(pts[i].ms), yOf(pts[i-1].bal));
+    ctx.lineTo(xOf(pts[i].ms), yOf(pts[i].bal));
+  }
+  ctx.stroke();
+
+  // Trade dots
+  _eqPts = [];
+  for (let i=1; i<pts.length; i++) {
+    const p = pts[i];
+    if (!p.magic) continue;
+    const x     = xOf(p.ms);
+    const y     = yOf(p.bal);
+    const isWin = p.res === 'WIN';
+    const col   = p.magic === 20260613 ? '#e0a820' : '#a78bfa';
+    ctx.beginPath(); ctx.arc(x, y, 7, 0, Math.PI*2);
+    ctx.fillStyle = '#060503'; ctx.fill();
+    ctx.beginPath(); ctx.arc(x, y, 5, 0, Math.PI*2);
+    ctx.fillStyle = isWin ? col : '#ff4060'; ctx.fill();
+    if (isWin) { ctx.strokeStyle=col; ctx.lineWidth=1; ctx.stroke(); }
+    _eqPts.push({x, y, ...p});
+  }
+
+  // Last point highlight
+  const ep = pts[pts.length-1];
+  const ex = xOf(ep.ms), ey = yOf(ep.bal);
+  ctx.beginPath(); ctx.arc(ex, ey, 6, 0, Math.PI*2);
+  ctx.fillStyle = ep.bal>=BASE_BAL ? '#00c87855' : '#ff406055'; ctx.fill();
+  ctx.beginPath(); ctx.arc(ex, ey, 4, 0, Math.PI*2);
+  ctx.fillStyle = ep.bal>=BASE_BAL ? '#00c878' : '#ff4060'; ctx.fill();
+  ctx.strokeStyle = '#060503'; ctx.lineWidth = 1.5; ctx.stroke();
+}
+
+function setupChartTooltip() {
+  const canvas = document.getElementById('equity-canvas');
+  const tip    = document.getElementById('echart-tip');
+  if (!canvas || !tip) return;
+  canvas.addEventListener('mousemove', e => {
+    const r  = canvas.getBoundingClientRect();
+    const mx = e.clientX - r.left, my = e.clientY - r.top;
+    let best = null, bestD = 24;
+    for (const p of _eqPts) {
+      const d = Math.hypot(p.x-mx, p.y-my);
+      if (d < bestD) { bestD=d; best=p; }
+    }
+    if (best) {
+      const ea   = best.magic===20260613 ? 'ARB Gold' : 'EMA200 NY';
+      const col  = best.magic===20260613 ? '#e0a820'  : '#a78bfa';
+      const pCol = best.pnl>=0 ? '#00c878' : '#ff4060';
+      const rCol = best.res==='WIN' ? '#00c878' : '#ff4060';
+      const sign = best.pnl>=0 ? '+' : '';
+      tip.innerHTML =
+        `<span style="color:${col};font-weight:800">${ea}</span> &nbsp;`+
+        `<span style="color:${rCol};font-weight:700">${best.res}</span><br>`+
+        `<span style="color:var(--muted)">${best.time} &nbsp;·&nbsp; ${best.dir}</span><br>`+
+        `<span style="color:${pCol};font-weight:700">${sign}$${best.pnl.toFixed(2)}</span>`+
+        ` &nbsp;→&nbsp; <b style="color:var(--gold2)">$${best.bal.toFixed(2)}</b>`;
+      const tw = tip.offsetWidth || 170;
+      let tx = best.x + 14;
+      if (tx + tw > canvas.offsetWidth - 4) tx = best.x - tw - 14;
+      tip.style.left = tx+'px';
+      tip.style.top  = (best.y - 22)+'px';
+      tip.style.display = 'block';
+    } else {
+      tip.style.display = 'none';
+    }
+  });
+  canvas.addEventListener('mouseleave', () => { tip.style.display='none'; });
+}
+
 // ── Separar render del fetch para poder reusar ────────────────────
+let _lastAll = [], _lastStartDate = '2026-07-26';
 function render(d) {
   // Badge
   const badge = document.getElementById('badge');
@@ -760,13 +1004,24 @@ function render(d) {
   renderS('c2', ema200Data, ema200Open);
 
   renderHist(all);
+
+  // Equity chart
+  const startDate = d.start_date || '2026-07-26';
+  _lastAll = all; _lastStartDate = startDate;
+  drawEquityChart(all, startDate);
 }
 
 // ARB abierto por defecto
-window.addEventListener('DOMContentLoaded', () => { load(); toggleS('arb'); });
+window.addEventListener('DOMContentLoaded', () => {
+  load();
+  toggleS('arb');
+  setupChartTooltip();
+});
+window.addEventListener('resize', () => { drawEquityChart(_lastAll, _lastStartDate); });
 setInterval(load, 5 * 60 * 1000);
 </script>
 </body>
 </html>
+
 
 
