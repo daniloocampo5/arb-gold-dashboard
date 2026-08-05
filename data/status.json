@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-08-05T15:33:10Z",
-  "last_updated": "2026-08-05T15:33:10Z",
+  "updated_at": "2026-08-05T16:33:16Z",
+  "last_updated": "2026-08-05T16:33:16Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 633.87,
-  "equity": 633.87,
-  "pnl_total": 33.57,
-  "pnl_pct": 5.59,
+  "current_balance": 639.2,
+  "equity": 639.2,
+  "pnl_total": 38.97,
+  "pnl_pct": 6.49,
   "tunnel_url": "https://william-jazz-tap-customize.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -144,13 +144,27 @@
         "profit_usd": 13.4,
         "result": "WIN",
         "ticket": "103102274"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 14,
+        "ea_name": "EMA200-NY",
+        "entry_price": 4255.19,
+        "entry_time": "2026-08-05 15:35 UTC",
+        "exit_comment": "[tp 4249.79200]",
+        "exit_price": 4249.79,
+        "exit_time": "2026-08-05 15:49 UTC",
+        "magic": 550208,
+        "profit_usd": 5.4,
+        "result": "WIN",
+        "ticket": "103186784"
       }
     ],
     "summary": {
-      "total": 3,
-      "wins": 3,
+      "total": 4,
+      "wins": 4,
       "losses": 0,
-      "pnl": 20.93,
+      "pnl": 26.33,
       "win_rate": 100.0,
       "profit_factor": 0,
       "target_wr": 84
@@ -279,17 +293,31 @@
       "profit_usd": 13.4,
       "result": "WIN",
       "ticket": "103102274"
+    },
+    {
+      "direction": "SELL",
+      "duration_min": 14,
+      "ea_name": "EMA200-NY",
+      "entry_price": 4255.19,
+      "entry_time": "2026-08-05 15:35 UTC",
+      "exit_comment": "[tp 4249.79200]",
+      "exit_price": 4249.79,
+      "exit_time": "2026-08-05 15:49 UTC",
+      "magic": 550208,
+      "profit_usd": 5.4,
+      "result": "WIN",
+      "ticket": "103186784"
     }
   ],
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 8,
-    "wins": 6,
+    "total": 9,
+    "wins": 7,
     "losses": 2,
-    "pnl": 33.57,
-    "win_rate": 75.0,
-    "profit_factor": 2.01
+    "pnl": 38.97,
+    "win_rate": 77.8,
+    "profit_factor": 2.17
   },
-  "message": "ARB: 5t $+12.64 | EMA200: 3t $+20.93 | Total: $+33.57"
+  "message": "ARB: 5t $+12.64 | EMA200: 4t $+26.33 | Total: $+38.97"
 }
