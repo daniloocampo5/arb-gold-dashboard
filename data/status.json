@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-08-06T17:35:28Z",
-  "last_updated": "2026-08-06T17:35:28Z",
+  "updated_at": "2026-08-06T18:35:33Z",
+  "last_updated": "2026-08-06T18:35:33Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 639.2,
-  "equity": 639.2,
+  "current_balance": 639.13,
+  "equity": 639.28,
   "pnl_total": 38.97,
   "pnl_pct": 6.49,
   "tunnel_url": "https://william-jazz-tap-customize.trycloudflare.com",
@@ -309,8 +309,32 @@
       "ticket": "103186784"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 61.472,
+      "ea_name": "StochC2",
+      "entrada": 61.475,
+      "lotes": 0.01,
+      "magic": 20260624,
+      "profit": 0.15,
+      "sl": 61.613,
+      "ticket": 103271972,
+      "tipo": "SELL",
+      "tp": 61.364
+    }
+  ],
+  "open_position": {
+    "actual": 61.472,
+    "ea_name": "StochC2",
+    "entrada": 61.475,
+    "lotes": 0.01,
+    "magic": 20260624,
+    "profit": 0.15,
+    "sl": 61.613,
+    "ticket": 103271972,
+    "tipo": "SELL",
+    "tp": 61.364
+  },
   "summary": {
     "total": 9,
     "wins": 7,
