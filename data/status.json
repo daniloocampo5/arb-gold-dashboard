@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-08-06T18:35:33Z",
-  "last_updated": "2026-08-06T18:35:33Z",
+  "updated_at": "2026-08-06T19:35:38Z",
+  "last_updated": "2026-08-06T19:35:38Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 639.13,
-  "equity": 639.28,
-  "pnl_total": 38.97,
-  "pnl_pct": 6.49,
+  "current_balance": 632.23,
+  "equity": 632.23,
+  "pnl_total": 32.07,
+  "pnl_pct": 5.34,
   "tunnel_url": "https://william-jazz-tap-customize.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -309,32 +309,8 @@
       "ticket": "103186784"
     }
   ],
-  "open_positions": [
-    {
-      "actual": 61.472,
-      "ea_name": "StochC2",
-      "entrada": 61.475,
-      "lotes": 0.01,
-      "magic": 20260624,
-      "profit": 0.15,
-      "sl": 61.613,
-      "ticket": 103271972,
-      "tipo": "SELL",
-      "tp": 61.364
-    }
-  ],
-  "open_position": {
-    "actual": 61.472,
-    "ea_name": "StochC2",
-    "entrada": 61.475,
-    "lotes": 0.01,
-    "magic": 20260624,
-    "profit": 0.15,
-    "sl": 61.613,
-    "ticket": 103271972,
-    "tipo": "SELL",
-    "tp": 61.364
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
     "total": 9,
     "wins": 7,
@@ -343,5 +319,5 @@
     "win_rate": 77.8,
     "profit_factor": 2.17
   },
-  "message": "ARB: 5t $+12.64 | EMA200: 4t $+26.33 | Total: $+38.97"
+  "message": "ARB: 5t $+12.64 | EMA200: 4t $+26.33 | Total: $+32.07"
 }
