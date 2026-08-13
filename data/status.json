@@ -1,11 +1,11 @@
 {
-  "pc_online": false,
-  "updated_at": "2026-08-13T03:33:32Z",
-  "last_updated": "2026-08-13T03:40:28Z",
+  "pc_online": true,
+  "updated_at": "2026-08-13T04:33:37Z",
+  "last_updated": "2026-08-13T04:33:37Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 584.19,
-  "equity": 584.19,
+  "current_balance": 586.62,
+  "equity": 586.62,
   "pnl_total": 80.85,
   "pnl_pct": 13.47,
   "tunnel_url": "https://greater-popular-impose-agency.trycloudflare.com",
@@ -375,5 +375,5 @@
     "win_rate": 81.8,
     "profit_factor": 3.64
   },
-  "message": "PC offline o Flask no responde. Datos anteriores conservados."
+  "message": "ARB: 6t $+51.41 | EMA200: 5t $+36.34 | Total: $+80.85"
 }
