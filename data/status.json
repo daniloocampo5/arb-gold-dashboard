@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-08-14T12:36:33Z",
-  "last_updated": "2026-08-14T12:36:33Z",
+  "updated_at": "2026-08-14T13:36:39Z",
+  "last_updated": "2026-08-14T13:36:39Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 589.98,
-  "equity": 600.39,
-  "pnl_total": 84.35,
-  "pnl_pct": 14.06,
+  "current_balance": 611.75,
+  "equity": 589.27,
+  "pnl_total": 106.33,
+  "pnl_pct": 17.72,
   "tunnel_url": "https://greater-popular-impose-agency.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -94,29 +94,32 @@
         "profit_usd": 38.77,
         "result": "WIN",
         "ticket": "103306430"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 94,
+        "ea_name": "ARB-Gold",
+        "entry_price": 4369.07,
+        "entry_time": "2026-08-14 12:00 UTC",
+        "exit_comment": "[tp 4391.04800]",
+        "exit_price": 4391.05,
+        "exit_time": "2026-08-14 13:34 UTC",
+        "magic": 20260613,
+        "profit_usd": 21.98,
+        "result": "WIN",
+        "ticket": "104069530"
       }
     ],
     "summary": {
-      "total": 6,
-      "wins": 4,
+      "total": 7,
+      "wins": 5,
       "losses": 2,
-      "pnl": 51.41,
-      "win_rate": 66.7,
-      "profit_factor": 2.55,
+      "pnl": 73.39,
+      "win_rate": 71.4,
+      "profit_factor": 3.21,
       "target_wr": 45
     },
-    "open_position": {
-      "actual": 4379.477,
-      "ea_name": "ARB-Gold",
-      "entrada": 4369.067,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": 10.41,
-      "sl": 4352.965,
-      "ticket": 104069530,
-      "tipo": "BUY",
-      "tp": 4391.048
-    },
+    "open_position": null,
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 2.5,
@@ -222,7 +225,18 @@
       "profit_factor": 0,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4392.512,
+      "ea_name": "EMA200-NY",
+      "entrada": 4385.019,
+      "lotes": 0.03,
+      "magic": 550208,
+      "profit": -22.48,
+      "sl": 4400.279,
+      "ticket": 104076114,
+      "tipo": "SELL",
+      "tp": 4380.67
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -320,6 +334,20 @@
       "ticket": "103306430"
     },
     {
+      "direction": "BUY",
+      "duration_min": 94,
+      "ea_name": "ARB-Gold",
+      "entry_price": 4369.07,
+      "entry_time": "2026-08-14 12:00 UTC",
+      "exit_comment": "[tp 4391.04800]",
+      "exit_price": 4391.05,
+      "exit_time": "2026-08-14 13:34 UTC",
+      "magic": 20260613,
+      "profit_usd": 21.98,
+      "result": "WIN",
+      "ticket": "104069530"
+    },
+    {
       "direction": "SELL",
       "duration_min": 99,
       "ea_name": "EMA200-NY",
@@ -406,37 +434,37 @@
   ],
   "open_positions": [
     {
-      "actual": 4379.477,
-      "ea_name": "ARB-Gold",
-      "entrada": 4369.067,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": 10.41,
-      "sl": 4352.965,
-      "ticket": 104069530,
-      "tipo": "BUY",
-      "tp": 4391.048
+      "actual": 4392.512,
+      "ea_name": "EMA200-NY",
+      "entrada": 4385.019,
+      "lotes": 0.03,
+      "magic": 550208,
+      "profit": -22.48,
+      "sl": 4400.279,
+      "ticket": 104076114,
+      "tipo": "SELL",
+      "tp": 4380.67
     }
   ],
   "open_position": {
-    "actual": 4379.477,
-    "ea_name": "ARB-Gold",
-    "entrada": 4369.067,
-    "lotes": 0.01,
-    "magic": 20260613,
-    "profit": 10.41,
-    "sl": 4352.965,
-    "ticket": 104069530,
-    "tipo": "BUY",
-    "tp": 4391.048
+    "actual": 4392.512,
+    "ea_name": "EMA200-NY",
+    "entrada": 4385.019,
+    "lotes": 0.03,
+    "magic": 550208,
+    "profit": -22.48,
+    "sl": 4400.279,
+    "ticket": 104076114,
+    "tipo": "SELL",
+    "tp": 4380.67
   },
   "summary": {
-    "total": 12,
-    "wins": 10,
+    "total": 13,
+    "wins": 11,
     "losses": 2,
-    "pnl": 91.25,
-    "win_rate": 83.3,
-    "profit_factor": 3.75
+    "pnl": 113.23,
+    "win_rate": 84.6,
+    "profit_factor": 4.41
   },
-  "message": "ARB: 6t $+51.41 | EMA200: 6t $+39.84 | Total: $+84.35"
+  "message": "ARB: 7t $+73.39 | EMA200: 6t $+39.84 | Total: $+106.33"
 }
