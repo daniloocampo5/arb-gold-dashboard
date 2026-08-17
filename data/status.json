@@ -1,13 +1,13 @@
 {
   "pc_online": true,
-  "updated_at": "2026-08-17T16:49:47Z",
-  "last_updated": "2026-08-17T16:49:47Z",
+  "updated_at": "2026-08-17T17:49:53Z",
+  "last_updated": "2026-08-17T17:49:53Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 618.59,
-  "equity": 613.17,
-  "pnl_total": 119.38,
-  "pnl_pct": 19.9,
+  "current_balance": 622.67,
+  "equity": 622.67,
+  "pnl_total": 123.46,
+  "pnl_pct": 20.58,
   "tunnel_url": "https://greater-popular-impose-agency.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -228,29 +228,32 @@
         "profit_usd": 13.05,
         "result": "WIN",
         "ticket": "104076114"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 141,
+        "ea_name": "EMA200-NY",
+        "entry_price": 4418.9,
+        "entry_time": "2026-08-17 15:05 UTC",
+        "exit_comment": "[tp 4414.82000]",
+        "exit_price": 4414.82,
+        "exit_time": "2026-08-17 17:26 UTC",
+        "magic": 550208,
+        "profit_usd": 4.08,
+        "result": "WIN",
+        "ticket": "104173329"
       }
     ],
     "summary": {
-      "total": 7,
-      "wins": 7,
+      "total": 8,
+      "wins": 8,
       "losses": 0,
-      "pnl": 52.89,
+      "pnl": 56.97,
       "win_rate": 100.0,
       "profit_factor": 0,
       "target_wr": 84
     },
-    "open_position": {
-      "actual": 4424.321,
-      "ea_name": "EMA200-NY",
-      "entrada": 4418.898,
-      "lotes": 0.01,
-      "magic": 550208,
-      "profit": -5.42,
-      "sl": 4432.985,
-      "ticket": 104173329,
-      "tipo": "SELL",
-      "tp": 4414.82
-    },
+    "open_position": null,
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -458,41 +461,31 @@
       "profit_usd": 13.05,
       "result": "WIN",
       "ticket": "104076114"
-    }
-  ],
-  "open_positions": [
+    },
     {
-      "actual": 4424.321,
+      "direction": "SELL",
+      "duration_min": 141,
       "ea_name": "EMA200-NY",
-      "entrada": 4418.898,
-      "lotes": 0.01,
+      "entry_price": 4418.9,
+      "entry_time": "2026-08-17 15:05 UTC",
+      "exit_comment": "[tp 4414.82000]",
+      "exit_price": 4414.82,
+      "exit_time": "2026-08-17 17:26 UTC",
       "magic": 550208,
-      "profit": -5.42,
-      "sl": 4432.985,
-      "ticket": 104173329,
-      "tipo": "SELL",
-      "tp": 4414.82
+      "profit_usd": 4.08,
+      "result": "WIN",
+      "ticket": "104173329"
     }
   ],
-  "open_position": {
-    "actual": 4424.321,
-    "ea_name": "EMA200-NY",
-    "entrada": 4418.898,
-    "lotes": 0.01,
-    "magic": 550208,
-    "profit": -5.42,
-    "sl": 4432.985,
-    "ticket": 104173329,
-    "tipo": "SELL",
-    "tp": 4414.82
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 14,
-    "wins": 12,
+    "total": 15,
+    "wins": 13,
     "losses": 2,
-    "pnl": 126.28,
-    "win_rate": 85.7,
-    "profit_factor": 4.8
+    "pnl": 130.36,
+    "win_rate": 86.7,
+    "profit_factor": 4.92
   },
-  "message": "ARB: 7t $+73.39 | EMA200: 7t $+52.89 | Total: $+119.38"
+  "message": "ARB: 7t $+73.39 | EMA200: 8t $+56.97 | Total: $+123.46"
 }
