@@ -1,11 +1,11 @@
 {
   "pc_online": true,
-  "updated_at": "2026-08-21T07:58:04Z",
-  "last_updated": "2026-08-21T07:58:04Z",
+  "updated_at": "2026-08-21T08:58:10Z",
+  "last_updated": "2026-08-21T08:58:10Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 595.0,
-  "equity": 595.0,
+  "current_balance": 594.93,
+  "equity": 597.95,
   "pnl_total": 167.27,
   "pnl_pct": 27.88,
   "tunnel_url": "https://greater-popular-impose-agency.trycloudflare.com",
@@ -119,7 +119,18 @@
       "profit_factor": 3.21,
       "target_wr": 45
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4582.42,
+      "ea_name": "ARB-Gold",
+      "entrada": 4579.403,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 3.02,
+      "sl": 4551.415,
+      "ticket": 104445202,
+      "tipo": "BUY",
+      "tp": 4617.453
+    },
     "params": {
       "sl_mult": 1.5,
       "tp_mult": 2.5,
@@ -589,8 +600,32 @@
       "ticket": "104400635"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4582.42,
+      "ea_name": "ARB-Gold",
+      "entrada": 4579.403,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 3.02,
+      "sl": 4551.415,
+      "ticket": 104445202,
+      "tipo": "BUY",
+      "tp": 4617.453
+    }
+  ],
+  "open_position": {
+    "actual": 4582.42,
+    "ea_name": "ARB-Gold",
+    "entrada": 4579.403,
+    "lotes": 0.01,
+    "magic": 20260613,
+    "profit": 3.02,
+    "sl": 4551.415,
+    "ticket": 104445202,
+    "tipo": "BUY",
+    "tp": 4617.453
+  },
   "summary": {
     "total": 19,
     "wins": 17,
