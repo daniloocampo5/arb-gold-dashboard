@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-08-26T17:01:04Z",
-  "last_updated": "2026-08-26T17:01:04Z",
+  "updated_at": "2026-08-26T18:01:09Z",
+  "last_updated": "2026-08-26T18:01:09Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 630.68,
-  "balance": 630.68,
-  "equity": 616.86,
-  "pnl_total": 292.53,
-  "pnl_pct": 48.75,
+  "current_balance": 647.96,
+  "balance": 647.96,
+  "equity": 647.96,
+  "pnl_total": 309.81,
+  "pnl_pct": 51.63,
   "tunnel_url": "https://perspective-investing-shipment-conf.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -341,29 +341,32 @@
         "profit_usd": 5.67,
         "result": "WIN",
         "ticket": "104559549"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 68,
+        "ea_name": "EMA200-NY",
+        "entry_price": 4596.34,
+        "entry_time": "2026-08-26 16:25 UTC",
+        "exit_comment": "[tp 4600.66300]",
+        "exit_price": 4600.66,
+        "exit_time": "2026-08-26 17:33 UTC",
+        "magic": 550208,
+        "profit_usd": 12.96,
+        "result": "WIN",
+        "ticket": "104715557"
       }
     ],
     "summary": {
-      "total": 14,
-      "wins": 14,
+      "total": 15,
+      "wins": 15,
       "losses": 0,
-      "pnl": 119.29,
+      "pnl": 132.25,
       "win_rate": 100.0,
       "profit_factor": 0,
       "target_wr": 84
     },
-    "open_position": {
-      "actual": 4592.888,
-      "ea_name": "EMA200-NY",
-      "entrada": 4596.344,
-      "lotes": 0.03,
-      "magic": 550208,
-      "profit": -10.37,
-      "sl": 4580.148,
-      "ticket": 104715557,
-      "tipo": "BUY",
-      "tp": 4600.663
-    },
+    "open_position": null,
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -446,29 +449,32 @@
         "profit_usd": 16.86,
         "result": "WIN",
         "ticket": "104559200"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 68,
+        "ea_name": "EMA200-ORO2",
+        "entry_price": 4596.34,
+        "entry_time": "2026-08-26 16:25 UTC",
+        "exit_comment": "[tp 4600.66300]",
+        "exit_price": 4600.66,
+        "exit_time": "2026-08-26 17:33 UTC",
+        "magic": 550210,
+        "profit_usd": 4.32,
+        "result": "WIN",
+        "ticket": "104715556"
       }
     ],
     "summary": {
-      "total": 5,
-      "wins": 4,
+      "total": 6,
+      "wins": 5,
       "losses": 1,
-      "pnl": 7.32,
-      "win_rate": 80.0,
-      "profit_factor": 1.13,
+      "pnl": 11.64,
+      "win_rate": 83.3,
+      "profit_factor": 1.21,
       "target_wr": 84
     },
-    "open_position": {
-      "actual": 4592.888,
-      "ea_name": "EMA200-ORO2",
-      "entrada": 4596.344,
-      "lotes": 0.01,
-      "magic": 550210,
-      "profit": -3.45,
-      "sl": 4580.148,
-      "ticket": 104715556,
-      "tipo": "BUY",
-      "tp": 4600.663
-    },
+    "open_position": null,
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -934,6 +940,20 @@
     },
     {
       "direction": "BUY",
+      "duration_min": 68,
+      "ea_name": "EMA200-NY",
+      "entry_price": 4596.34,
+      "entry_time": "2026-08-26 16:25 UTC",
+      "exit_comment": "[tp 4600.66300]",
+      "exit_price": 4600.66,
+      "exit_time": "2026-08-26 17:33 UTC",
+      "magic": 550208,
+      "profit_usd": 12.96,
+      "result": "WIN",
+      "ticket": "104715557"
+    },
+    {
+      "direction": "BUY",
       "duration_min": 10,
       "ea_name": "EMA200-USTEC",
       "entry_price": 29632.98,
@@ -1033,6 +1053,20 @@
     {
       "direction": "BUY",
       "duration_min": 68,
+      "ea_name": "EMA200-ORO2",
+      "entry_price": 4596.34,
+      "entry_time": "2026-08-26 16:25 UTC",
+      "exit_comment": "[tp 4600.66300]",
+      "exit_price": 4600.66,
+      "exit_time": "2026-08-26 17:33 UTC",
+      "magic": 550210,
+      "profit_usd": 4.32,
+      "result": "WIN",
+      "ticket": "104715556"
+    },
+    {
+      "direction": "BUY",
+      "duration_min": 68,
       "ea_name": "EMA200-MULTI",
       "entry_price": 29659.98,
       "entry_time": "2026-08-18 09:40 UTC",
@@ -1101,51 +1135,15 @@
       "ticket": "104619930"
     }
   ],
-  "open_positions": [
-    {
-      "actual": 4592.888,
-      "ea_name": "EMA200-ORO2",
-      "entrada": 4596.344,
-      "lotes": 0.01,
-      "magic": 550210,
-      "profit": -3.45,
-      "sl": 4580.148,
-      "ticket": 104715556,
-      "tipo": "BUY",
-      "tp": 4600.663
-    },
-    {
-      "actual": 4592.888,
-      "ea_name": "EMA200-NY",
-      "entrada": 4596.344,
-      "lotes": 0.03,
-      "magic": 550208,
-      "profit": -10.37,
-      "sl": 4580.148,
-      "ticket": 104715557,
-      "tipo": "BUY",
-      "tp": 4600.663
-    }
-  ],
-  "open_position": {
-    "actual": 4592.888,
-    "ea_name": "EMA200-ORO2",
-    "entrada": 4596.344,
-    "lotes": 0.01,
-    "magic": 550210,
-    "profit": -3.45,
-    "sl": 4580.148,
-    "ticket": 104715556,
-    "tipo": "BUY",
-    "tp": 4600.663
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 34,
-    "wins": 30,
+    "total": 36,
+    "wins": 32,
     "losses": 4,
-    "pnl": 292.53,
-    "win_rate": 88.2,
-    "profit_factor": 3.74
+    "pnl": 309.81,
+    "win_rate": 88.9,
+    "profit_factor": 3.91
   },
-  "message": "ARB:8t $+104.81 | NY:14t $+119.29 | ORO2:5t $+7.32 | USTEC:2t $+34.68 | MULTI:5t $+26.43 | Total:$+292.53"
+  "message": "ARB:8t $+104.81 | NY:15t $+132.25 | ORO2:6t $+11.64 | USTEC:2t $+34.68 | MULTI:5t $+26.43 | Total:$+309.81"
 }
