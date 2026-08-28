@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-08-28T04:04:01Z",
-  "last_updated": "2026-08-28T04:04:01Z",
+  "updated_at": "2026-08-28T07:04:09Z",
+  "last_updated": "2026-08-28T07:04:09Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 647.96,
-  "balance": 647.96,
-  "equity": 647.96,
+  "current_balance": 647.89,
+  "balance": 647.89,
+  "equity": 643.1,
   "pnl_total": 309.81,
   "pnl_pct": 51.63,
   "tunnel_url": "https://perspective-investing-shipment-conf.trycloudflare.com",
@@ -134,7 +134,18 @@
       "profit_factor": 4.16,
       "target_wr": 45
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4608.006,
+      "ea_name": "ARB-Gold",
+      "entrada": 4612.801,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": -4.79,
+      "sl": 4584.15,
+      "ticket": 104808525,
+      "tipo": "BUY",
+      "tp": 4650.356
+    },
     "params": {
       "sl_mult": 3.0,
       "tp_mult": 4.0,
@@ -1135,8 +1146,32 @@
       "ticket": "104619930"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4608.006,
+      "ea_name": "ARB-Gold",
+      "entrada": 4612.801,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": -4.79,
+      "sl": 4584.15,
+      "ticket": 104808525,
+      "tipo": "BUY",
+      "tp": 4650.356
+    }
+  ],
+  "open_position": {
+    "actual": 4608.006,
+    "ea_name": "ARB-Gold",
+    "entrada": 4612.801,
+    "lotes": 0.01,
+    "magic": 20260613,
+    "profit": -4.79,
+    "sl": 4584.15,
+    "ticket": 104808525,
+    "tipo": "BUY",
+    "tp": 4650.356
+  },
   "summary": {
     "total": 36,
     "wins": 32,
