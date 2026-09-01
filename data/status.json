@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-09-01T12:22:30Z",
-  "last_updated": "2026-09-01T12:22:30Z",
+  "updated_at": "2026-09-01T13:22:35Z",
+  "last_updated": "2026-09-01T13:22:35Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 451.78,
-  "balance": 451.78,
-  "equity": 451.78,
+  "current_balance": 451.28,
+  "balance": 451.28,
+  "equity": 455.04,
   "pnl_total": 114.3,
   "pnl_pct": 19.05,
   "tunnel_url": "https://perspective-investing-shipment-conf.trycloudflare.com",
@@ -581,7 +581,18 @@
       "profit_factor": 0,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 29078.52,
+      "ea_name": "EMA200-USTEC",
+      "entrada": 29073.83,
+      "lotes": 0.4,
+      "magic": 550209,
+      "profit": 1.88,
+      "sl": 29010.65,
+      "ticket": 104974276,
+      "tipo": "BUY",
+      "tp": 29089.1
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -688,7 +699,18 @@
       "profit_factor": 0.7,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 29078.52,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 29073.83,
+      "lotes": 0.4,
+      "magic": 550211,
+      "profit": 1.88,
+      "sl": 29010.65,
+      "ticket": 104974275,
+      "tipo": "BUY",
+      "tp": 29089.1
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -1275,8 +1297,44 @@
       "ticket": "104963425"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 29078.52,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 29073.83,
+      "lotes": 0.4,
+      "magic": 550211,
+      "profit": 1.88,
+      "sl": 29010.65,
+      "ticket": 104974275,
+      "tipo": "BUY",
+      "tp": 29089.1
+    },
+    {
+      "actual": 29078.52,
+      "ea_name": "EMA200-USTEC",
+      "entrada": 29073.83,
+      "lotes": 0.4,
+      "magic": 550209,
+      "profit": 1.88,
+      "sl": 29010.65,
+      "ticket": 104974276,
+      "tipo": "BUY",
+      "tp": 29089.1
+    }
+  ],
+  "open_position": {
+    "actual": 29078.52,
+    "ea_name": "EMA200-MULTI",
+    "entrada": 29073.83,
+    "lotes": 0.4,
+    "magic": 550211,
+    "profit": 1.88,
+    "sl": 29010.65,
+    "ticket": 104974275,
+    "tipo": "BUY",
+    "tp": 29089.1
+  },
   "summary": {
     "total": 41,
     "wins": 33,
