@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-09-02T13:24:41Z",
-  "last_updated": "2026-09-02T13:24:41Z",
+  "updated_at": "2026-09-02T14:24:46Z",
+  "last_updated": "2026-09-02T14:24:46Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 444.32,
-  "balance": 444.32,
-  "equity": 444.32,
+  "current_balance": 444.04,
+  "balance": 444.04,
+  "equity": 453.61,
   "pnl_total": 108.05,
   "pnl_pct": 18.01,
   "tunnel_url": "https://perspective-investing-shipment-conf.trycloudflare.com",
@@ -408,7 +408,18 @@
       "profit_factor": 3.39,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4387.829,
+      "ea_name": "EMA200-NY",
+      "entrada": 4390.222,
+      "lotes": 0.01,
+      "magic": 550208,
+      "profit": 2.39,
+      "sl": 4424.371,
+      "ticket": 105051531,
+      "tipo": "SELL",
+      "tp": 4382.158
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -544,7 +555,18 @@
       "profit_factor": 0.32,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4387.829,
+      "ea_name": "EMA200-ORO2",
+      "entrada": 4390.222,
+      "lotes": 0.03,
+      "magic": 550210,
+      "profit": 7.18,
+      "sl": 4424.371,
+      "ticket": 105051530,
+      "tipo": "SELL",
+      "tp": 4382.158
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -1387,8 +1409,44 @@
       "ticket": "105035929"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4387.829,
+      "ea_name": "EMA200-ORO2",
+      "entrada": 4390.222,
+      "lotes": 0.03,
+      "magic": 550210,
+      "profit": 7.18,
+      "sl": 4424.371,
+      "ticket": 105051530,
+      "tipo": "SELL",
+      "tp": 4382.158
+    },
+    {
+      "actual": 4387.829,
+      "ea_name": "EMA200-NY",
+      "entrada": 4390.222,
+      "lotes": 0.01,
+      "magic": 550208,
+      "profit": 2.39,
+      "sl": 4424.371,
+      "ticket": 105051531,
+      "tipo": "SELL",
+      "tp": 4382.158
+    }
+  ],
+  "open_position": {
+    "actual": 4387.829,
+    "ea_name": "EMA200-ORO2",
+    "entrada": 4390.222,
+    "lotes": 0.03,
+    "magic": 550210,
+    "profit": 7.18,
+    "sl": 4424.371,
+    "ticket": 105051530,
+    "tipo": "SELL",
+    "tp": 4382.158
+  },
   "summary": {
     "total": 45,
     "wins": 36,
