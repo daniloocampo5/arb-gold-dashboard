@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-09-08T16:49:12Z",
-  "last_updated": "2026-09-08T16:49:12Z",
+  "updated_at": "2026-09-08T17:49:17Z",
+  "last_updated": "2026-09-08T17:49:17Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 497.08,
-  "balance": 497.08,
-  "equity": 494.72,
+  "current_balance": 517.68,
+  "balance": 517.68,
+  "equity": 517.68,
   "pnl_total": 162.11,
   "pnl_pct": 27.02,
   "tunnel_url": "https://perspective-investing-shipment-conf.trycloudflare.com",
@@ -162,18 +162,7 @@
       "profit_factor": 2.78,
       "target_wr": 45
     },
-    "open_position": {
-      "actual": 4393.174,
-      "ea_name": "ARB-Gold",
-      "entrada": 4395.671,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": 2.5,
-      "sl": 4425.464,
-      "ticket": 105310428,
-      "tipo": "SELL",
-      "tp": 4355.947
-    },
+    "open_position": null,
     "params": {
       "sl_mult": 3.0,
       "tp_mult": 4.0,
@@ -1566,92 +1555,8 @@
       "ticket": "105167812"
     }
   ],
-  "open_positions": [
-    {
-      "actual": 4393.174,
-      "ea_name": "ARB-Gold",
-      "entrada": 4395.671,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": 2.5,
-      "sl": 4425.464,
-      "ticket": 105310428,
-      "tipo": "SELL",
-      "tp": 4355.947
-    },
-    {
-      "actual": 4393.084,
-      "ea_name": "ARB-Gold",
-      "entrada": 4400.6,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": -7.52,
-      "sl": 0.0,
-      "ticket": 105335802,
-      "tipo": "BUY",
-      "tp": 0.0
-    },
-    {
-      "actual": 4393.084,
-      "ea_name": "ARB-Gold",
-      "entrada": 4395.067,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": -1.99,
-      "sl": 0.0,
-      "ticket": 105336761,
-      "tipo": "BUY",
-      "tp": 0.0
-    },
-    {
-      "actual": 4393.084,
-      "ea_name": "ARB-Gold",
-      "entrada": 4386.329,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": 6.75,
-      "sl": 0.0,
-      "ticket": 105338260,
-      "tipo": "BUY",
-      "tp": 0.0
-    },
-    {
-      "actual": 4393.084,
-      "ea_name": "ARB-Gold",
-      "entrada": 4393.954,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": -0.87,
-      "sl": 0.0,
-      "ticket": 105339246,
-      "tipo": "BUY",
-      "tp": 0.0
-    },
-    {
-      "actual": 4393.084,
-      "ea_name": "ARB-Gold",
-      "entrada": 4394.314,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": -1.23,
-      "sl": 0.0,
-      "ticket": 105340108,
-      "tipo": "BUY",
-      "tp": 0.0
-    }
-  ],
-  "open_position": {
-    "actual": 4393.174,
-    "ea_name": "ARB-Gold",
-    "entrada": 4395.671,
-    "lotes": 0.01,
-    "magic": 20260613,
-    "profit": 2.5,
-    "sl": 4425.464,
-    "ticket": 105310428,
-    "tipo": "SELL",
-    "tp": 4355.947
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
     "total": 51,
     "wins": 41,
