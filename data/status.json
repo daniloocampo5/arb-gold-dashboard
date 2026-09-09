@@ -1,6 +1,6 @@
 {
-  "pc_online": true,
-  "updated_at": "2026-09-09T04:50:17Z",
+  "pc_online": false,
+  "updated_at": "2026-09-09T13:52:02Z",
   "last_updated": "2026-09-09T04:50:17Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
@@ -1565,5 +1565,5 @@
     "win_rate": 80.4,
     "profit_factor": 1.42
   },
-  "message": "ARB:10t $+111.71 | NY:19t $+128.41 | ORO2:10t $-108.44 | USTEC:3t $+40.79 | MULTI:9t $-10.36 | Total:$+162.11"
+  "message": "PC detectada pero Flask y MT5 no responden. Datos anteriores conservados."
 }
