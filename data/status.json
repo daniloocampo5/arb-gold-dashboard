@@ -1,7 +1,7 @@
 {
-  "pc_online": false,
-  "updated_at": "2026-09-09T13:52:02Z",
-  "last_updated": "2026-09-09T04:50:17Z",
+  "pc_online": true,
+  "updated_at": "2026-09-09T14:53:53Z",
+  "last_updated": "2026-09-09T14:53:53Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 517.68,
@@ -9,7 +9,7 @@
   "equity": 517.68,
   "pnl_total": 162.11,
   "pnl_pct": 27.02,
-  "tunnel_url": "https://perspective-investing-shipment-conf.trycloudflare.com",
+  "tunnel_url": "https://expanded-attempting-belly-common.trycloudflare.com",
   "arb_gold": {
     "trades": [
       {
@@ -1565,5 +1565,5 @@
     "win_rate": 80.4,
     "profit_factor": 1.42
   },
-  "message": "PC detectada pero Flask y MT5 no responden. Datos anteriores conservados."
+  "message": "ARB:10t $+111.71 | NY:19t $+128.41 | ORO2:10t $-108.44 | USTEC:3t $+40.79 | MULTI:9t $-10.36 | Total:$+162.11"
 }
