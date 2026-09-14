@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-09-14T08:17:06Z",
-  "last_updated": "2026-09-14T08:17:06Z",
+  "updated_at": "2026-09-14T09:17:11Z",
+  "last_updated": "2026-09-14T09:17:11Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 596.69,
-  "balance": 596.69,
-  "equity": 596.69,
+  "current_balance": 596.44,
+  "balance": 596.44,
+  "equity": 592.5,
   "pnl_total": 242.65,
   "pnl_pct": 40.44,
   "tunnel_url": "https://expanded-attempting-belly-common.trycloudflare.com",
@@ -898,7 +898,18 @@
       "profit_factor": 1.13,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 28852.47,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 28862.33,
+      "lotes": 0.4,
+      "magic": 550211,
+      "profit": -3.94,
+      "sl": 28780.23,
+      "ticket": 105616980,
+      "tipo": "BUY",
+      "tp": 28879.73
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -1695,8 +1706,32 @@
       "ticket": "105554406"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 28852.47,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 28862.33,
+      "lotes": 0.4,
+      "magic": 550211,
+      "profit": -3.94,
+      "sl": 28780.23,
+      "ticket": 105616980,
+      "tipo": "BUY",
+      "tp": 28879.73
+    }
+  ],
+  "open_position": {
+    "actual": 28852.47,
+    "ea_name": "EMA200-MULTI",
+    "entrada": 28862.33,
+    "lotes": 0.4,
+    "magic": 550211,
+    "profit": -3.94,
+    "sl": 28780.23,
+    "ticket": 105616980,
+    "tipo": "BUY",
+    "tp": 28879.73
+  },
   "summary": {
     "total": 56,
     "wins": 46,
