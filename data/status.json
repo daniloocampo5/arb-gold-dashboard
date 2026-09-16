@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-09-16T16:23:17Z",
-  "last_updated": "2026-09-16T16:23:17Z",
+  "updated_at": "2026-09-16T17:23:23Z",
+  "last_updated": "2026-09-16T17:23:23Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 649.91,
-  "balance": 649.91,
-  "equity": 649.91,
-  "pnl_total": 297.62,
-  "pnl_pct": 49.6,
+  "current_balance": 651.91,
+  "balance": 651.91,
+  "equity": 651.91,
+  "pnl_total": 299.69,
+  "pnl_pct": 49.95,
   "tunnel_url": "https://purse-poison-sandra-distance.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -467,15 +467,29 @@
         "profit_usd": 15.17,
         "result": "WIN",
         "ticket": "105478783"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 1,
+        "ea_name": "EMA200-NY",
+        "entry_price": 4346.45,
+        "entry_time": "2026-09-16 17:00 UTC",
+        "exit_comment": "[tp 4344.38300]",
+        "exit_price": 4344.38,
+        "exit_time": "2026-09-16 17:01 UTC",
+        "magic": 550208,
+        "profit_usd": 2.07,
+        "result": "WIN",
+        "ticket": "105784147"
       }
     ],
     "summary": {
-      "total": 20,
-      "wins": 19,
+      "total": 21,
+      "wins": 20,
       "losses": 1,
-      "pnl": 143.58,
-      "win_rate": 95.0,
-      "profit_factor": 4.68,
+      "pnl": 145.65,
+      "win_rate": 95.2,
+      "profit_factor": 4.73,
       "target_wr": 84
     },
     "open_position": null,
@@ -1415,6 +1429,20 @@
       "ticket": "105478783"
     },
     {
+      "direction": "SELL",
+      "duration_min": 1,
+      "ea_name": "EMA200-NY",
+      "entry_price": 4346.45,
+      "entry_time": "2026-09-16 17:00 UTC",
+      "exit_comment": "[tp 4344.38300]",
+      "exit_price": 4344.38,
+      "exit_time": "2026-09-16 17:01 UTC",
+      "magic": 550208,
+      "profit_usd": 2.07,
+      "result": "WIN",
+      "ticket": "105784147"
+    },
+    {
       "direction": "BUY",
       "duration_min": 10,
       "ea_name": "EMA200-USTEC",
@@ -1838,12 +1866,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 61,
-    "wins": 51,
+    "total": 62,
+    "wins": 52,
     "losses": 10,
-    "pnl": 297.62,
-    "win_rate": 83.6,
+    "pnl": 299.69,
+    "win_rate": 83.9,
     "profit_factor": 1.77
   },
-  "message": "ARB:11t $+141.99 | NY:20t $+143.58 | ORO2:10t $-108.44 | USTEC:6t $+77.84 | MULTI:14t $+42.65 | Total:$+297.62"
+  "message": "ARB:11t $+141.99 | NY:21t $+145.65 | ORO2:10t $-108.44 | USTEC:6t $+77.84 | MULTI:14t $+42.65 | Total:$+299.69"
 }
