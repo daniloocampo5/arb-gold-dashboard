@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-09-17T15:25:14Z",
-  "last_updated": "2026-09-17T15:25:14Z",
+  "updated_at": "2026-09-17T16:25:20Z",
+  "last_updated": "2026-09-17T16:25:20Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 671.74,
-  "balance": 671.74,
-  "equity": 671.74,
+  "current_balance": 671.67,
+  "balance": 671.67,
+  "equity": 671.09,
   "pnl_total": 319.73,
   "pnl_pct": 53.29,
   "tunnel_url": "https://purse-poison-sandra-distance.trycloudflare.com",
@@ -506,7 +506,18 @@
       "profit_factor": 5.25,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4368.146,
+      "ea_name": "EMA200-NY",
+      "entrada": 4367.573,
+      "lotes": 0.01,
+      "magic": 550208,
+      "profit": -0.58,
+      "sl": 4377.821,
+      "ticket": 105872291,
+      "tipo": "SELL",
+      "tp": 4364.63
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -1891,8 +1902,32 @@
       "ticket": "105779859"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4368.146,
+      "ea_name": "EMA200-NY",
+      "entrada": 4367.573,
+      "lotes": 0.01,
+      "magic": 550208,
+      "profit": -0.58,
+      "sl": 4377.821,
+      "ticket": 105872291,
+      "tipo": "SELL",
+      "tp": 4364.63
+    }
+  ],
+  "open_position": {
+    "actual": 4368.146,
+    "ea_name": "EMA200-NY",
+    "entrada": 4367.573,
+    "lotes": 0.01,
+    "magic": 550208,
+    "profit": -0.58,
+    "sl": 4377.821,
+    "ticket": 105872291,
+    "tipo": "SELL",
+    "tp": 4364.63
+  },
   "summary": {
     "total": 63,
     "wins": 53,
