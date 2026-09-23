@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-09-23T04:31:13Z",
-  "last_updated": "2026-09-23T04:31:13Z",
+  "updated_at": "2026-09-23T07:31:23Z",
+  "last_updated": "2026-09-23T07:31:23Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 575.26,
-  "balance": 575.26,
-  "equity": 575.26,
+  "current_balance": 575.19,
+  "balance": 575.19,
+  "equity": 577.49,
   "pnl_total": 225.39,
   "pnl_pct": 37.56,
   "tunnel_url": "https://purse-poison-sandra-distance.trycloudflare.com",
@@ -190,7 +190,18 @@
       "profit_factor": 2.17,
       "target_wr": 45
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4324.198,
+      "ea_name": "ARB-Gold",
+      "entrada": 4326.496,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 2.3,
+      "sl": 4345.008,
+      "ticket": 106156691,
+      "tipo": "SELL",
+      "tp": 4298.314
+    },
     "params": {
       "sl_mult": 3.0,
       "tp_mult": 4.0,
@@ -2115,8 +2126,32 @@
       "ticket": "106101426"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4324.198,
+      "ea_name": "ARB-Gold",
+      "entrada": 4326.496,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 2.3,
+      "sl": 4345.008,
+      "ticket": 106156691,
+      "tipo": "SELL",
+      "tp": 4298.314
+    }
+  ],
+  "open_position": {
+    "actual": 4324.198,
+    "ea_name": "ARB-Gold",
+    "entrada": 4326.496,
+    "lotes": 0.01,
+    "magic": 20260613,
+    "profit": 2.3,
+    "sl": 4345.008,
+    "ticket": 106156691,
+    "tipo": "SELL",
+    "tp": 4298.314
+  },
   "summary": {
     "total": 71,
     "wins": 57,
