@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-06T09:43:38Z",
-  "last_updated": "2026-10-06T09:43:38Z",
+  "updated_at": "2026-10-06T10:43:44Z",
+  "last_updated": "2026-10-06T10:43:44Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 858.64,
-  "balance": 858.64,
-  "equity": 861.52,
-  "pnl_total": 515.63,
-  "pnl_pct": 85.94,
+  "current_balance": 863.17,
+  "balance": 863.17,
+  "equity": 863.17,
+  "pnl_total": 520.16,
+  "pnl_pct": 86.69,
   "tunnel_url": "https://purse-poison-sandra-distance.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -1461,29 +1461,32 @@
         "profit_usd": 21.57,
         "result": "WIN",
         "ticket": "106779435"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 4,
+        "ea_name": "EMA200-MULTI",
+        "entry_price": 31210.67,
+        "entry_time": "2026-10-06 09:40 UTC",
+        "exit_comment": "[tp 31199.34000]",
+        "exit_price": 31199.34,
+        "exit_time": "2026-10-06 09:44 UTC",
+        "magic": 550211,
+        "profit_usd": 4.53,
+        "result": "WIN",
+        "ticket": "106825963"
       }
     ],
     "summary": {
-      "total": 26,
-      "wins": 20,
+      "total": 27,
+      "wins": 21,
       "losses": 6,
-      "pnl": 94.18,
-      "win_rate": 76.9,
-      "profit_factor": 1.56,
+      "pnl": 98.71,
+      "win_rate": 77.8,
+      "profit_factor": 1.59,
       "target_wr": 84
     },
-    "open_position": {
-      "actual": 31203.48,
-      "ea_name": "EMA200-MULTI",
-      "entrada": 31210.67,
-      "lotes": 0.4,
-      "magic": 550211,
-      "profit": 2.88,
-      "sl": 31251.96,
-      "ticket": 106825963,
-      "tipo": "SELL",
-      "tp": 31199.34
-    },
+    "open_position": null,
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -2852,41 +2855,31 @@
       "profit_usd": 21.57,
       "result": "WIN",
       "ticket": "106779435"
-    }
-  ],
-  "open_positions": [
+    },
     {
-      "actual": 31203.48,
+      "direction": "SELL",
+      "duration_min": 4,
       "ea_name": "EMA200-MULTI",
-      "entrada": 31210.67,
-      "lotes": 0.4,
+      "entry_price": 31210.67,
+      "entry_time": "2026-10-06 09:40 UTC",
+      "exit_comment": "[tp 31199.34000]",
+      "exit_price": 31199.34,
+      "exit_time": "2026-10-06 09:44 UTC",
       "magic": 550211,
-      "profit": 2.88,
-      "sl": 31251.96,
-      "ticket": 106825963,
-      "tipo": "SELL",
-      "tp": 31199.34
+      "profit_usd": 4.53,
+      "result": "WIN",
+      "ticket": "106825963"
     }
   ],
-  "open_position": {
-    "actual": 31203.48,
-    "ea_name": "EMA200-MULTI",
-    "entrada": 31210.67,
-    "lotes": 0.4,
-    "magic": 550211,
-    "profit": 2.88,
-    "sl": 31251.96,
-    "ticket": 106825963,
-    "tipo": "SELL",
-    "tp": 31199.34
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 97,
-    "wins": 80,
+    "total": 98,
+    "wins": 81,
     "losses": 17,
-    "pnl": 515.63,
-    "win_rate": 82.5,
-    "profit_factor": 1.91
+    "pnl": 520.16,
+    "win_rate": 82.7,
+    "profit_factor": 1.92
   },
-  "message": "ARB:16t $+126.29 | NY:28t $+211.91 | ORO2:14t $-70.51 | USTEC:13t $+153.76 | MULTI:26t $+94.18 | Total:$+515.63"
+  "message": "ARB:16t $+126.29 | NY:28t $+211.91 | ORO2:14t $-70.51 | USTEC:13t $+153.76 | MULTI:27t $+98.71 | Total:$+520.16"
 }
