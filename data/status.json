@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-07T08:45:50Z",
-  "last_updated": "2026-10-07T08:45:50Z",
+  "updated_at": "2026-10-07T09:45:56Z",
+  "last_updated": "2026-10-07T09:45:56Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 882.99,
-  "balance": 882.99,
-  "equity": 882.54,
-  "pnl_total": 540.8,
-  "pnl_pct": 90.13,
+  "current_balance": 866.4,
+  "balance": 866.4,
+  "equity": 873.49,
+  "pnl_total": 524.46,
+  "pnl_pct": 87.41,
   "tunnel_url": "https://purse-poison-sandra-distance.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -247,12 +247,12 @@
       "target_wr": 45
     },
     "open_position": {
-      "actual": 4126.437,
+      "actual": 4118.895,
       "ea_name": "ARB-Gold",
       "entrada": 4125.985,
       "lotes": 0.01,
       "magic": 20260613,
-      "profit": -0.45,
+      "profit": 7.09,
       "sl": 4146.612,
       "ticket": 106896507,
       "tipo": "SELL",
@@ -1514,15 +1514,29 @@
         "profit_usd": 13.76,
         "result": "WIN",
         "ticket": "106849112"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 15,
+        "ea_name": "EMA200-MULTI",
+        "entry_price": 31188.78,
+        "entry_time": "2026-10-07 09:05 UTC",
+        "exit_comment": "[sl 31147.94000]",
+        "exit_price": 31147.94,
+        "exit_time": "2026-10-07 09:20 UTC",
+        "magic": 550211,
+        "profit_usd": -16.34,
+        "result": "LOSS",
+        "ticket": "106897017"
       }
     ],
     "summary": {
-      "total": 28,
+      "total": 29,
       "wins": 22,
-      "losses": 6,
-      "pnl": 112.47,
-      "win_rate": 78.6,
-      "profit_factor": 1.67,
+      "losses": 7,
+      "pnl": 96.13,
+      "win_rate": 75.9,
+      "profit_factor": 1.52,
       "target_wr": 84
     },
     "open_position": null,
@@ -2936,16 +2950,30 @@
       "profit_usd": 13.76,
       "result": "WIN",
       "ticket": "106849112"
+    },
+    {
+      "direction": "BUY",
+      "duration_min": 15,
+      "ea_name": "EMA200-MULTI",
+      "entry_price": 31188.78,
+      "entry_time": "2026-10-07 09:05 UTC",
+      "exit_comment": "[sl 31147.94000]",
+      "exit_price": 31147.94,
+      "exit_time": "2026-10-07 09:20 UTC",
+      "magic": 550211,
+      "profit_usd": -16.34,
+      "result": "LOSS",
+      "ticket": "106897017"
     }
   ],
   "open_positions": [
     {
-      "actual": 4126.437,
+      "actual": 4118.895,
       "ea_name": "ARB-Gold",
       "entrada": 4125.985,
       "lotes": 0.01,
       "magic": 20260613,
-      "profit": -0.45,
+      "profit": 7.09,
       "sl": 4146.612,
       "ticket": 106896507,
       "tipo": "SELL",
@@ -2953,24 +2981,24 @@
     }
   ],
   "open_position": {
-    "actual": 4126.437,
+    "actual": 4118.895,
     "ea_name": "ARB-Gold",
     "entrada": 4125.985,
     "lotes": 0.01,
     "magic": 20260613,
-    "profit": -0.45,
+    "profit": 7.09,
     "sl": 4146.612,
     "ticket": 106896507,
     "tipo": "SELL",
     "tp": 4098.482
   },
   "summary": {
-    "total": 100,
+    "total": 101,
     "wins": 83,
-    "losses": 17,
-    "pnl": 540.8,
-    "win_rate": 83.0,
-    "profit_factor": 1.96
+    "losses": 18,
+    "pnl": 524.46,
+    "win_rate": 82.2,
+    "profit_factor": 1.9
   },
-  "message": "ARB:16t $+126.29 | NY:28t $+211.91 | ORO2:14t $-70.51 | USTEC:14t $+160.64 | MULTI:28t $+112.47 | Total:$+540.80"
+  "message": "ARB:16t $+126.29 | NY:28t $+211.91 | ORO2:14t $-70.51 | USTEC:14t $+160.64 | MULTI:29t $+96.13 | Total:$+524.46"
 }
