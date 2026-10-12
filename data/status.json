@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-12T09:24:24Z",
-  "last_updated": "2026-10-12T09:24:24Z",
+  "updated_at": "2026-10-12T10:24:30Z",
+  "last_updated": "2026-10-12T10:24:30Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 931.33,
-  "balance": 931.33,
-  "equity": 931.33,
+  "current_balance": 931.08,
+  "balance": 931.08,
+  "equity": 930.46,
   "pnl_total": 590.93,
   "pnl_pct": 98.49,
   "tunnel_url": "https://purse-poison-sandra-distance.trycloudflare.com",
@@ -1612,7 +1612,18 @@
       "profit_factor": 1.63,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 30896.92,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 30898.48,
+      "lotes": 0.4,
+      "magic": 550211,
+      "profit": -0.62,
+      "sl": 30852.19,
+      "ticket": 107123608,
+      "tipo": "BUY",
+      "tp": 30910.51
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -3123,8 +3134,32 @@
       "ticket": "107042318"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 30896.92,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 30898.48,
+      "lotes": 0.4,
+      "magic": 550211,
+      "profit": -0.62,
+      "sl": 30852.19,
+      "ticket": 107123608,
+      "tipo": "BUY",
+      "tp": 30910.51
+    }
+  ],
+  "open_position": {
+    "actual": 30896.92,
+    "ea_name": "EMA200-MULTI",
+    "entrada": 30898.48,
+    "lotes": 0.4,
+    "magic": 550211,
+    "profit": -0.62,
+    "sl": 30852.19,
+    "ticket": 107123608,
+    "tipo": "BUY",
+    "tp": 30910.51
+  },
   "summary": {
     "total": 107,
     "wins": 89,
