@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-13T15:26:55Z",
-  "last_updated": "2026-10-13T15:26:55Z",
+  "updated_at": "2026-10-13T16:27:00Z",
+  "last_updated": "2026-10-13T16:27:00Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 939.99,
-  "balance": 939.99,
-  "equity": 939.99,
+  "current_balance": 939.71,
+  "balance": 939.71,
+  "equity": 928.59,
   "pnl_total": 600.62,
   "pnl_pct": 100.1,
   "tunnel_url": "https://purse-poison-sandra-distance.trycloudflare.com",
@@ -702,7 +702,18 @@
       "profit_factor": 6.61,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4156.811,
+      "ea_name": "EMA200-NY",
+      "entrada": 4159.59,
+      "lotes": 0.01,
+      "magic": 550208,
+      "profit": -2.78,
+      "sl": 4148.675,
+      "ticket": 107203345,
+      "tipo": "BUY",
+      "tp": 4162.501
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -950,7 +961,18 @@
       "profit_factor": 0.7,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4156.811,
+      "ea_name": "EMA200-ORO2",
+      "entrada": 4159.59,
+      "lotes": 0.03,
+      "magic": 550210,
+      "profit": -8.34,
+      "sl": 4148.675,
+      "ticket": 107203344,
+      "tipo": "BUY",
+      "tp": 4162.501
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -3263,8 +3285,44 @@
       "ticket": "107138563"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4156.811,
+      "ea_name": "EMA200-ORO2",
+      "entrada": 4159.59,
+      "lotes": 0.03,
+      "magic": 550210,
+      "profit": -8.34,
+      "sl": 4148.675,
+      "ticket": 107203344,
+      "tipo": "BUY",
+      "tp": 4162.501
+    },
+    {
+      "actual": 4156.811,
+      "ea_name": "EMA200-NY",
+      "entrada": 4159.59,
+      "lotes": 0.01,
+      "magic": 550208,
+      "profit": -2.78,
+      "sl": 4148.675,
+      "ticket": 107203345,
+      "tipo": "BUY",
+      "tp": 4162.501
+    }
+  ],
+  "open_position": {
+    "actual": 4156.811,
+    "ea_name": "EMA200-ORO2",
+    "entrada": 4159.59,
+    "lotes": 0.03,
+    "magic": 550210,
+    "profit": -8.34,
+    "sl": 4148.675,
+    "ticket": 107203344,
+    "tipo": "BUY",
+    "tp": 4162.501
+  },
   "summary": {
     "total": 112,
     "wins": 93,
