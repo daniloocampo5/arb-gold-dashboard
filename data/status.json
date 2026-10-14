@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-14T01:27:51Z",
-  "last_updated": "2026-10-14T01:27:51Z",
+  "updated_at": "2026-10-14T15:43:02Z",
+  "last_updated": "2026-10-14T15:43:02Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 896.06,
-  "balance": 896.06,
-  "equity": 896.06,
+  "current_balance": 895.06,
+  "balance": 895.06,
+  "equity": 789.36,
   "pnl_total": 556.97,
   "pnl_pct": 92.83,
   "tunnel_url": "https://purse-poison-sandra-distance.trycloudflare.com",
@@ -1225,7 +1225,18 @@
       "profit_factor": 6.26,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 30145.72,
+      "ea_name": "EMA200-USTEC",
+      "entrada": 30211.78,
+      "lotes": 0.8,
+      "magic": 550209,
+      "profit": -52.85,
+      "sl": 30088.41,
+      "ticket": 107274799,
+      "tipo": "BUY",
+      "tp": 30243.41
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -1710,7 +1721,18 @@
       "profit_factor": 1.53,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 30145.72,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 30211.78,
+      "lotes": 0.8,
+      "magic": 550211,
+      "profit": -52.85,
+      "sl": 30088.41,
+      "ticket": 107274798,
+      "tipo": "BUY",
+      "tp": 30243.41
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -3319,8 +3341,44 @@
       "ticket": "107138563"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 30145.72,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 30211.78,
+      "lotes": 0.8,
+      "magic": 550211,
+      "profit": -52.85,
+      "sl": 30088.41,
+      "ticket": 107274798,
+      "tipo": "BUY",
+      "tp": 30243.41
+    },
+    {
+      "actual": 30145.72,
+      "ea_name": "EMA200-USTEC",
+      "entrada": 30211.78,
+      "lotes": 0.8,
+      "magic": 550209,
+      "profit": -52.85,
+      "sl": 30088.41,
+      "ticket": 107274799,
+      "tipo": "BUY",
+      "tp": 30243.41
+    }
+  ],
+  "open_position": {
+    "actual": 30145.72,
+    "ea_name": "EMA200-MULTI",
+    "entrada": 30211.78,
+    "lotes": 0.8,
+    "magic": 550211,
+    "profit": -52.85,
+    "sl": 30088.41,
+    "ticket": 107274798,
+    "tipo": "BUY",
+    "tp": 30243.41
+  },
   "summary": {
     "total": 114,
     "wins": 93,
