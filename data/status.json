@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-16T16:17:39Z",
-  "last_updated": "2026-10-16T16:17:39Z",
+  "updated_at": "2026-10-16T17:17:45Z",
+  "last_updated": "2026-10-16T17:17:45Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 697.31,
-  "balance": 697.31,
-  "equity": 638.81,
-  "pnl_total": 360.57,
-  "pnl_pct": 60.09,
+  "current_balance": 366.05,
+  "balance": 366.05,
+  "equity": 366.05,
+  "pnl_total": 29.31,
+  "pnl_pct": 4.88,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -1270,29 +1270,32 @@
         "profit_usd": -98.7,
         "result": "LOSS",
         "ticket": "107274799"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 118,
+        "ea_name": "EMA200-USTEC",
+        "entry_price": 29526.48,
+        "entry_time": "2026-10-16 15:10 UTC",
+        "exit_comment": "[sl 29319.44000]",
+        "exit_price": 29319.44,
+        "exit_time": "2026-10-16 17:08 UTC",
+        "magic": 550209,
+        "profit_usd": -165.63,
+        "result": "LOSS",
+        "ticket": "107477871"
       }
     ],
     "summary": {
-      "total": 17,
+      "total": 18,
       "wins": 15,
-      "losses": 2,
-      "pnl": 83.82,
-      "win_rate": 88.2,
-      "profit_factor": 1.63,
+      "losses": 3,
+      "pnl": -81.81,
+      "win_rate": 83.3,
+      "profit_factor": 0.73,
       "target_wr": 84
     },
-    "open_position": {
-      "actual": 29489.92,
-      "ea_name": "EMA200-USTEC",
-      "entrada": 29526.48,
-      "lotes": 0.8,
-      "magic": 550209,
-      "profit": -29.25,
-      "sl": 29319.44,
-      "ticket": 107477871,
-      "tipo": "BUY",
-      "tp": 29581.06
-    },
+    "open_position": null,
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -1780,29 +1783,32 @@
         "profit_usd": -98.7,
         "result": "LOSS",
         "ticket": "107274798"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 118,
+        "ea_name": "EMA200-MULTI",
+        "entry_price": 29526.48,
+        "entry_time": "2026-10-16 15:10 UTC",
+        "exit_comment": "[sl 29319.44000]",
+        "exit_price": 29319.44,
+        "exit_time": "2026-10-16 17:08 UTC",
+        "magic": 550211,
+        "profit_usd": -165.63,
+        "result": "LOSS",
+        "ticket": "107477872"
       }
     ],
     "summary": {
-      "total": 34,
+      "total": 35,
       "wins": 25,
-      "losses": 9,
-      "pnl": 9.45,
-      "win_rate": 73.5,
-      "profit_factor": 1.03,
+      "losses": 10,
+      "pnl": -156.18,
+      "win_rate": 71.4,
+      "profit_factor": 0.67,
       "target_wr": 84
     },
-    "open_position": {
-      "actual": 29489.92,
-      "ea_name": "EMA200-MULTI",
-      "entrada": 29526.48,
-      "lotes": 0.8,
-      "magic": 550211,
-      "profit": -29.25,
-      "sl": 29319.44,
-      "ticket": 107477872,
-      "tipo": "BUY",
-      "tp": 29581.06
-    },
+    "open_position": null,
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -2754,6 +2760,20 @@
     },
     {
       "direction": "BUY",
+      "duration_min": 118,
+      "ea_name": "EMA200-USTEC",
+      "entry_price": 29526.48,
+      "entry_time": "2026-10-16 15:10 UTC",
+      "exit_comment": "[sl 29319.44000]",
+      "exit_price": 29319.44,
+      "exit_time": "2026-10-16 17:08 UTC",
+      "magic": 550209,
+      "profit_usd": -165.63,
+      "result": "LOSS",
+      "ticket": "107477871"
+    },
+    {
+      "direction": "BUY",
       "duration_min": 3,
       "ea_name": "EMA200-ORO2",
       "entry_price": 4358.94,
@@ -3479,53 +3499,31 @@
       "profit_usd": -98.7,
       "result": "LOSS",
       "ticket": "107274798"
-    }
-  ],
-  "open_positions": [
-    {
-      "actual": 29489.92,
-      "ea_name": "EMA200-USTEC",
-      "entrada": 29526.48,
-      "lotes": 0.8,
-      "magic": 550209,
-      "profit": -29.25,
-      "sl": 29319.44,
-      "ticket": 107477871,
-      "tipo": "BUY",
-      "tp": 29581.06
     },
     {
-      "actual": 29489.92,
+      "direction": "BUY",
+      "duration_min": 118,
       "ea_name": "EMA200-MULTI",
-      "entrada": 29526.48,
-      "lotes": 0.8,
+      "entry_price": 29526.48,
+      "entry_time": "2026-10-16 15:10 UTC",
+      "exit_comment": "[sl 29319.44000]",
+      "exit_price": 29319.44,
+      "exit_time": "2026-10-16 17:08 UTC",
       "magic": 550211,
-      "profit": -29.25,
-      "sl": 29319.44,
-      "ticket": 107477872,
-      "tipo": "BUY",
-      "tp": 29581.06
+      "profit_usd": -165.63,
+      "result": "LOSS",
+      "ticket": "107477872"
     }
   ],
-  "open_position": {
-    "actual": 29489.92,
-    "ea_name": "EMA200-USTEC",
-    "entrada": 29526.48,
-    "lotes": 0.8,
-    "magic": 550209,
-    "profit": -29.25,
-    "sl": 29319.44,
-    "ticket": 107477871,
-    "tipo": "BUY",
-    "tp": 29581.06
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 119,
+    "total": 121,
     "wins": 95,
-    "losses": 24,
-    "pnl": 360.57,
-    "win_rate": 79.8,
-    "profit_factor": 1.42
+    "losses": 26,
+    "pnl": 29.31,
+    "win_rate": 78.5,
+    "profit_factor": 1.02
   },
-  "message": "ARB:18t $+134.46 | NY:32t $+212.82 | ORO2:18t $-79.98 | USTEC:17t $+83.82 | MULTI:34t $+9.45 | Total:$+360.57"
+  "message": "ARB:18t $+134.46 | NY:32t $+212.82 | ORO2:18t $-79.98 | USTEC:18t $-81.81 | MULTI:35t $-156.18 | Total:$+29.31"
 }
