@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-16T14:17:28Z",
-  "last_updated": "2026-10-16T14:17:28Z",
+  "updated_at": "2026-10-16T15:17:34Z",
+  "last_updated": "2026-10-16T15:17:34Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 698.31,
-  "balance": 698.31,
-  "equity": 698.31,
+  "current_balance": 697.31,
+  "balance": 697.31,
+  "equity": 740.81,
   "pnl_total": 360.57,
   "pnl_pct": 60.09,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
@@ -1281,7 +1281,18 @@
       "profit_factor": 1.63,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 29553.67,
+      "ea_name": "EMA200-USTEC",
+      "entrada": 29526.48,
+      "lotes": 0.8,
+      "magic": 550209,
+      "profit": 21.75,
+      "sl": 29319.44,
+      "ticket": 107477871,
+      "tipo": "BUY",
+      "tp": 29581.06
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -1780,7 +1791,18 @@
       "profit_factor": 1.03,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 29553.67,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 29526.48,
+      "lotes": 0.8,
+      "magic": 550211,
+      "profit": 21.75,
+      "sl": 29319.44,
+      "ticket": 107477872,
+      "tipo": "BUY",
+      "tp": 29581.06
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -3459,8 +3481,44 @@
       "ticket": "107274798"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 29553.67,
+      "ea_name": "EMA200-USTEC",
+      "entrada": 29526.48,
+      "lotes": 0.8,
+      "magic": 550209,
+      "profit": 21.75,
+      "sl": 29319.44,
+      "ticket": 107477871,
+      "tipo": "BUY",
+      "tp": 29581.06
+    },
+    {
+      "actual": 29553.67,
+      "ea_name": "EMA200-MULTI",
+      "entrada": 29526.48,
+      "lotes": 0.8,
+      "magic": 550211,
+      "profit": 21.75,
+      "sl": 29319.44,
+      "ticket": 107477872,
+      "tipo": "BUY",
+      "tp": 29581.06
+    }
+  ],
+  "open_position": {
+    "actual": 29553.67,
+    "ea_name": "EMA200-USTEC",
+    "entrada": 29526.48,
+    "lotes": 0.8,
+    "magic": 550209,
+    "profit": 21.75,
+    "sl": 29319.44,
+    "ticket": 107477871,
+    "tipo": "BUY",
+    "tp": 29581.06
+  },
   "summary": {
     "total": 119,
     "wins": 95,
