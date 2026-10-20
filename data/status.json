@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-20T12:34:47Z",
-  "last_updated": "2026-10-20T12:34:47Z",
+  "updated_at": "2026-10-20T16:19:10Z",
+  "last_updated": "2026-10-20T16:19:10Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 439.73,
-  "balance": 439.73,
-  "equity": 432.77,
-  "pnl_total": 75.28,
-  "pnl_pct": 12.55,
+  "current_balance": 417.42,
+  "balance": 417.42,
+  "equity": 417.42,
+  "pnl_total": 52.97,
+  "pnl_pct": 8.83,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -235,29 +235,32 @@
         "profit_usd": -19.34,
         "result": "LOSS",
         "ticket": "107452129"
+      },
+      {
+        "direction": "SELL",
+        "duration_min": 256,
+        "ea_name": "ARB-Gold",
+        "entry_price": 4113.03,
+        "entry_time": "2026-10-20 10:00 UTC",
+        "exit_comment": "[sl 4135.34400]",
+        "exit_price": 4135.34,
+        "exit_time": "2026-10-20 14:16 UTC",
+        "magic": 20260613,
+        "profit_usd": -22.31,
+        "result": "LOSS",
+        "ticket": "107624392"
       }
     ],
     "summary": {
-      "total": 16,
+      "total": 17,
       "wins": 9,
-      "losses": 7,
-      "pnl": 105.15,
-      "win_rate": 56.2,
-      "profit_factor": 1.77,
+      "losses": 8,
+      "pnl": 82.84,
+      "win_rate": 52.9,
+      "profit_factor": 1.52,
       "target_wr": 45
     },
-    "open_position": {
-      "actual": 4119.994,
-      "ea_name": "ARB-Gold",
-      "entrada": 4113.03,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": -6.96,
-      "sl": 4135.344,
-      "ticket": 107624392,
-      "tipo": "SELL",
-      "tp": 4082.963
-    },
+    "open_position": null,
     "params": {
       "sl_mult": 3.0,
       "tp_mult": 4.0,
@@ -2099,6 +2102,20 @@
     },
     {
       "direction": "SELL",
+      "duration_min": 256,
+      "ea_name": "ARB-Gold",
+      "entry_price": 4113.03,
+      "entry_time": "2026-10-20 10:00 UTC",
+      "exit_comment": "[sl 4135.34400]",
+      "exit_price": 4135.34,
+      "exit_time": "2026-10-20 14:16 UTC",
+      "magic": 20260613,
+      "profit_usd": -22.31,
+      "result": "LOSS",
+      "ticket": "107624392"
+    },
+    {
+      "direction": "SELL",
       "duration_min": 99,
       "ea_name": "EMA200-NY",
       "entry_price": 4106.09,
@@ -3610,39 +3627,15 @@
       "ticket": "107623411"
     }
   ],
-  "open_positions": [
-    {
-      "actual": 4119.994,
-      "ea_name": "ARB-Gold",
-      "entrada": 4113.03,
-      "lotes": 0.01,
-      "magic": 20260613,
-      "profit": -6.96,
-      "sl": 4135.344,
-      "ticket": 107624392,
-      "tipo": "SELL",
-      "tp": 4082.963
-    }
-  ],
-  "open_position": {
-    "actual": 4119.994,
-    "ea_name": "ARB-Gold",
-    "entrada": 4113.03,
-    "lotes": 0.01,
-    "magic": 20260613,
-    "profit": -6.96,
-    "sl": 4135.344,
-    "ticket": 107624392,
-    "tipo": "SELL",
-    "tp": 4082.963
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 124,
+    "total": 125,
     "wins": 98,
-    "losses": 26,
-    "pnl": 75.28,
-    "win_rate": 79.0,
-    "profit_factor": 1.06
+    "losses": 27,
+    "pnl": 52.97,
+    "win_rate": 78.4,
+    "profit_factor": 1.04
   },
-  "message": "ARB:16t $+105.15 | NY:33t $+223.66 | ORO2:19t $-76.36 | USTEC:19t $-55.98 | MULTI:37t $-121.19 | Total:$+75.28"
+  "message": "ARB:17t $+82.84 | NY:33t $+223.66 | ORO2:19t $-76.36 | USTEC:19t $-55.98 | MULTI:37t $-121.19 | Total:$+52.97"
 }
