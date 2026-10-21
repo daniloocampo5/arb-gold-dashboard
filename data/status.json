@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-21T18:32:50Z",
-  "last_updated": "2026-10-21T18:32:50Z",
+  "updated_at": "2026-10-21T19:32:57Z",
+  "last_updated": "2026-10-21T19:32:57Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 446.94,
   "balance": 446.94,
   "equity": 446.94,
-  "pnl_total": 116.46,
-  "pnl_pct": 19.41,
+  "pnl_total": 111.21,
+  "pnl_pct": 18.54,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -244,20 +244,6 @@
   },
   "ema200_ny": {
     "trades": [
-      {
-        "direction": "SELL",
-        "duration_min": 99,
-        "ea_name": "EMA200-NY",
-        "entry_price": 4106.09,
-        "entry_time": "2026-07-30 15:50 UTC",
-        "exit_comment": "[tp 4100.83600]",
-        "exit_price": 4100.84,
-        "exit_time": "2026-07-30 17:29 UTC",
-        "magic": 550208,
-        "profit_usd": 5.25,
-        "result": "WIN",
-        "ticket": "102895192"
-      },
       {
         "direction": "BUY",
         "duration_min": 7,
@@ -708,12 +694,12 @@
       }
     ],
     "summary": {
-      "total": 33,
-      "wins": 31,
+      "total": 32,
+      "wins": 30,
       "losses": 2,
-      "pnl": 223.66,
-      "win_rate": 93.9,
-      "profit_factor": 5.48,
+      "pnl": 218.41,
+      "win_rate": 93.8,
+      "profit_factor": 5.38,
       "target_wr": 84
     },
     "open_position": null,
@@ -2085,20 +2071,6 @@
       "profit_usd": -22.31,
       "result": "LOSS",
       "ticket": "107624392"
-    },
-    {
-      "direction": "SELL",
-      "duration_min": 99,
-      "ea_name": "EMA200-NY",
-      "entry_price": 4106.09,
-      "entry_time": "2026-07-30 15:50 UTC",
-      "exit_comment": "[tp 4100.83600]",
-      "exit_price": 4100.84,
-      "exit_time": "2026-07-30 17:29 UTC",
-      "magic": 550208,
-      "profit_usd": 5.25,
-      "result": "WIN",
-      "ticket": "102895192"
     },
     {
       "direction": "BUY",
@@ -3630,12 +3602,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 125,
-    "wins": 100,
+    "total": 124,
+    "wins": 99,
     "losses": 25,
-    "pnl": 116.46,
-    "win_rate": 80.0,
-    "profit_factor": 1.1
+    "pnl": 111.21,
+    "win_rate": 79.8,
+    "profit_factor": 1.09
   },
-  "message": "ARB:15t $+116.06 | NY:33t $+223.66 | ORO2:19t $-76.36 | USTEC:20t $-45.89 | MULTI:38t $-101.01 | Total:$+116.46"
+  "message": "ARB:15t $+116.06 | NY:32t $+218.41 | ORO2:19t $-76.36 | USTEC:20t $-45.89 | MULTI:38t $-101.01 | Total:$+111.21"
 }
