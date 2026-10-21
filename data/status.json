@@ -1,31 +1,17 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-21T16:32:37Z",
-  "last_updated": "2026-10-21T16:32:37Z",
+  "updated_at": "2026-10-21T17:32:44Z",
+  "last_updated": "2026-10-21T17:32:44Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 446.94,
   "balance": 446.94,
   "equity": 446.94,
-  "pnl_total": 97.28,
-  "pnl_pct": 16.21,
+  "pnl_total": 116.46,
+  "pnl_pct": 19.41,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
   "arb_gold": {
     "trades": [
-      {
-        "direction": "BUY",
-        "duration_min": 18,
-        "ea_name": "ARB-Gold",
-        "entry_price": 4112.22,
-        "entry_time": "2026-07-30 14:00 UTC",
-        "exit_comment": "[sl 4093.041]",
-        "exit_price": 4093.04,
-        "exit_time": "2026-07-30 14:18 UTC",
-        "magic": 20260613,
-        "profit_usd": -19.18,
-        "result": "LOSS",
-        "ticket": "102884513"
-      },
       {
         "direction": "BUY",
         "duration_min": 255,
@@ -238,12 +224,12 @@
       }
     ],
     "summary": {
-      "total": 16,
+      "total": 15,
       "wins": 9,
-      "losses": 7,
-      "pnl": 96.88,
-      "win_rate": 56.2,
-      "profit_factor": 1.67,
+      "losses": 6,
+      "pnl": 116.06,
+      "win_rate": 60.0,
+      "profit_factor": 1.92,
       "target_wr": 45
     },
     "open_position": null,
@@ -1890,20 +1876,6 @@
     }
   },
   "trades": [
-    {
-      "direction": "BUY",
-      "duration_min": 18,
-      "ea_name": "ARB-Gold",
-      "entry_price": 4112.22,
-      "entry_time": "2026-07-30 14:00 UTC",
-      "exit_comment": "[sl 4093.041]",
-      "exit_price": 4093.04,
-      "exit_time": "2026-07-30 14:18 UTC",
-      "magic": 20260613,
-      "profit_usd": -19.18,
-      "result": "LOSS",
-      "ticket": "102884513"
-    },
     {
       "direction": "BUY",
       "duration_min": 255,
@@ -3658,12 +3630,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 126,
+    "total": 125,
     "wins": 100,
-    "losses": 26,
-    "pnl": 97.28,
-    "win_rate": 79.4,
-    "profit_factor": 1.08
+    "losses": 25,
+    "pnl": 116.46,
+    "win_rate": 80.0,
+    "profit_factor": 1.1
   },
-  "message": "ARB:16t $+96.88 | NY:33t $+223.66 | ORO2:19t $-76.36 | USTEC:20t $-45.89 | MULTI:38t $-101.01 | Total:$+97.28"
+  "message": "ARB:15t $+116.06 | NY:33t $+223.66 | ORO2:19t $-76.36 | USTEC:20t $-45.89 | MULTI:38t $-101.01 | Total:$+116.46"
 }
