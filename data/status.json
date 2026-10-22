@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-22T10:34:23Z",
-  "last_updated": "2026-10-22T10:34:23Z",
+  "updated_at": "2026-10-22T11:34:29Z",
+  "last_updated": "2026-10-22T11:34:29Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 446.94,
-  "balance": 446.94,
-  "equity": 446.94,
+  "current_balance": 446.87,
+  "balance": 446.87,
+  "equity": 449.74,
   "pnl_total": 111.21,
   "pnl_pct": 18.54,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
@@ -232,7 +232,18 @@
       "profit_factor": 1.92,
       "target_wr": 45
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4059.291,
+      "ea_name": "ARB-Gold",
+      "entrada": 4062.163,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 2.87,
+      "sl": 4086.439,
+      "ticket": 107769338,
+      "tipo": "SELL",
+      "tp": 4030.346
+    },
     "params": {
       "sl_mult": 3.0,
       "tp_mult": 4.0,
@@ -3599,8 +3610,32 @@
       "ticket": "107721180"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4059.291,
+      "ea_name": "ARB-Gold",
+      "entrada": 4062.163,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": 2.87,
+      "sl": 4086.439,
+      "ticket": 107769338,
+      "tipo": "SELL",
+      "tp": 4030.346
+    }
+  ],
+  "open_position": {
+    "actual": 4059.291,
+    "ea_name": "ARB-Gold",
+    "entrada": 4062.163,
+    "lotes": 0.01,
+    "magic": 20260613,
+    "profit": 2.87,
+    "sl": 4086.439,
+    "ticket": 107769338,
+    "tipo": "SELL",
+    "tp": 4030.346
+  },
   "summary": {
     "total": 124,
     "wins": 99,
