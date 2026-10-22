@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-22T16:35:01Z",
-  "last_updated": "2026-10-22T16:35:01Z",
+  "updated_at": "2026-10-22T17:35:06Z",
+  "last_updated": "2026-10-22T17:35:06Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 422.38,
-  "balance": 422.38,
-  "equity": 398.1,
-  "pnl_total": 86.93,
-  "pnl_pct": 14.49,
+  "current_balance": 379.63,
+  "balance": 379.63,
+  "equity": 379.63,
+  "pnl_total": 44.18,
+  "pnl_pct": 7.36,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -705,29 +705,32 @@
         "profit_usd": 10.84,
         "result": "WIN",
         "ticket": "107570265"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 46,
+        "ea_name": "EMA200-NY",
+        "entry_price": 4052.6,
+        "entry_time": "2026-10-22 16:00 UTC",
+        "exit_comment": "[sl 4038.35400]",
+        "exit_price": 4038.35,
+        "exit_time": "2026-10-22 16:46 UTC",
+        "magic": 550208,
+        "profit_usd": -42.75,
+        "result": "LOSS",
+        "ticket": "107798461"
       }
     ],
     "summary": {
-      "total": 32,
+      "total": 33,
       "wins": 30,
-      "losses": 2,
-      "pnl": 218.41,
-      "win_rate": 93.8,
-      "profit_factor": 5.38,
+      "losses": 3,
+      "pnl": 175.66,
+      "win_rate": 90.9,
+      "profit_factor": 2.9,
       "target_wr": 84
     },
-    "open_position": {
-      "actual": 4044.51,
-      "ea_name": "EMA200-NY",
-      "entrada": 4052.602,
-      "lotes": 0.03,
-      "magic": 550208,
-      "profit": -24.28,
-      "sl": 4038.354,
-      "ticket": 107798461,
-      "tipo": "BUY",
-      "tp": 4055.824
-    },
+    "open_position": null,
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -2561,6 +2564,20 @@
     },
     {
       "direction": "BUY",
+      "duration_min": 46,
+      "ea_name": "EMA200-NY",
+      "entry_price": 4052.6,
+      "entry_time": "2026-10-22 16:00 UTC",
+      "exit_comment": "[sl 4038.35400]",
+      "exit_price": 4038.35,
+      "exit_time": "2026-10-22 16:46 UTC",
+      "magic": 550208,
+      "profit_usd": -42.75,
+      "result": "LOSS",
+      "ticket": "107798461"
+    },
+    {
+      "direction": "BUY",
       "duration_min": 10,
       "ea_name": "EMA200-USTEC",
       "entry_price": 29632.98,
@@ -3638,39 +3655,15 @@
       "ticket": "107721180"
     }
   ],
-  "open_positions": [
-    {
-      "actual": 4044.51,
-      "ea_name": "EMA200-NY",
-      "entrada": 4052.602,
-      "lotes": 0.03,
-      "magic": 550208,
-      "profit": -24.28,
-      "sl": 4038.354,
-      "ticket": 107798461,
-      "tipo": "BUY",
-      "tp": 4055.824
-    }
-  ],
-  "open_position": {
-    "actual": 4044.51,
-    "ea_name": "EMA200-NY",
-    "entrada": 4052.602,
-    "lotes": 0.03,
-    "magic": 550208,
-    "profit": -24.28,
-    "sl": 4038.354,
-    "ticket": 107798461,
-    "tipo": "BUY",
-    "tp": 4055.824
-  },
+  "open_positions": [],
+  "open_position": null,
   "summary": {
-    "total": 125,
+    "total": 126,
     "wins": 99,
-    "losses": 26,
-    "pnl": 86.93,
-    "win_rate": 79.2,
-    "profit_factor": 1.07
+    "losses": 27,
+    "pnl": 44.18,
+    "win_rate": 78.6,
+    "profit_factor": 1.04
   },
-  "message": "ARB:16t $+91.78 | NY:32t $+218.41 | ORO2:19t $-76.36 | USTEC:20t $-45.89 | MULTI:38t $-101.01 | Total:$+86.93"
+  "message": "ARB:16t $+91.78 | NY:33t $+175.66 | ORO2:19t $-76.36 | USTEC:20t $-45.89 | MULTI:38t $-101.01 | Total:$+44.18"
 }
