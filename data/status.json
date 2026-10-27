@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-10-27T14:04:49Z",
-  "last_updated": "2026-10-27T14:04:49Z",
+  "updated_at": "2026-10-27T15:04:55Z",
+  "last_updated": "2026-10-27T15:04:55Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 447.18,
-  "balance": 447.18,
-  "equity": 447.18,
+  "current_balance": 446.48,
+  "balance": 446.48,
+  "equity": 335.66,
   "pnl_total": 81.24,
   "pnl_pct": 13.54,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
@@ -716,7 +716,18 @@
       "profit_factor": 2.87,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4056.964,
+      "ea_name": "EMA200-NY",
+      "entrada": 4045.882,
+      "lotes": 0.09,
+      "magic": 550208,
+      "profit": -99.74,
+      "sl": 4063.506,
+      "ticket": 108031041,
+      "tipo": "SELL",
+      "tp": 4041.182
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -1020,7 +1031,18 @@
       "profit_factor": 0.74,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 4056.964,
+      "ea_name": "EMA200-ORO2",
+      "entrada": 4045.882,
+      "lotes": 0.01,
+      "magic": 550210,
+      "profit": -11.08,
+      "sl": 4063.506,
+      "ticket": 108031040,
+      "tipo": "SELL",
+      "tp": 4041.182
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -3739,8 +3761,44 @@
       "ticket": "108007724"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 4056.964,
+      "ea_name": "EMA200-ORO2",
+      "entrada": 4045.882,
+      "lotes": 0.01,
+      "magic": 550210,
+      "profit": -11.08,
+      "sl": 4063.506,
+      "ticket": 108031040,
+      "tipo": "SELL",
+      "tp": 4041.182
+    },
+    {
+      "actual": 4056.964,
+      "ea_name": "EMA200-NY",
+      "entrada": 4045.882,
+      "lotes": 0.09,
+      "magic": 550208,
+      "profit": -99.74,
+      "sl": 4063.506,
+      "ticket": 108031041,
+      "tipo": "SELL",
+      "tp": 4041.182
+    }
+  ],
+  "open_position": {
+    "actual": 4056.964,
+    "ea_name": "EMA200-ORO2",
+    "entrada": 4045.882,
+    "lotes": 0.01,
+    "magic": 550210,
+    "profit": -11.08,
+    "sl": 4063.506,
+    "ticket": 108031040,
+    "tipo": "SELL",
+    "tp": 4041.182
+  },
   "summary": {
     "total": 129,
     "wins": 101,
