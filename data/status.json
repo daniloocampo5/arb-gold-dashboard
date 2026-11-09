@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-09T15:41:43Z",
-  "last_updated": "2026-11-09T15:41:43Z",
+  "updated_at": "2026-11-09T16:41:48Z",
+  "last_updated": "2026-11-09T16:41:48Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 91.07,
   "balance": 91.07,
   "equity": 91.07,
-  "pnl_total": -375.14,
-  "pnl_pct": -62.52,
+  "pnl_total": -388.85,
+  "pnl_pct": -64.81,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -1063,20 +1063,6 @@
     "trades": [
       {
         "direction": "BUY",
-        "duration_min": 10,
-        "ea_name": "EMA200-USTEC",
-        "entry_price": 29632.98,
-        "entry_time": "2026-08-18 13:20 UTC",
-        "exit_comment": "[tp 29644.40000]",
-        "exit_price": 29644.4,
-        "exit_time": "2026-08-18 13:30 UTC",
-        "magic": 550209,
-        "profit_usd": 4.57,
-        "result": "WIN",
-        "ticket": "104234137"
-      },
-      {
-        "direction": "BUY",
         "duration_min": 1,
         "ea_name": "EMA200-USTEC",
         "entry_price": 28920.83,
@@ -1413,12 +1399,12 @@
       }
     ],
     "summary": {
-      "total": 25,
-      "wins": 19,
+      "total": 24,
+      "wins": 18,
       "losses": 6,
-      "pnl": -137.72,
-      "win_rate": 76.0,
-      "profit_factor": 0.7,
+      "pnl": -142.29,
+      "win_rate": 75.0,
+      "profit_factor": 0.69,
       "target_wr": 84
     },
     "open_position": null,
@@ -1434,20 +1420,6 @@
   },
   "ema200_multi": {
     "trades": [
-      {
-        "direction": "BUY",
-        "duration_min": 10,
-        "ea_name": "EMA200-MULTI",
-        "entry_price": 29632.98,
-        "entry_time": "2026-08-18 13:20 UTC",
-        "exit_comment": "[tp 29644.40000]",
-        "exit_price": 29644.4,
-        "exit_time": "2026-08-18 13:30 UTC",
-        "magic": 550211,
-        "profit_usd": 9.14,
-        "result": "WIN",
-        "ticket": "104234138"
-      },
       {
         "direction": "SELL",
         "duration_min": 25,
@@ -2038,12 +2010,12 @@
       }
     ],
     "summary": {
-      "total": 43,
-      "wins": 30,
+      "total": 42,
+      "wins": 29,
       "losses": 13,
-      "pnl": -172.78,
-      "win_rate": 69.8,
-      "profit_factor": 0.71,
+      "pnl": -181.92,
+      "win_rate": 69.0,
+      "profit_factor": 0.69,
       "target_wr": 84
     },
     "open_position": null,
@@ -2701,20 +2673,6 @@
       "profit_usd": 15.0,
       "result": "WIN",
       "ticket": "108240721"
-    },
-    {
-      "direction": "BUY",
-      "duration_min": 10,
-      "ea_name": "EMA200-USTEC",
-      "entry_price": 29632.98,
-      "entry_time": "2026-08-18 13:20 UTC",
-      "exit_comment": "[tp 29644.40000]",
-      "exit_price": 29644.4,
-      "exit_time": "2026-08-18 13:30 UTC",
-      "magic": 550209,
-      "profit_usd": 4.57,
-      "result": "WIN",
-      "ticket": "104234137"
     },
     {
       "direction": "BUY",
@@ -3389,20 +3347,6 @@
       "ticket": "108355079"
     },
     {
-      "direction": "BUY",
-      "duration_min": 10,
-      "ea_name": "EMA200-MULTI",
-      "entry_price": 29632.98,
-      "entry_time": "2026-08-18 13:20 UTC",
-      "exit_comment": "[tp 29644.40000]",
-      "exit_price": 29644.4,
-      "exit_time": "2026-08-18 13:30 UTC",
-      "magic": 550211,
-      "profit_usd": 9.14,
-      "result": "WIN",
-      "ticket": "104234138"
-    },
-    {
       "direction": "SELL",
       "duration_min": 25,
       "ea_name": "EMA200-MULTI",
@@ -3994,12 +3938,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 138,
-    "wins": 101,
+    "total": 136,
+    "wins": 99,
     "losses": 37,
-    "pnl": -375.14,
-    "win_rate": 73.2,
-    "profit_factor": 0.79
+    "pnl": -388.85,
+    "win_rate": 72.8,
+    "profit_factor": 0.78
   },
-  "message": "ARB:16t $-24.25 | NY:30t $+17.52 | ORO2:24t $-57.91 | USTEC:25t $-137.72 | MULTI:43t $-172.78 | Total:$-375.14"
+  "message": "ARB:16t $-24.25 | NY:30t $+17.52 | ORO2:24t $-57.91 | USTEC:24t $-142.29 | MULTI:42t $-181.92 | Total:$-388.85"
 }
