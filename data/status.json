@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-09T11:41:20Z",
-  "last_updated": "2026-11-09T11:41:20Z",
+  "updated_at": "2026-11-09T12:41:26Z",
+  "last_updated": "2026-11-09T12:41:26Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 162.28,
   "balance": 162.28,
   "equity": 162.28,
-  "pnl_total": -296.67,
-  "pnl_pct": -49.45,
+  "pnl_total": -304.43,
+  "pnl_pct": -50.74,
   "tunnel_url": "https://chargers-motorola-sufficient-financing.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -1422,20 +1422,6 @@
     "trades": [
       {
         "direction": "BUY",
-        "duration_min": 68,
-        "ea_name": "EMA200-MULTI",
-        "entry_price": 29659.98,
-        "entry_time": "2026-08-18 09:40 UTC",
-        "exit_comment": "[tp 29679.37000]",
-        "exit_price": 29679.37,
-        "exit_time": "2026-08-18 10:48 UTC",
-        "magic": 550211,
-        "profit_usd": 7.76,
-        "result": "WIN",
-        "ticket": "104222913"
-      },
-      {
-        "direction": "BUY",
         "duration_min": 10,
         "ea_name": "EMA200-MULTI",
         "entry_price": 29632.98,
@@ -2038,12 +2024,12 @@
       }
     ],
     "summary": {
-      "total": 44,
-      "wins": 31,
+      "total": 43,
+      "wins": 30,
       "losses": 13,
-      "pnl": -165.02,
-      "win_rate": 70.5,
-      "profit_factor": 0.72,
+      "pnl": -172.78,
+      "win_rate": 69.8,
+      "profit_factor": 0.71,
       "target_wr": 84
     },
     "open_position": null,
@@ -3376,20 +3362,6 @@
     },
     {
       "direction": "BUY",
-      "duration_min": 68,
-      "ea_name": "EMA200-MULTI",
-      "entry_price": 29659.98,
-      "entry_time": "2026-08-18 09:40 UTC",
-      "exit_comment": "[tp 29679.37000]",
-      "exit_price": 29679.37,
-      "exit_time": "2026-08-18 10:48 UTC",
-      "magic": 550211,
-      "profit_usd": 7.76,
-      "result": "WIN",
-      "ticket": "104222913"
-    },
-    {
-      "direction": "BUY",
       "duration_min": 10,
       "ea_name": "EMA200-MULTI",
       "entry_price": 29632.98,
@@ -3994,12 +3966,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 138,
-    "wins": 102,
+    "total": 137,
+    "wins": 101,
     "losses": 36,
-    "pnl": -296.67,
-    "win_rate": 73.9,
+    "pnl": -304.43,
+    "win_rate": 73.7,
     "profit_factor": 0.82
   },
-  "message": "ARB:16t $-24.25 | NY:30t $+17.52 | ORO2:24t $-57.91 | USTEC:24t $-67.01 | MULTI:44t $-165.02 | Total:$-296.67"
+  "message": "ARB:16t $-24.25 | NY:30t $+17.52 | ORO2:24t $-57.91 | USTEC:24t $-67.01 | MULTI:43t $-172.78 | Total:$-304.43"
 }
