@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-12T18:08:36Z",
-  "last_updated": "2026-11-12T18:08:36Z",
+  "updated_at": "2026-11-12T19:08:43Z",
+  "last_updated": "2026-11-12T19:08:43Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 96.02,
   "balance": 96.02,
   "equity": 96.02,
-  "pnl_total": -441.61,
-  "pnl_pct": -73.6,
+  "pnl_total": -399.67,
+  "pnl_pct": -66.61,
   "tunnel_url": "https://seminar-collectables-crops-quilt.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -258,20 +258,6 @@
   },
   "ema200_ny": {
     "trades": [
-      {
-        "direction": "SELL",
-        "duration_min": 8,
-        "ea_name": "EMA200-NY",
-        "entry_price": 4614.8,
-        "entry_time": "2026-08-21 16:00 UTC",
-        "exit_comment": "[tp 4610.52000]",
-        "exit_price": 4610.52,
-        "exit_time": "2026-08-21 16:08 UTC",
-        "magic": 550208,
-        "profit_usd": 12.84,
-        "result": "WIN",
-        "ticket": "104476537"
-      },
       {
         "direction": "SELL",
         "duration_min": 2,
@@ -638,12 +624,12 @@
       }
     ],
     "summary": {
-      "total": 27,
-      "wins": 23,
+      "total": 26,
+      "wins": 22,
       "losses": 4,
-      "pnl": -7.96,
-      "win_rate": 85.2,
-      "profit_factor": 0.97,
+      "pnl": -20.8,
+      "win_rate": 84.6,
+      "profit_factor": 0.92,
       "target_wr": 84
     },
     "open_position": null,
@@ -660,20 +646,6 @@
   },
   "ema200_oro2": {
     "trades": [
-      {
-        "direction": "SELL",
-        "duration_min": 68,
-        "ea_name": "EMA200-ORO2",
-        "entry_price": 4606.86,
-        "entry_time": "2026-08-21 15:40 UTC",
-        "exit_comment": "[sl 4625.11700]",
-        "exit_price": 4625.12,
-        "exit_time": "2026-08-21 16:48 UTC",
-        "magic": 550210,
-        "profit_usd": -54.78,
-        "result": "LOSS",
-        "ticket": "104474959"
-      },
       {
         "direction": "SELL",
         "duration_min": 29,
@@ -956,12 +928,12 @@
       }
     ],
     "summary": {
-      "total": 21,
+      "total": 20,
       "wins": 16,
-      "losses": 5,
-      "pnl": -103.15,
-      "win_rate": 76.2,
-      "profit_factor": 0.6,
+      "losses": 4,
+      "pnl": -48.37,
+      "win_rate": 80.0,
+      "profit_factor": 0.76,
       "target_wr": 84
     },
     "open_position": null,
@@ -2158,20 +2130,6 @@
     },
     {
       "direction": "SELL",
-      "duration_min": 8,
-      "ea_name": "EMA200-NY",
-      "entry_price": 4614.8,
-      "entry_time": "2026-08-21 16:00 UTC",
-      "exit_comment": "[tp 4610.52000]",
-      "exit_price": 4610.52,
-      "exit_time": "2026-08-21 16:08 UTC",
-      "magic": 550208,
-      "profit_usd": 12.84,
-      "result": "WIN",
-      "ticket": "104476537"
-    },
-    {
-      "direction": "SELL",
       "duration_min": 2,
       "ea_name": "EMA200-NY",
       "entry_price": 4677.36,
@@ -2869,20 +2827,6 @@
       "profit_usd": -70.71,
       "result": "LOSS",
       "ticket": "108853168"
-    },
-    {
-      "direction": "SELL",
-      "duration_min": 68,
-      "ea_name": "EMA200-ORO2",
-      "entry_price": 4606.86,
-      "entry_time": "2026-08-21 15:40 UTC",
-      "exit_comment": "[sl 4625.11700]",
-      "exit_price": 4625.12,
-      "exit_time": "2026-08-21 16:48 UTC",
-      "magic": 550210,
-      "profit_usd": -54.78,
-      "result": "LOSS",
-      "ticket": "104474959"
     },
     {
       "direction": "SELL",
@@ -3742,12 +3686,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 129,
-    "wins": 93,
-    "losses": 36,
-    "pnl": -441.61,
-    "win_rate": 72.1,
-    "profit_factor": 0.75
+    "total": 127,
+    "wins": 92,
+    "losses": 35,
+    "pnl": -399.67,
+    "win_rate": 72.4,
+    "profit_factor": 0.76
   },
-  "message": "ARB:16t $-24.89 | NY:27t $-7.96 | ORO2:21t $-103.15 | USTEC:24t $-142.29 | MULTI:41t $-163.32 | Total:$-441.61"
+  "message": "ARB:16t $-24.89 | NY:26t $-20.80 | ORO2:20t $-48.37 | USTEC:24t $-142.29 | MULTI:41t $-163.32 | Total:$-399.67"
 }
