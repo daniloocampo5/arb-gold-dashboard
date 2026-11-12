@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-12T15:08:18Z",
-  "last_updated": "2026-11-12T15:08:18Z",
+  "updated_at": "2026-11-12T16:08:25Z",
+  "last_updated": "2026-11-12T16:08:25Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 77.9,
-  "balance": 77.9,
-  "equity": 77.9,
-  "pnl_total": -459.94,
-  "pnl_pct": -76.66,
+  "current_balance": 96.02,
+  "balance": 96.02,
+  "equity": 96.02,
+  "pnl_total": -441.61,
+  "pnl_pct": -73.6,
   "tunnel_url": "https://seminar-collectables-crops-quilt.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -621,15 +621,29 @@
         "profit_usd": 15.0,
         "result": "WIN",
         "ticket": "108240721"
+      },
+      {
+        "direction": "BUY",
+        "duration_min": 5,
+        "ea_name": "EMA200-NY",
+        "entry_price": 3863.9,
+        "entry_time": "2026-11-12 15:40 UTC",
+        "exit_comment": "[tp 3870.00600]",
+        "exit_price": 3870.01,
+        "exit_time": "2026-11-12 15:45 UTC",
+        "magic": 550208,
+        "profit_usd": 18.33,
+        "result": "WIN",
+        "ticket": "109124828"
       }
     ],
     "summary": {
-      "total": 26,
-      "wins": 22,
+      "total": 27,
+      "wins": 23,
       "losses": 4,
-      "pnl": -26.29,
-      "win_rate": 84.6,
-      "profit_factor": 0.9,
+      "pnl": -7.96,
+      "win_rate": 85.2,
+      "profit_factor": 0.97,
       "target_wr": 84
     },
     "open_position": null,
@@ -2508,6 +2522,20 @@
     },
     {
       "direction": "BUY",
+      "duration_min": 5,
+      "ea_name": "EMA200-NY",
+      "entry_price": 3863.9,
+      "entry_time": "2026-11-12 15:40 UTC",
+      "exit_comment": "[tp 3870.00600]",
+      "exit_price": 3870.01,
+      "exit_time": "2026-11-12 15:45 UTC",
+      "magic": 550208,
+      "profit_usd": 18.33,
+      "result": "WIN",
+      "ticket": "109124828"
+    },
+    {
+      "direction": "BUY",
       "duration_min": 1,
       "ea_name": "EMA200-USTEC",
       "entry_price": 28920.83,
@@ -3714,12 +3742,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 128,
-    "wins": 92,
+    "total": 129,
+    "wins": 93,
     "losses": 36,
-    "pnl": -459.94,
-    "win_rate": 71.9,
-    "profit_factor": 0.74
+    "pnl": -441.61,
+    "win_rate": 72.1,
+    "profit_factor": 0.75
   },
-  "message": "ARB:16t $-24.89 | NY:26t $-26.29 | ORO2:21t $-103.15 | USTEC:24t $-142.29 | MULTI:41t $-163.32 | Total:$-459.94"
+  "message": "ARB:16t $-24.89 | NY:27t $-7.96 | ORO2:21t $-103.15 | USTEC:24t $-142.29 | MULTI:41t $-163.32 | Total:$-441.61"
 }
