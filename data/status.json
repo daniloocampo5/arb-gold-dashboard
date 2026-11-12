@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-12T12:07:56Z",
-  "last_updated": "2026-11-12T12:07:56Z",
+  "updated_at": "2026-11-12T13:08:04Z",
+  "last_updated": "2026-11-12T13:08:04Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 77.9,
   "balance": 77.9,
   "equity": 77.9,
-  "pnl_total": -478.54,
-  "pnl_pct": -79.76,
+  "pnl_total": -459.94,
+  "pnl_pct": -76.66,
   "tunnel_url": "https://seminar-collectables-crops-quilt.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -1323,20 +1323,6 @@
   "ema200_multi": {
     "trades": [
       {
-        "direction": "SELL",
-        "duration_min": 25,
-        "ea_name": "EMA200-MULTI",
-        "entry_price": 29403.57,
-        "entry_time": "2026-08-21 09:40 UTC",
-        "exit_comment": "[sl 29450.06000]",
-        "exit_price": 29450.06,
-        "exit_time": "2026-08-21 10:05 UTC",
-        "magic": 550211,
-        "profit_usd": -18.6,
-        "result": "LOSS",
-        "ticket": "104448064"
-      },
-      {
         "direction": "BUY",
         "duration_min": 1,
         "ea_name": "EMA200-MULTI",
@@ -1912,12 +1898,12 @@
       }
     ],
     "summary": {
-      "total": 42,
+      "total": 41,
       "wins": 29,
-      "losses": 13,
-      "pnl": -181.92,
-      "win_rate": 69.0,
-      "profit_factor": 0.69,
+      "losses": 12,
+      "pnl": -163.32,
+      "win_rate": 70.7,
+      "profit_factor": 0.71,
       "target_wr": 84
     },
     "open_position": null,
@@ -3151,20 +3137,6 @@
       "ticket": "108355079"
     },
     {
-      "direction": "SELL",
-      "duration_min": 25,
-      "ea_name": "EMA200-MULTI",
-      "entry_price": 29403.57,
-      "entry_time": "2026-08-21 09:40 UTC",
-      "exit_comment": "[sl 29450.06000]",
-      "exit_price": 29450.06,
-      "exit_time": "2026-08-21 10:05 UTC",
-      "magic": 550211,
-      "profit_usd": -18.6,
-      "result": "LOSS",
-      "ticket": "104448064"
-    },
-    {
       "direction": "BUY",
       "duration_min": 1,
       "ea_name": "EMA200-MULTI",
@@ -3742,12 +3714,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 129,
+    "total": 128,
     "wins": 92,
-    "losses": 37,
-    "pnl": -478.54,
-    "win_rate": 71.3,
-    "profit_factor": 0.73
+    "losses": 36,
+    "pnl": -459.94,
+    "win_rate": 71.9,
+    "profit_factor": 0.74
   },
-  "message": "ARB:16t $-24.89 | NY:26t $-26.29 | ORO2:21t $-103.15 | USTEC:24t $-142.29 | MULTI:42t $-181.92 | Total:$-478.54"
+  "message": "ARB:16t $-24.89 | NY:26t $-26.29 | ORO2:21t $-103.15 | USTEC:24t $-142.29 | MULTI:41t $-163.32 | Total:$-459.94"
 }
