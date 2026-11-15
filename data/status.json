@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-15T17:16:11Z",
-  "last_updated": "2026-11-15T17:16:11Z",
+  "updated_at": "2026-11-15T18:16:17Z",
+  "last_updated": "2026-11-15T18:16:17Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 90.15,
   "balance": 90.15,
   "equity": 90.15,
-  "pnl_total": -428.0,
-  "pnl_pct": -71.33,
+  "pnl_total": -473.37,
+  "pnl_pct": -78.9,
   "tunnel_url": "https://seminar-collectables-crops-quilt.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -937,20 +937,6 @@
     "trades": [
       {
         "direction": "BUY",
-        "duration_min": 1,
-        "ea_name": "EMA200-USTEC",
-        "entry_price": 28920.83,
-        "entry_time": "2026-08-24 14:20 UTC",
-        "exit_comment": "[tp 28958.47000]",
-        "exit_price": 28958.47,
-        "exit_time": "2026-08-24 14:21 UTC",
-        "magic": 550209,
-        "profit_usd": 30.11,
-        "result": "WIN",
-        "ticket": "104568154"
-      },
-      {
-        "direction": "BUY",
         "duration_min": 23,
         "ea_name": "EMA200-USTEC",
         "entry_price": 29073.83,
@@ -1273,12 +1259,12 @@
       }
     ],
     "summary": {
-      "total": 24,
-      "wins": 18,
+      "total": 23,
+      "wins": 17,
       "losses": 6,
-      "pnl": -142.29,
-      "win_rate": 75.0,
-      "profit_factor": 0.69,
+      "pnl": -172.4,
+      "win_rate": 73.9,
+      "profit_factor": 0.62,
       "target_wr": 84
     },
     "open_position": null,
@@ -1294,20 +1280,6 @@
   },
   "ema200_multi": {
     "trades": [
-      {
-        "direction": "BUY",
-        "duration_min": 1,
-        "ea_name": "EMA200-MULTI",
-        "entry_price": 28920.33,
-        "entry_time": "2026-08-24 14:20 UTC",
-        "exit_comment": "[tp 28958.47000]",
-        "exit_price": 28958.47,
-        "exit_time": "2026-08-24 14:21 UTC",
-        "magic": 550211,
-        "profit_usd": 15.26,
-        "result": "WIN",
-        "ticket": "104568153"
-      },
       {
         "direction": "SELL",
         "duration_min": 2,
@@ -1870,12 +1842,12 @@
       }
     ],
     "summary": {
-      "total": 41,
-      "wins": 29,
+      "total": 40,
+      "wins": 28,
       "losses": 12,
-      "pnl": -163.32,
-      "win_rate": 70.7,
-      "profit_factor": 0.71,
+      "pnl": -178.58,
+      "win_rate": 70.0,
+      "profit_factor": 0.69,
       "target_wr": 84
     },
     "open_position": null,
@@ -2480,20 +2452,6 @@
     },
     {
       "direction": "BUY",
-      "duration_min": 1,
-      "ea_name": "EMA200-USTEC",
-      "entry_price": 28920.83,
-      "entry_time": "2026-08-24 14:20 UTC",
-      "exit_comment": "[tp 28958.47000]",
-      "exit_price": 28958.47,
-      "exit_time": "2026-08-24 14:21 UTC",
-      "magic": 550209,
-      "profit_usd": 30.11,
-      "result": "WIN",
-      "ticket": "104568154"
-    },
-    {
-      "direction": "BUY",
       "duration_min": 23,
       "ea_name": "EMA200-USTEC",
       "entry_price": 29073.83,
@@ -3081,20 +3039,6 @@
       "ticket": "108355079"
     },
     {
-      "direction": "BUY",
-      "duration_min": 1,
-      "ea_name": "EMA200-MULTI",
-      "entry_price": 28920.33,
-      "entry_time": "2026-08-24 14:20 UTC",
-      "exit_comment": "[tp 28958.47000]",
-      "exit_price": 28958.47,
-      "exit_time": "2026-08-24 14:21 UTC",
-      "magic": 550211,
-      "profit_usd": 15.26,
-      "result": "WIN",
-      "ticket": "104568153"
-    },
-    {
       "direction": "SELL",
       "duration_min": 2,
       "ea_name": "EMA200-MULTI",
@@ -3658,12 +3602,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 126,
-    "wins": 90,
+    "total": 124,
+    "wins": 88,
     "losses": 36,
-    "pnl": -428.0,
-    "win_rate": 71.4,
-    "profit_factor": 0.75
+    "pnl": -473.37,
+    "win_rate": 71.0,
+    "profit_factor": 0.72
   },
-  "message": "ARB:17t $-30.69 | NY:25t $-26.47 | ORO2:19t $-65.23 | USTEC:24t $-142.29 | MULTI:41t $-163.32 | Total:$-428.00"
+  "message": "ARB:17t $-30.69 | NY:25t $-26.47 | ORO2:19t $-65.23 | USTEC:23t $-172.40 | MULTI:40t $-178.58 | Total:$-473.37"
 }
