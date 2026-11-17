@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-17T13:03:04Z",
-  "last_updated": "2026-11-17T13:03:04Z",
+  "updated_at": "2026-11-17T14:03:11Z",
+  "last_updated": "2026-11-17T14:03:11Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 90.15,
-  "balance": 90.15,
-  "equity": 90.15,
+  "current_balance": 90.08,
+  "balance": 90.08,
+  "equity": 80.82,
   "pnl_total": -486.24,
   "pnl_pct": -81.04,
   "tunnel_url": "https://seminar-collectables-crops-quilt.trycloudflare.com",
@@ -260,7 +260,18 @@
       "profit_factor": 0.85,
       "target_wr": 45
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 3855.067,
+      "ea_name": "ARB-Gold",
+      "entrada": 3845.807,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": -9.26,
+      "sl": 3869.928,
+      "ticket": 109455034,
+      "tipo": "SELL",
+      "tp": 3814.912
+    },
     "params": {
       "sl_mult": 3.0,
       "tp_mult": 4.0,
@@ -3571,8 +3582,32 @@
       "ticket": "108512339"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 3855.067,
+      "ea_name": "ARB-Gold",
+      "entrada": 3845.807,
+      "lotes": 0.01,
+      "magic": 20260613,
+      "profit": -9.26,
+      "sl": 3869.928,
+      "ticket": 109455034,
+      "tipo": "SELL",
+      "tp": 3814.912
+    }
+  ],
+  "open_position": {
+    "actual": 3855.067,
+    "ea_name": "ARB-Gold",
+    "entrada": 3845.807,
+    "lotes": 0.01,
+    "magic": 20260613,
+    "profit": -9.26,
+    "sl": 3869.928,
+    "ticket": 109455034,
+    "tipo": "SELL",
+    "tp": 3814.912
+  },
   "summary": {
     "total": 123,
     "wins": 87,
