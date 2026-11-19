@@ -1,15 +1,15 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-19T01:06:53Z",
-  "last_updated": "2026-11-19T01:06:53Z",
+  "updated_at": "2026-11-19T04:04:57Z",
+  "last_updated": "2026-11-19T04:04:57Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 96.71,
   "balance": 96.71,
   "equity": 96.71,
-  "pnl_total": -496.82,
-  "pnl_pct": -82.8,
-  "tunnel_url": "https://seminar-collectables-crops-quilt.trycloudflare.com",
+  "pnl_total": -546.83,
+  "pnl_pct": -91.14,
+  "tunnel_url": "https://api.trycloudflare.com",
   "arb_gold": {
     "trades": [
       {
@@ -221,71 +221,15 @@
         "profit_usd": 7.41,
         "result": "WIN",
         "ticket": "108488530"
-      },
-      {
-        "direction": "SELL",
-        "duration_min": 113,
-        "ea_name": "ARB-Gold",
-        "entry_price": 3965.08,
-        "entry_time": "2026-11-12 07:00 UTC",
-        "exit_comment": "[tp 3934.30200]",
-        "exit_price": 3934.3,
-        "exit_time": "2026-11-12 08:53 UTC",
-        "magic": 20260613,
-        "profit_usd": 30.78,
-        "result": "WIN",
-        "ticket": "109089701"
-      },
-      {
-        "direction": "SELL",
-        "duration_min": 60,
-        "ea_name": "ARB-Gold",
-        "entry_price": 3873.65,
-        "entry_time": "2026-11-13 16:00 UTC",
-        "exit_comment": "",
-        "exit_price": 3879.45,
-        "exit_time": "2026-11-13 17:00 UTC",
-        "magic": 20260613,
-        "profit_usd": -5.8,
-        "result": "LOSS",
-        "ticket": "109199142"
-      },
-      {
-        "direction": "SELL",
-        "duration_min": 51,
-        "ea_name": "ARB-Gold",
-        "entry_price": 3845.81,
-        "entry_time": "2026-11-17 13:45 UTC",
-        "exit_comment": "[sl 3869.92800]",
-        "exit_price": 3869.93,
-        "exit_time": "2026-11-17 14:36 UTC",
-        "magic": 20260613,
-        "profit_usd": -24.12,
-        "result": "LOSS",
-        "ticket": "109455034"
-      },
-      {
-        "direction": "SELL",
-        "duration_min": 341,
-        "ea_name": "ARB-Gold",
-        "entry_price": 3773.89,
-        "entry_time": "2026-11-18 07:15 UTC",
-        "exit_comment": "[tp 3743.07400]",
-        "exit_price": 3743.07,
-        "exit_time": "2026-11-18 12:56 UTC",
-        "magic": 20260613,
-        "profit_usd": 30.82,
-        "result": "WIN",
-        "ticket": "109542363"
       }
     ],
     "summary": {
-      "total": 19,
-      "wins": 8,
-      "losses": 11,
-      "pnl": -23.99,
-      "win_rate": 42.1,
-      "profit_factor": 0.89,
+      "total": 15,
+      "wins": 6,
+      "losses": 9,
+      "pnl": -55.67,
+      "win_rate": 40.0,
+      "profit_factor": 0.72,
       "target_wr": 45
     },
     "open_position": null,
@@ -621,29 +565,15 @@
         "profit_usd": 15.0,
         "result": "WIN",
         "ticket": "108240721"
-      },
-      {
-        "direction": "BUY",
-        "duration_min": 5,
-        "ea_name": "EMA200-NY",
-        "entry_price": 3863.9,
-        "entry_time": "2026-11-12 15:40 UTC",
-        "exit_comment": "[tp 3870.00600]",
-        "exit_price": 3870.01,
-        "exit_time": "2026-11-12 15:45 UTC",
-        "magic": 550208,
-        "profit_usd": 18.33,
-        "result": "WIN",
-        "ticket": "109124828"
       }
     ],
     "summary": {
-      "total": 24,
-      "wins": 20,
+      "total": 23,
+      "wins": 19,
       "losses": 4,
-      "pnl": -39.43,
-      "win_rate": 83.3,
-      "profit_factor": 0.84,
+      "pnl": -57.76,
+      "win_rate": 82.6,
+      "profit_factor": 0.77,
       "target_wr": 84
     },
     "open_position": null,
@@ -2059,62 +1989,6 @@
       "ticket": "108488530"
     },
     {
-      "direction": "SELL",
-      "duration_min": 113,
-      "ea_name": "ARB-Gold",
-      "entry_price": 3965.08,
-      "entry_time": "2026-11-12 07:00 UTC",
-      "exit_comment": "[tp 3934.30200]",
-      "exit_price": 3934.3,
-      "exit_time": "2026-11-12 08:53 UTC",
-      "magic": 20260613,
-      "profit_usd": 30.78,
-      "result": "WIN",
-      "ticket": "109089701"
-    },
-    {
-      "direction": "SELL",
-      "duration_min": 60,
-      "ea_name": "ARB-Gold",
-      "entry_price": 3873.65,
-      "entry_time": "2026-11-13 16:00 UTC",
-      "exit_comment": "",
-      "exit_price": 3879.45,
-      "exit_time": "2026-11-13 17:00 UTC",
-      "magic": 20260613,
-      "profit_usd": -5.8,
-      "result": "LOSS",
-      "ticket": "109199142"
-    },
-    {
-      "direction": "SELL",
-      "duration_min": 51,
-      "ea_name": "ARB-Gold",
-      "entry_price": 3845.81,
-      "entry_time": "2026-11-17 13:45 UTC",
-      "exit_comment": "[sl 3869.92800]",
-      "exit_price": 3869.93,
-      "exit_time": "2026-11-17 14:36 UTC",
-      "magic": 20260613,
-      "profit_usd": -24.12,
-      "result": "LOSS",
-      "ticket": "109455034"
-    },
-    {
-      "direction": "SELL",
-      "duration_min": 341,
-      "ea_name": "ARB-Gold",
-      "entry_price": 3773.89,
-      "entry_time": "2026-11-18 07:15 UTC",
-      "exit_comment": "[tp 3743.07400]",
-      "exit_price": 3743.07,
-      "exit_time": "2026-11-18 12:56 UTC",
-      "magic": 20260613,
-      "profit_usd": 30.82,
-      "result": "WIN",
-      "ticket": "109542363"
-    },
-    {
       "direction": "BUY",
       "duration_min": 15,
       "ea_name": "EMA200-NY",
@@ -2435,20 +2309,6 @@
       "profit_usd": 15.0,
       "result": "WIN",
       "ticket": "108240721"
-    },
-    {
-      "direction": "BUY",
-      "duration_min": 5,
-      "ea_name": "EMA200-NY",
-      "entry_price": 3863.9,
-      "entry_time": "2026-11-12 15:40 UTC",
-      "exit_comment": "[tp 3870.00600]",
-      "exit_price": 3870.01,
-      "exit_time": "2026-11-12 15:45 UTC",
-      "magic": 550208,
-      "profit_usd": 18.33,
-      "result": "WIN",
-      "ticket": "109124828"
     },
     {
       "direction": "BUY",
@@ -3574,12 +3434,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 123,
-    "wins": 86,
-    "losses": 37,
-    "pnl": -496.82,
-    "win_rate": 69.9,
-    "profit_factor": 0.71
+    "total": 118,
+    "wins": 83,
+    "losses": 35,
+    "pnl": -546.83,
+    "win_rate": 70.3,
+    "profit_factor": 0.67
   },
-  "message": "ARB:19t $-23.99 | NY:24t $-39.43 | ORO2:18t $-69.55 | USTEC:23t $-172.40 | MULTI:39t $-191.45 | Total:$-496.82"
+  "message": "ARB:15t $-55.67 | NY:23t $-57.76 | ORO2:18t $-69.55 | USTEC:23t $-172.40 | MULTI:39t $-191.45 | Total:$-546.83"
 }
