@@ -1,7 +1,7 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-20T04:16:19Z",
-  "last_updated": "2026-11-20T04:16:19Z",
+  "updated_at": "2026-11-20T06:32:36Z",
+  "last_updated": "2026-11-20T06:32:36Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
   "current_balance": 133.77,
@@ -9,7 +9,7 @@
   "equity": 133.77,
   "pnl_total": -273.66,
   "pnl_pct": -45.61,
-  "tunnel_url": "https://api.trycloudflare.com",
+  "tunnel_url": "https://bright-reporter-because-climbing.trycloudflare.com",
   "arb_gold": {
     "trades": [
       {
