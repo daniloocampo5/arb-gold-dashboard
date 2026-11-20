@@ -1,12 +1,12 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-20T15:33:35Z",
-  "last_updated": "2026-11-20T15:33:35Z",
+  "updated_at": "2026-11-20T16:33:40Z",
+  "last_updated": "2026-11-20T16:33:40Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 133.77,
-  "balance": 133.77,
-  "equity": 133.77,
+  "current_balance": 133.27,
+  "balance": 133.27,
+  "equity": 115.42,
   "pnl_total": -273.66,
   "pnl_pct": -45.61,
   "tunnel_url": "https://bright-reporter-because-climbing.trycloudflare.com",
@@ -1253,7 +1253,18 @@
       "profit_factor": 0.62,
       "target_wr": 84
     },
-    "open_position": null,
+    "open_position": {
+      "actual": 25712.97,
+      "ea_name": "EMA200-USTEC",
+      "entrada": 25735.28,
+      "lotes": 0.8,
+      "magic": 550209,
+      "profit": -17.85,
+      "sl": 25420.15,
+      "ticket": 109765028,
+      "tipo": "BUY",
+      "tp": 25822.17
+    },
     "params": {
       "dist_mult": 5.0,
       "tp_mult": 0.8,
@@ -3543,8 +3554,32 @@
       "ticket": "108512339"
     }
   ],
-  "open_positions": [],
-  "open_position": null,
+  "open_positions": [
+    {
+      "actual": 25712.97,
+      "ea_name": "EMA200-USTEC",
+      "entrada": 25735.28,
+      "lotes": 0.8,
+      "magic": 550209,
+      "profit": -17.85,
+      "sl": 25420.15,
+      "ticket": 109765028,
+      "tipo": "BUY",
+      "tp": 25822.17
+    }
+  ],
+  "open_position": {
+    "actual": 25712.97,
+    "ea_name": "EMA200-USTEC",
+    "entrada": 25735.28,
+    "lotes": 0.8,
+    "magic": 550209,
+    "profit": -17.85,
+    "sl": 25420.15,
+    "ticket": 109765028,
+    "tipo": "BUY",
+    "tp": 25822.17
+  },
   "summary": {
     "total": 122,
     "wins": 88,
