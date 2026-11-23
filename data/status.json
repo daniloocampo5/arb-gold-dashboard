@@ -1,31 +1,17 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-22T22:15:55Z",
-  "last_updated": "2026-11-22T22:15:55Z",
+  "updated_at": "2026-11-23T14:13:10Z",
+  "last_updated": "2026-11-23T14:13:10Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 392.89,
-  "balance": 392.89,
-  "equity": 392.89,
-  "pnl_total": -407.11,
-  "pnl_pct": -67.85,
+  "current_balance": 402.44,
+  "balance": 402.44,
+  "equity": 402.44,
+  "pnl_total": -397.56,
+  "pnl_pct": -66.26,
   "tunnel_url": "https://bright-reporter-because-climbing.trycloudflare.com",
   "arb_gold": {
     "trades": [
-      {
-        "direction": "SELL",
-        "duration_min": 43,
-        "ea_name": "ARB-Gold",
-        "entry_price": 4418.54,
-        "entry_time": "2026-09-01 07:45 UTC",
-        "exit_comment": "[tp 4382.04500]",
-        "exit_price": 4382.05,
-        "exit_time": "2026-09-01 08:28 UTC",
-        "magic": 20260613,
-        "profit_usd": 36.49,
-        "result": "WIN",
-        "ticket": "104961797"
-      },
       {
         "direction": "SELL",
         "duration_min": 106,
@@ -280,12 +266,12 @@
       }
     ],
     "summary": {
-      "total": 19,
-      "wins": 9,
+      "total": 18,
+      "wins": 8,
       "losses": 10,
-      "pnl": 36.96,
-      "win_rate": 47.4,
-      "profit_factor": 1.19,
+      "pnl": 0.47,
+      "win_rate": 44.4,
+      "profit_factor": 1.0,
       "target_wr": 45
     },
     "open_position": null,
@@ -1282,20 +1268,6 @@
     "trades": [
       {
         "direction": "BUY",
-        "duration_min": 219,
-        "ea_name": "EMA200-MULTI",
-        "entry_price": 29238.29,
-        "entry_time": "2026-09-01 08:40 UTC",
-        "exit_comment": "[sl 29123.20000]",
-        "exit_price": 29123.2,
-        "exit_time": "2026-09-01 12:19 UTC",
-        "magic": 550211,
-        "profit_usd": -46.04,
-        "result": "LOSS",
-        "ticket": "104963425"
-      },
-      {
-        "direction": "BUY",
         "duration_min": 23,
         "ea_name": "EMA200-MULTI",
         "entry_price": 29073.83,
@@ -1828,12 +1800,12 @@
       }
     ],
     "summary": {
-      "total": 39,
+      "total": 38,
       "wins": 27,
-      "losses": 12,
-      "pnl": -191.45,
-      "win_rate": 69.2,
-      "profit_factor": 0.67,
+      "losses": 11,
+      "pnl": -145.41,
+      "win_rate": 71.1,
+      "profit_factor": 0.72,
       "target_wr": 84
     },
     "open_position": null,
@@ -1848,20 +1820,6 @@
     }
   },
   "trades": [
-    {
-      "direction": "SELL",
-      "duration_min": 43,
-      "ea_name": "ARB-Gold",
-      "entry_price": 4418.54,
-      "entry_time": "2026-09-01 07:45 UTC",
-      "exit_comment": "[tp 4382.04500]",
-      "exit_price": 4382.05,
-      "exit_time": "2026-09-01 08:28 UTC",
-      "magic": 20260613,
-      "profit_usd": 36.49,
-      "result": "WIN",
-      "ticket": "104961797"
-    },
     {
       "direction": "SELL",
       "duration_min": 106,
@@ -3026,20 +2984,6 @@
     },
     {
       "direction": "BUY",
-      "duration_min": 219,
-      "ea_name": "EMA200-MULTI",
-      "entry_price": 29238.29,
-      "entry_time": "2026-09-01 08:40 UTC",
-      "exit_comment": "[sl 29123.20000]",
-      "exit_price": 29123.2,
-      "exit_time": "2026-09-01 12:19 UTC",
-      "magic": 550211,
-      "profit_usd": -46.04,
-      "result": "LOSS",
-      "ticket": "104963425"
-    },
-    {
-      "direction": "BUY",
       "duration_min": 23,
       "ea_name": "EMA200-MULTI",
       "entry_price": 29073.83,
@@ -3574,12 +3518,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 123,
-    "wins": 88,
-    "losses": 35,
-    "pnl": -407.11,
-    "win_rate": 71.5,
+    "total": 121,
+    "wins": 87,
+    "losses": 34,
+    "pnl": -397.56,
+    "win_rate": 71.9,
     "profit_factor": 0.75
   },
-  "message": "ARB:19t $+36.96 | NY:24t $+5.42 | ORO2:17t $+47.81 | USTEC:24t $-305.85 | MULTI:39t $-191.45 | Total:$-407.11"
+  "message": "ARB:18t $+0.47 | NY:24t $+5.42 | ORO2:17t $+47.81 | USTEC:24t $-305.85 | MULTI:38t $-145.41 | Total:$-397.56"
 }
