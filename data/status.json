@@ -1,14 +1,14 @@
 {
   "pc_online": true,
-  "updated_at": "2026-11-23T18:13:35Z",
-  "last_updated": "2026-11-23T18:13:35Z",
+  "updated_at": "2026-11-23T19:13:41Z",
+  "last_updated": "2026-11-23T19:13:41Z",
   "start_date": "2026-07-26",
   "start_balance": 600,
-  "current_balance": 390.22,
-  "balance": 390.22,
-  "equity": 390.22,
-  "pnl_total": -409.78,
-  "pnl_pct": -68.3,
+  "current_balance": 425.51,
+  "balance": 425.51,
+  "equity": 425.51,
+  "pnl_total": -374.49,
+  "pnl_pct": -62.41,
   "tunnel_url": "https://bright-reporter-because-climbing.trycloudflare.com",
   "arb_gold": {
     "trades": [
@@ -647,20 +647,6 @@
   "ema200_oro2": {
     "trades": [
       {
-        "direction": "BUY",
-        "duration_min": 11,
-        "ea_name": "EMA200-ORO2",
-        "entry_price": 4368.1,
-        "entry_time": "2026-09-01 16:10 UTC",
-        "exit_comment": "[sl 4356.33300]",
-        "exit_price": 4356.33,
-        "exit_time": "2026-09-01 16:21 UTC",
-        "magic": 550210,
-        "profit_usd": -35.29,
-        "result": "LOSS",
-        "ticket": "104991293"
-      },
-      {
         "direction": "SELL",
         "duration_min": 29,
         "ea_name": "EMA200-ORO2",
@@ -886,12 +872,12 @@
       }
     ],
     "summary": {
-      "total": 17,
+      "total": 16,
       "wins": 14,
-      "losses": 3,
-      "pnl": 47.81,
-      "win_rate": 82.4,
-      "profit_factor": 1.56,
+      "losses": 2,
+      "pnl": 83.1,
+      "win_rate": 87.5,
+      "profit_factor": 2.65,
       "target_wr": 84
     },
     "open_position": null,
@@ -2703,20 +2689,6 @@
       "ticket": "109765028"
     },
     {
-      "direction": "BUY",
-      "duration_min": 11,
-      "ea_name": "EMA200-ORO2",
-      "entry_price": 4368.1,
-      "entry_time": "2026-09-01 16:10 UTC",
-      "exit_comment": "[sl 4356.33300]",
-      "exit_price": 4356.33,
-      "exit_time": "2026-09-01 16:21 UTC",
-      "magic": 550210,
-      "profit_usd": -35.29,
-      "result": "LOSS",
-      "ticket": "104991293"
-    },
-    {
       "direction": "SELL",
       "duration_min": 29,
       "ea_name": "EMA200-ORO2",
@@ -3462,12 +3434,12 @@
   "open_positions": [],
   "open_position": null,
   "summary": {
-    "total": 119,
+    "total": 118,
     "wins": 85,
-    "losses": 34,
-    "pnl": -409.78,
-    "win_rate": 71.4,
-    "profit_factor": 0.75
+    "losses": 33,
+    "pnl": -374.49,
+    "win_rate": 72.0,
+    "profit_factor": 0.76
   },
-  "message": "ARB:18t $+0.47 | NY:24t $+5.42 | ORO2:17t $+47.81 | USTEC:23t $-311.96 | MULTI:37t $-151.52 | Total:$-409.78"
+  "message": "ARB:18t $+0.47 | NY:24t $+5.42 | ORO2:16t $+83.10 | USTEC:23t $-311.96 | MULTI:37t $-151.52 | Total:$-374.49"
 }
